@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { LoadingProvider } from './context/LoadingContext'
 import { RouteTransitionProvider, useRouteTransition } from './context/RouteTransitionContext'
 import { useEffect } from 'react'
@@ -33,24 +33,22 @@ function AppContent() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/property/:id" element={<ProductPage />} />
-        <Route path="/about" element={<AboutUs />} />
-      </Routes>
     </>
   )
 }
 
 function App() {
   return (
-    <LoadingProvider>
-      <RouteTransitionProvider>
-        <Router>
-          <AppContent />
-        </Router>
-      </RouteTransitionProvider>
-    </LoadingProvider>
+    <RouteTransitionProvider>
+      <LoadingProvider>
+        <AppContent />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/property/:id" element={<ProductPage />} />
+          <Route path="/about" element={<AboutUs />} />
+        </Routes>
+      </LoadingProvider>
+    </RouteTransitionProvider>
   )
 }
 
