@@ -15,10 +15,12 @@ function Search({ onSearch }) {
   const [showPreference, setShowPreference] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [locations] = useState([
-    'Barcelona, Spain',
-    'Madrid, Spain',
-    'Valencia, Spain',
-    'Seville, Spain'
+    'Kadıköy, Istanbul',
+    'Beşiktaş, Istanbul',
+    'Üsküdar, Istanbul',
+    'Beylikdüzü, Istanbul',
+    'Bahçeşehir, Istanbul',
+    'Ataşehir, Istanbul'
   ])
   const preferences = ['male', 'female']
 
