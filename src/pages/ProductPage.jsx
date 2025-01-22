@@ -8,6 +8,7 @@ import ImageSlider from '../components/ImageSlider'
 import { useState, useEffect } from 'react'
 import { findPropertyById } from '../data/properties'
 import { useRouteTransition } from '../context/RouteTransitionContext'
+import { TbCurrencyLira } from 'react-icons/tb'
 
 function ProductPage() {
   const { id } = useParams()
@@ -105,6 +106,50 @@ function ProductPage() {
     )
   }
 
+  const renderVideoGallery = () => {
+    if (!property.videos || property.videos.length === 0) return null;
+    
+    return (
+      <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <motion.div 
+            className="relative h-[400px] rounded-lg overflow-hidden"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <iframe
+              className="w-full h-full"
+              src={property.videos[0].url}
+              title="Property Video Tour"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </motion.div>
+          <div className="grid grid-cols-2 gap-4">
+            {property.images.slice(0, 4).map((image, index) => (
+              <motion.div 
+                key={index}
+                className="relative h-[190px] rounded-lg overflow-hidden cursor-pointer"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 + index * 0.1 }}
+                onClick={() => handleImageClick(index)}
+              >
+                <img 
+                  src={image} 
+                  alt={`${property.name} ${index + 1}`}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <motion.div 
       className="min-h-screen flex flex-col"
@@ -116,7 +161,7 @@ function ProductPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           {/* Image Gallery */}
           <div className="mb-8 relative">
-            {renderImageGallery()}
+            {property.videos?.length > 0 ? renderVideoGallery() : renderImageGallery()}
           </div>
 
           {/* Content Grid */}
@@ -188,8 +233,10 @@ function ProductPage() {
                 >
                   <div className="bg-white rounded-lg border border-[#F0EFF9] p-6">
                     <div className="flex items-center gap-2 mb-6">
-                      <FiDollarSign className="text-[#E9A159] w-6 h-6" />
-                      <span className="text-2xl font-semibold text-[#10103B]">{property.price}</span>
+                      <TbCurrencyLira className="text-[#E9A159] w-6 h-6" />
+                      <span className="text-2xl font-semibold text-[#10103B]">
+                        {property.price.toLocaleString('tr-TR')}
+                      </span>
                       <span className="text-gray-600">
                         {property.type === 'rent' ? '/month' : ''}
                       </span>

@@ -3,7 +3,7 @@ export const properties = [
   {
     id: 1,
     type: 'rent',
-    name: "Cozy Single Room in Kadıköy",
+    name: "Single Room in Üsküdar",
     price: 4500,
     roomType: 'individual',
     preference: 'male',
@@ -14,10 +14,16 @@ export const properties = [
     amenities: ["Furnished", "WiFi", "Air Conditioning", "Study Desk", "Shared Kitchen", "Laundry"],
     image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
     images: [
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
+      "https://i.imgur.com/SolWH51.jpeg",
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+    ],
+    videos: [
+      {
+        url: "https://media-hosting.imagekit.io//e8b22b86ad124229/rent1.mp4?Expires=1832183611&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ci4~sVJBMNHej6pYO-Zez1UZDGNoLwzYmw8nkBPdmcnklVcT8v5eq28Mdq25GFRzwC5OWHBTmmQqbTBOJQRpWlzL7svqAl5QQuzJiMV65i3C6eiwy0qZT-oJgDepzrhU2MEfSk2bui1Q-QJYjR-wnFnsLh8fKFLf4fi7A1xYP7QukChOSSZxKXvw1n3qa~S9flhTjjPY32fm4tCQDFz74KE5lHWl0KhaCwjqLv8slSiIAghRLbDqb8eAAPVvxWcl8~XQ5ie2qC5JQnJnBf21~gWs2FejDgEzDoGdS6y7F7zM5~iiOpWFBik~HA7UX-C6K-dqtJNNGEfCL14iY89Y6Q__",
+        thumbnail: "https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+      }
     ]
   },
   {

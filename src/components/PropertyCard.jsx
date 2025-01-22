@@ -37,7 +37,7 @@ function PropertyCard({ property }) {
             <h3 className="text-xl font-semibold text-[#10103B] mb-2">{property.location}</h3>
 
             <div className="flex items-center gap-1 mt-2">
-              <span className="text-[#E9A159] text-2xl font-semibold">${property.price}</span>
+              <span className="text-[#E9A159] text-2xl font-semibold">₺{property.price.toLocaleString('tr-TR')}</span>
               <span className="text-[#10103B]/60">/month</span>
             </div>
 

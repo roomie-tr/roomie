@@ -53,13 +53,77 @@ function Search({ onSearch }) {
   const handleLocationSelect = (loc) => {
     setLocation(loc)
     setActiveDropdown(null)
+    onSearch({
+      activeTab,
+      location: loc,
+      roomType,
+      preference,
+      apartmentArea
+    })
   }
 
-  const apartmentAreas = ['1 + 1', '2 + 1', '3 + 1', '4 + 1']
+  const handleTabChange = (tab) => {
+    setActiveTab(tab)
+    onSearch({
+      activeTab: tab,
+      location,
+      roomType,
+      preference,
+      apartmentArea
+    })
+  }
+
+  const handleRoomTypeSelect = (type) => {
+    setRoomType(type)
+    setActiveDropdown(null)
+    onSearch({
+      activeTab,
+      location,
+      roomType: type,
+      preference,
+      apartmentArea
+    })
+  }
+
+  const handlePreferenceSelect = (pref) => {
+    setPreference(pref)
+    setActiveDropdown(null)
+    onSearch({
+      activeTab,
+      location,
+      roomType,
+      preference: pref,
+      apartmentArea
+    })
+  }
 
   const handleAreaSelect = (area) => {
     setApartmentArea(area)
     setActiveDropdown(null)
+    onSearch({
+      activeTab,
+      location,
+      roomType,
+      preference,
+      apartmentArea: area
+    })
+  }
+
+  const handleClearFilters = () => {
+    setActiveTab('rent')
+    setLocation('')
+    setApartmentArea('')
+    setRoomType('')
+    setPreference('')
+    setActiveDropdown(null)
+    
+    onSearch({
+      activeTab: 'rent',
+      location: '',
+      roomType: '',
+      preference: '',
+      apartmentArea: ''
+    })
   }
 
   const handleSearch = () => {
@@ -69,23 +133,6 @@ function Search({ onSearch }) {
       roomType,
       preference,
       apartmentArea
-    })
-  }
-
-  const handleClearFilters = () => {
-    setActiveTab('')
-    setLocation('')
-    setApartmentArea('')
-    setRoomType('')
-    setPreference('')
-    setActiveDropdown(null)
-    
-    onSearch({
-      activeTab: '',
-      location: '',
-      roomType: '',
-      preference: '',
-      apartmentArea: ''
     })
   }
 
@@ -105,7 +152,7 @@ function Search({ onSearch }) {
             <div className="relative min-w-[120px] h-[56px]">
               <button 
                 className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'rent' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
-                onClick={() => setActiveTab('rent')}
+                onClick={() => handleTabChange('rent')}
               >
                 Rooms
               </button>
@@ -117,7 +164,7 @@ function Search({ onSearch }) {
             <div className="relative min-w-[120px] h-[56px]">
               <button 
                 className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'buy' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
-                onClick={() => setActiveTab('buy')}
+                onClick={() => handleTabChange('buy')}
               >
                 Apartments
               </button>
@@ -205,10 +252,7 @@ function Search({ onSearch }) {
                         className={`flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-[#F0EFF9] rounded-md ${
                           roomType === type ? 'text-[#E9A159]' : 'text-[#10103B]'
                         }`}
-                        onClick={() => {
-                          setRoomType(type);
-                          setActiveDropdown(null);
-                        }}
+                        onClick={() => handleRoomTypeSelect(type)}
                       >
                         {type === 'individual' ? 
                           <FiUser className="text-[#E9A159] w-4 h-4" /> : 
@@ -252,10 +296,7 @@ function Search({ onSearch }) {
                         className={`flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-[#F0EFF9] rounded-md ${
                           preference === pref ? 'text-[#E9A159]' : 'text-[#10103B]'
                         }`}
-                        onClick={() => {
-                          setPreference(pref);
-                          setActiveDropdown(null);
-                        }}
+                        onClick={() => handlePreferenceSelect(pref)}
                       >
                         {pref === 'male' ? (
                           <BsGenderMale className="text-[#007BFF] w-4 h-4" />
@@ -304,7 +345,7 @@ function Search({ onSearch }) {
             </>
           )}
 
-          {/* Search Button */}
+          {/* Add back the Search Button */}
           <button 
             onClick={handleSearch}
             className="w-full lg:w-auto bg-[#E9A159] text-white px-8 py-4 rounded-lg whitespace-nowrap 
