@@ -1,14 +1,17 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiUser, FiUsers, FiMapPin, FiDollarSign, FiImage } from 'react-icons/fi'
+import { FiUser, FiUsers, FiMapPin, FiDollarSign, FiImage, FiPlay, FiInfo, FiShield, FiVideo } from 'react-icons/fi'
 import { BsGenderMale, BsGenderFemale } from 'react-icons/bs'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
-import ImageSlider from '../components/ImageSlider'
+import MediaSlider from '../components/MediaSlider'
 import { useState, useEffect } from 'react'
 import { findPropertyById } from '../data/properties'
 import { useRouteTransition } from '../context/RouteTransitionContext'
 import { TbCurrencyLira } from 'react-icons/tb'
+import ApartmentDetails from '../components/ApartmentDetails'
+import StudentHousingDetails from '../components/StudentHousingDetails'
+import RoomDetails from '../components/RoomDetails'
 
 function ProductPage() {
   const { id } = useParams()
@@ -17,6 +20,8 @@ function ProductPage() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null)
   const [property, setProperty] = useState(null)
   const { stopLoading } = useRouteTransition()
+  const [showAllMedia, setShowAllMedia] = useState(false)
+  const INITIAL_MEDIA_COUNT = 4
 
   useEffect(() => {
     const foundProperty = findPropertyById(id)
@@ -32,120 +37,97 @@ function ProductPage() {
   }, [])
 
   if (!property) {
-    return null // or a loading spinner
-  }
-
-  const getPreferenceIcon = () => {
-    if (!property.preference) return null;
-    if (property.preference === 'male') {
-      return <BsGenderMale className="text-[#007BFF] w-5 h-5" />
-    } else if (property.preference === 'female') {
-      return <BsGenderFemale className="text-[#FF69B4] w-5 h-5" />
-    }
-  }
-
-  const handleImageClick = (index) => {
-    setSelectedImageIndex(index)
-  }
-
-  const handleShowAllPhotos = () => {
-    setSelectedImageIndex(0)
+    return null
   }
 
   const handleLocationClick = () => {
     window.open(property.googleMapsUrl, '_blank')
   }
 
-  const renderImageGallery = () => {
-    return (
-      <div className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <motion.div 
-            className="relative h-[400px] rounded-lg overflow-hidden cursor-pointer"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            onClick={() => handleImageClick(0)}
-          >
-            <img 
-              src={property.images[0]} 
-              alt={property.name}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-            />
-          </motion.div>
-          <div className="grid grid-cols-2 gap-4">
-            {property.images.slice(1, 4).map((image, index) => (
-              <motion.div 
-                key={index}
-                className="relative h-[190px] rounded-lg overflow-hidden cursor-pointer"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 + index * 0.1 }}
-                onClick={() => handleImageClick(index + 1)}
-              >
-                <img 
-                  src={image} 
-                  alt={`${property.name} ${index + 2}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
+  const allMedia = [
+    ...(property.videos?.map((v, i) => ({ 
+      type: 'video', 
+      url: v.url, 
+      index: i 
+    })) || []),
+    ...((property.images?.map((img, i) => ({ 
+      type: 'image', 
+      url: img, 
+      index: i + (property.videos?.length || 0)
+    }))) || [])
+  ];
 
-        {property.images.length > 4 && (
-          <button
-            onClick={handleShowAllPhotos}
-            className="flex items-center gap-2 text-[#E9A159] hover:text-[#d08236] transition-colors duration-300"
+  const displayedMedia = showAllMedia ? allMedia : allMedia.slice(0, INITIAL_MEDIA_COUNT);
+  const remainingCount = allMedia.length - INITIAL_MEDIA_COUNT;
+
+  const renderMediaGallery = () => {
+    return (
+      <div className="relative">
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-4"
+          layout
+        >
+          {displayedMedia.map((media, index) => (
+            <motion.div 
+              key={media.url || index}
+              layout
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+              className={`relative aspect-square rounded-lg overflow-hidden cursor-pointer
+                ${index === 0 && !showAllMedia ? 'md:col-span-2 md:row-span-2' : ''}`}
+              onClick={() => setSelectedImageIndex(media.index)}
+            >
+              {media.type === 'video' ? (
+                <div className="group relative h-full">
+                  <video 
+                    src={media.url}
+                    className="w-full h-full object-cover"
+                    poster={property.image}
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                    <FiVideo className="text-white w-8 h-8" />
+                  </div>
+                </div>
+              ) : (
+                <div className="group relative h-full">
+                  <img 
+                    src={media.url} 
+                    alt={`Property ${index + 1}`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                </div>
+              )}
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {allMedia.length > INITIAL_MEDIA_COUNT && (
+          <motion.button
+            layout
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setShowAllMedia(!showAllMedia)}
+            className="absolute bottom-4 right-4 bg-white bg-opacity-90 hover:bg-opacity-100 
+              text-[#10103B] px-4 py-2 rounded-lg shadow-lg flex items-center gap-2
+              transition-all duration-300"
           >
             <FiImage className="w-5 h-5" />
-            <span>Show All {property.images.length} Photos</span>
-          </button>
+            <motion.span
+              key={showAllMedia ? 'less' : 'more'}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.2 }}
+            >
+              {!showAllMedia ? `+${remainingCount} more` : 'Show less'}
+            </motion.span>
+          </motion.button>
         )}
-      </div>
-    )
-  }
-
-  const renderVideoGallery = () => {
-    if (!property.videos || property.videos.length === 0) return null;
-    
-    return (
-      <div className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <motion.div 
-            className="relative h-[400px] rounded-lg overflow-hidden"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <iframe
-              className="w-full h-full"
-              src={property.videos[0].url}
-              title="Property Video Tour"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </motion.div>
-          <div className="grid grid-cols-2 gap-4">
-            {property.images.slice(0, 4).map((image, index) => (
-              <motion.div 
-                key={index}
-                className="relative h-[190px] rounded-lg overflow-hidden cursor-pointer"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.3 + index * 0.1 }}
-                onClick={() => handleImageClick(index)}
-              >
-                <img 
-                  src={image} 
-                  alt={`${property.name} ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
     );
   };
@@ -159,14 +141,11 @@ function ProductPage() {
     >
       <div className="flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          {/* Image Gallery */}
           <div className="mb-8 relative">
-            {property.videos?.length > 0 ? renderVideoGallery() : renderImageGallery()}
+            {renderMediaGallery()}
           </div>
 
-          {/* Content Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-            {/* Main Content */}
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -182,15 +161,19 @@ function ProductPage() {
                   <span>{property.location}</span>
                 </div>
 
+                <StudentHousingDetails property={property} />
+
                 <div className="bg-white rounded-lg border border-[#F0EFF9] p-6 mb-8">
                   <h2 className="text-xl font-semibold text-[#10103B] mb-4">Description</h2>
-                  <p className="text-gray-600 leading-relaxed">{property.description}</p>
+                  <p className="text-gray-600 leading-relaxed text-right" dir="rtl">
+                    {property.description}
+                  </p>
                 </div>
 
                 <div className="bg-white rounded-lg border border-[#F0EFF9] p-6 mb-8">
                   <h2 className="text-xl font-semibold text-[#10103B] mb-4">Amenities</h2>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    {property.amenities.map((amenity, index) => (
+                    {property?.amenities?.map((amenity, index) => (
                       <div key={index} className="flex items-center gap-2 text-gray-600">
                         <span className="w-2 h-2 bg-[#E9A159] rounded-full" />
                         <span>{amenity}</span>
@@ -199,7 +182,6 @@ function ProductPage() {
                   </div>
                 </div>
 
-                {/* Map Section */}
                 <div className="bg-white rounded-lg border border-[#F0EFF9] p-6">
                   <div className="flex items-center justify-between mb-4">
                     <h2 className="text-xl font-semibold text-[#10103B]">Location</h2>
@@ -223,7 +205,6 @@ function ProductPage() {
               </motion.div>
             </div>
 
-            {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-24">
                 <motion.div 
@@ -238,49 +219,31 @@ function ProductPage() {
                         {property.price.toLocaleString('tr-TR')}
                       </span>
                       <span className="text-gray-600">
-                        {property.type === 'rent' ? '/month' : ''}
+                        {property.type === 'room' ? '/month' : ''}
                       </span>
                     </div>
 
-                    <div className="space-y-4 mb-8">
-                      {property.type === 'rent' ? (
-                        <>
-                          {/* Room Type */}
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                              {property.roomType === 'individual' ? (
-                                <FiUser className="text-[#E9A159] w-5 h-5" />
-                              ) : (
-                                <FiUsers className="text-[#E9A159] w-5 h-5" />
-                              )}
-                              <span className="text-[#10103B] capitalize">{property.roomType} Room</span>
-                            </div>
-                          </div>
-
-                          {/* Preference */}
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                              {getPreferenceIcon()}
-                              <span className="text-[#10103B] capitalize">
-                                {property.preference} Only
-                              </span>
-                            </div>
-                          </div>
-                        </>
-                      ) : (
-                        /* Apartment Area */
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <span className="text-[#10103B]">
-                              Apartment Area: {property.apartmentArea}
-                            </span>
-                          </div>
+                    <div className="bg-[#F0EFF9] rounded-lg p-4 mb-6">
+                      <div className="flex items-start gap-3">
+                        <FiShield className="text-[#10103B] w-5 h-5 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-sm text-[#10103B]" dir="rtl">
+                            {property.deposit?.description || "Deposit information not available"}
+                          </p>
                         </div>
+                      </div>
+                    </div>
+
+                    <div className="space-y-4 mb-8">
+                      {property.type === 'room' ? (
+                        <RoomDetails property={property} />
+                      ) : (
+                        <ApartmentDetails property={property} />
                       )}
                     </div>
 
                     <button className="w-full bg-[#E9A159] text-white py-3 rounded-lg hover:bg-[#d08236] transition-colors duration-300">
-                      {property.type === 'rent' ? 'Contact Owner' : 'Contact Agent'}
+                      {property.type === 'room' ? 'Contact Owner' : 'Contact Agent'}
                     </button>
                   </div>
                 </motion.div>
@@ -294,8 +257,8 @@ function ProductPage() {
       
       <AnimatePresence>
         {selectedImageIndex !== null && (
-          <ImageSlider 
-            images={property.images}
+          <MediaSlider 
+            media={allMedia}
             currentIndex={selectedImageIndex}
             onClose={() => setSelectedImageIndex(null)}
           />

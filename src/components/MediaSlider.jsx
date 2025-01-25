@@ -2,16 +2,19 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 import { useState } from 'react'
 
-function ImageSlider({ images, currentIndex, onClose }) {
+function MediaSlider({ media, currentIndex, onClose }) {
   const [activeIndex, setActiveIndex] = useState(currentIndex)
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev + 1) % images.length)
+    setActiveIndex((prev) => (prev + 1) % media.length)
   }
 
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev - 1 + images.length) % images.length)
+    setActiveIndex((prev) => (prev - 1 + media.length) % media.length)
   }
+
+  const currentItem = media[activeIndex]
+  const isVideo = currentItem.type === 'video'
 
   return (
     <motion.div
@@ -43,19 +46,32 @@ function ImageSlider({ images, currentIndex, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         <AnimatePresence mode="wait">
-          <motion.img
-            key={activeIndex}
-            src={images[activeIndex]}
-            alt={`Slide ${activeIndex + 1}`}
-            className="max-w-full max-h-[90vh] object-contain"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.3 }}
-          />
+          {isVideo ? (
+            <motion.video
+              key={`video-${activeIndex}`}
+              src={currentItem.url}
+              className="max-w-full max-h-[90vh] object-contain"
+              controls
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.3 }}
+            />
+          ) : (
+            <motion.img
+              key={`image-${activeIndex}`}
+              src={currentItem.url}
+              alt={`Slide ${activeIndex + 1}`}
+              className="max-w-full max-h-[90vh] object-contain"
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.3 }}
+            />
+          )}
         </AnimatePresence>
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white">
-          {activeIndex + 1} / {images.length}
+          {activeIndex + 1} / {media.length}
         </div>
       </div>
 
@@ -72,4 +88,4 @@ function ImageSlider({ images, currentIndex, onClose }) {
   )
 }
 
-export default ImageSlider 
+export default MediaSlider 

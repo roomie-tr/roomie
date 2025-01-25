@@ -50,53 +50,56 @@ function Home() {
   }
 
   const filteredProperties = properties.filter(property => {
-    // First check the active tab
-    if (searchParams.activeTab !== 'all' && property.type !== searchParams.activeTab) {
-      return false
+    // First check if we should show all properties
+    if (searchParams.activeTab === 'all') {
+      return true;
+    }
+
+    // Check if property type matches the active tab
+    if (searchParams.activeTab === 'room' && property.type !== 'room') {
+      return false;
+    }
+    if (searchParams.activeTab === 'apartment' && property.type !== 'apartment') {
+      return false;
     }
 
     // Then apply other filters if they exist
     if (searchParams.location && property.location !== searchParams.location) {
-      return false
+      return false;
     }
 
     // Apply type-specific filters
-    if (property.type === 'rent') {
+    if (property.type === 'room') {
       if (searchParams.roomType && property.roomType !== searchParams.roomType) {
-        return false
+        return false;
       }
       if (searchParams.preference && property.preference !== searchParams.preference) {
-        return false
+        return false;
       }
-    } else if (property.type === 'buy') {
-      if (searchParams.apartmentArea && property.apartmentArea !== searchParams.apartmentArea) {
-        return false
+    } else if (property.type === 'apartment') {
+      if (searchParams.apartmentArea) {
+        if (searchParams.apartmentArea === 'duplex') {
+          if (!property.apartment?.type || property.apartment.type !== 'duplex') {
+            return false;
+          }
+        } else if (property.apartment?.type === 'duplex' || property.apartmentArea !== searchParams.apartmentArea) {
+          return false;
+        }
       }
     }
 
-    return true
+    return true;
   })
 
   const getHeadingText = () => {
-    // If no properties are found after filtering
-    if (filteredProperties.length === 0) {
-      if (searchParams.activeTab === 'rent') {
-        return 'No Available Rooms Found'
-      } else if (searchParams.activeTab === 'buy') {
-        return 'No Available Apartments Found'
-      }
-      return 'No Properties Found'
+    if (searchParams.activeTab === 'room') {
+      return 'Available Rooms';
+    } else if (searchParams.activeTab === 'apartment') {
+      return 'Available Apartments';
+    } else if (searchParams.activeTab === 'student_housing') {
+      return 'Available Student Housing';
     }
-
-    // If properties are found
-    switch(searchParams.activeTab) {
-      case 'rent':
-        return 'Available Rooms'
-      case 'buy':
-        return 'Available Apartments'
-      default:
-        return 'All Properties'
-    }
+    return 'Available Properties';
   }
 
   if (isLoading) {
@@ -127,10 +130,11 @@ function Home() {
             {getHeadingText()}
           </motion.h2>
           {filteredProperties.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
               {filteredProperties.map((property, index) => (
                 <motion.div
                   key={property.id}
+                  className="h-full"
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
@@ -147,8 +151,9 @@ function Home() {
               transition={{ delay: 0.3, duration: 0.5 }}
             >
               <p className="text-lg text-gray-600 mb-2">
-                {searchParams.activeTab === 'rent' ? 'No rooms available' : 
-                 searchParams.activeTab === 'buy' ? 'No apartments available' : 
+                {searchParams.activeTab === 'room' ? 'No rooms available' : 
+                 searchParams.activeTab === 'apartment' ? 'No apartments available' : 
+                 searchParams.activeTab === 'student_housing' ? 'No student housing available' :
                  'No properties available'}
               </p>
               <p className="text-sm text-gray-500">

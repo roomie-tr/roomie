@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
-import { FiChevronDown, FiDollarSign, FiUsers, FiUser } from 'react-icons/fi'
+import { FiChevronDown, FiDollarSign, FiUsers, FiUser, FiHome, FiArrowUp } from 'react-icons/fi'
 import Slider from '@mui/material/Slider'
 import '../styles/animations.css'
 import { BsGenderMale, BsGenderFemale } from 'react-icons/bs'
 
 function Search({ onSearch }) {
-  const [activeTab, setActiveTab] = useState('rent')
+  const [activeTab, setActiveTab] = useState('room')
   const [location, setLocation] = useState('')
   const [apartmentArea, setApartmentArea] = useState('')
   const [roomType, setRoomType] = useState('')
@@ -23,6 +23,7 @@ function Search({ onSearch }) {
     'Ataşehir, Istanbul'
   ])
   const preferences = ['male', 'female']
+  const apartmentAreas = ['1+1', '2+1', '3+1', '4+1', "duplex"]
 
   const searchRef = useRef(null);
 
@@ -64,12 +65,20 @@ function Search({ onSearch }) {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab)
+    if (tab === 'room') {
+      setRoomType('')
+      setPreference('')
+    } else if (tab === 'student_housing') {
+      setRoomType('')
+      setPreference('')
+    }
+    
     onSearch({
       activeTab: tab,
       location,
-      roomType,
-      preference,
-      apartmentArea
+      roomType: (tab === 'room' || tab === 'student_housing') ? roomType : '',
+      preference: (tab === 'room' || tab === 'student_housing') ? preference : '',
+      apartmentArea: tab === 'apartment' ? apartmentArea : ''
     })
   }
 
@@ -105,12 +114,13 @@ function Search({ onSearch }) {
       location,
       roomType,
       preference,
-      apartmentArea: area
+      apartmentArea: area,
+      isDuplex: area === 'duplex'
     })
   }
 
   const handleClearFilters = () => {
-    setActiveTab('rent')
+    setActiveTab('room')
     setLocation('')
     setApartmentArea('')
     setRoomType('')
@@ -118,7 +128,7 @@ function Search({ onSearch }) {
     setActiveDropdown(null)
     
     onSearch({
-      activeTab: 'rent',
+      activeTab: 'room',
       location: '',
       roomType: '',
       preference: '',
@@ -131,8 +141,19 @@ function Search({ onSearch }) {
       activeTab,
       location,
       roomType,
+      preference
+    })
+  }
+
+  const handleApartmentTypeSelect = (type) => {
+    setApartmentArea(type)
+    setActiveDropdown(null)
+    onSearch({
+      activeTab,
+      location,
+      roomType,
       preference,
-      apartmentArea
+      apartmentArea: type
     })
   }
 
@@ -147,40 +168,42 @@ function Search({ onSearch }) {
       {/* Main container */}
       <div className="relative bg-white/90 backdrop-blur-sm rounded-lg">
         {/* Tabs */}
-        <div className="flex justify-between border-b border-[#E0DEF7] overflow-x-auto">
-          <div className="flex">
-            <div className="relative min-w-[120px] h-[56px]">
-              <button 
-                className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'rent' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
-                onClick={() => handleTabChange('rent')}
-              >
-                Rooms
-              </button>
-              {activeTab === 'rent' && (
-                <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
-              )}
-            </div>
-
-            <div className="relative min-w-[120px] h-[56px]">
-              <button 
-                className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'buy' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
-                onClick={() => handleTabChange('buy')}
-              >
-                Apartments
-              </button>
-              {activeTab === 'buy' && (
-                <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
-              )}
-            </div>
+        <div className="flex items-center gap-8 border-b border-[#E0DEF7]">
+          <div className="relative min-w-[120px] h-[56px]">
+            <button 
+              className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'room' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
+              onClick={() => handleTabChange('room')}
+            >
+              Rooms
+            </button>
+            {activeTab === 'room' && (
+              <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
+            )}
           </div>
-          
-          {/* Clear Filters Button */}
-          <button
-            onClick={handleClearFilters}
-            className="min-w-[100px] px-4 sm:px-8 text-sm text-[#E9A159] hover:text-[#d08236] transition-colors duration-200 whitespace-nowrap"
-          >
-            Clear Filters
-          </button>
+
+          <div className="relative min-w-[120px] h-[56px]">
+            <button 
+              className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'apartment' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
+              onClick={() => handleTabChange('apartment')}
+            >
+              Apartments
+            </button>
+            {activeTab === 'apartment' && (
+              <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
+            )}
+          </div>
+
+          <div className="relative min-w-[120px] h-[56px]">
+            <button 
+              className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'student_housing' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
+              onClick={() => handleTabChange('student_housing')}
+            >
+              Student Housing
+            </button>
+            {activeTab === 'student_housing' && (
+              <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
+            )}
+          </div>
         </div>
 
         {/* Search Fields */}
@@ -218,7 +241,7 @@ function Search({ onSearch }) {
 
           <div className="hidden lg:block w-[1px] h-10 bg-[#E0DEF7]" />
 
-          {activeTab === 'rent' ? (
+          {activeTab === 'room' ? (
             <>
               {/* Room Type */}
               <div className="flex-1 min-w-0 relative">
@@ -352,7 +375,11 @@ function Search({ onSearch }) {
               hover:bg-[#d08236] transition-colors duration-300 cursor-pointer
               hover:shadow-md"
           >
-            Search {activeTab === 'rent' ? 'Rooms' : 'Apartments'}
+            Search {
+              activeTab === 'room' ? 'Rooms' : 
+              activeTab === 'apartment' ? 'Apartments' : 
+              'Student Housing'
+            }
           </button>
         </div>
       </div>
