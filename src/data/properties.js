@@ -4,41 +4,100 @@ export const properties = [
   {
     id: 1,
     type: 'room',
-    name: "غرفة للبنات في شيشلي",
-    price: 10000,
-    roomType: 'shared',
-    preference: 'female', 
+    name: "غرفة في شقة مشتركة في اسكودار",
+    price: 13000,
+    roomType: 'individual',
+    preference: 'male',
+    location: "Üsküdar, Istanbul",
+    coordinates: { lat: 41.0266, lng: 29.0163 },
+    googleMapsUrl: "https://maps.app.goo.gl/SnGTVrwes3ZbG9he8",
+    description: "متوفر سكن في اسكودار موجود غرفه قريبه من مرمراي و الساحل في شقة 3+1 لشباب. موقعها مميز يوجد في الشقة شخص واحد فقط. هم ثلاث غرف بثلاث شباب.",
     apartment: {
-      type: "3+1",
-      location: "شيشلي",
-      currentOccupants: 2,
-      description: "شقة 3+1 في شيشلي"
+      type: "1+3"
     },
+    amenities: [
+      "قريب من مرمراي",
+      "قريب من الساحل",
+      "مطبخ مشترك",
+      "انترنت",
+      "تدفئة"
+    ],
+    image: "https://media-hosting.imagekit.io//1def72562d6343b1/WhatsApp%20Image%202025-01-15%20at%2010.46.04_21499f37.jpg?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=tISHUsN6s8ZmJ7KOQxr5sHfxh1qKv89go~strNB7Otg~X5FqUPWMsY4Zy6Kty84FRRcuiTi2bq3ndbJxBJhrPrqtqogkpiPOD-UIYwCgRuRfimhpxSrigo4YOazYewfPjystGnkNJ0FnAhpOL9mmBVGsqggv5gvKYYQISmUb0x-zxBRmhZ~sStQSzvWU4dPriiGfWxNRSgXSHdkE61bsFsTkJ3-48xWlnmYaqD4~8KJ2XQSQMODZzNdCgdK-la8jcGsWwfcakc~fgwpIioypnYVqrBRYMSd98GLoZOhdCIovf02ev4BKldYPwB4fzNgwGsGmQrOMkHWarNw0YmIsmg__",
+    images: [
+      "https://media-hosting.imagekit.io//1def72562d6343b1/WhatsApp%20Image%202025-01-15%20at%2010.46.04_21499f37.jpg?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=tISHUsN6s8ZmJ7KOQxr5sHfxh1qKv89go~strNB7Otg~X5FqUPWMsY4Zy6Kty84FRRcuiTi2bq3ndbJxBJhrPrqtqogkpiPOD-UIYwCgRuRfimhpxSrigo4YOazYewfPjystGnkNJ0FnAhpOL9mmBVGsqggv5gvKYYQISmUb0x-zxBRmhZ~sStQSzvWU4dPriiGfWxNRSgXSHdkE61bsFsTkJ3-48xWlnmYaqD4~8KJ2XQSQMODZzNdCgdK-la8jcGsWwfcakc~fgwpIioypnYVqrBRYMSd98GLoZOhdCIovf02ev4BKldYPwB4fzNgwGsGmQrOMkHWarNw0YmIsmg__",
+      "https://media-hosting.imagekit.io//d5c38f9b035240ec/WhatsApp%20Image%202025-01-15%20at%2010.46.03_d2ad666d.jpg?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UNvYujAP-2JpSl~r-Lau2CkNEk-f2snY9cgZdLZ8iCdEI7n4iM1ZeYld6jmFLTYvch5w7FjaCgm8DmWHIL9tde-h~uMjpXKQ48IejIbrjiAn9vFJDr05veh6zmV0FKTfnXVLax3eLu5ZX~V7HwgyLcJBpD4-7CZSeUQwXe5cZFhj0vZPyRN~LzMCXM47iduajHgmMZ~loRhoIFvhBHqYeFJAblaX3EkZAnUJKwzh1wddJKEBtYJnpmKmqOPQ83BWp5HG9ispH5BEAUvOwRe5bZ8OjiPr0gt0BWOPJG0qnP566OeMKaU6b5OGzQHyrvj-1nFezzdZmDvf741Juu5k1Q__",
+      "https://media-hosting.imagekit.io//14306b7f07f04e4e/WhatsApp%20Image%202025-01-15%20at%2010.46.03_3caf0292.jpg?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KEPsnV9afh0hifbOTQhzghAvbSyZJdHWs9jmMZCZm-D7ENzdbTxD7VN7huowVDluEMxzy~vQ84TNrbkl8vQDOuu9Chwjy7iY0eByl8QaZJSIPYfcxwcfr581s0D8dSN6RxoNUvPLpTEsQmvV9Oa1NWUtBT53nuTIY6~8DWEKfoF~yAh9dEF-ef8N6Mi8q4Q6iDjEOPgH~zWn6grbSmUtmSWr-Hleai32GvaR9dUXhV~gU5UudRuQ7zm8vlBlL1gIwVDeplaaEtyeJwZ2B3bUVswKJ62umEbwMJP~BIPtJqA0oO3~1Fkm6AnW5rzqUQOYBdBW-D-Gryy7L6BFZa506Q__",
+    ],
+    videos: [
+      {
+        url: "https://media-hosting.imagekit.io//30e7d5a64d9f4d22/WhatsApp%20Video%202025-01-15%20at%2010.46.03_e9420da5.mp4?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zK7WOsI4UVuAW3XId1CdcMeuGXhK1zclBC3heXnuOBZf4bgTRrto~H4gQV3QugUdVAkmdo-Y-RLMEAUSXrmrq6OHEJZhY9K8iG7lxE1W5w1i0Sf9UriH0PLeS3h6y1zC2P~mtwKoNuM6FxsSylFDzMVWenSvt-i0ZTABK8YO9-Tg0z8Fa36XXgmX4mcxrR0pNMBeSpEW2rik19I~vt-zRB-ehnsBICM8sU0C0Q1vEsHwC~UIHmSzTQLMxkph1r5Sbj81tUeRDyCPzagmmZAyP8nuMI1EZRmvsvxNIU9jIjj3J5tb8jfiI0lP5lBNKsHZGz2kCphMxHItGNWn0X0vcQ__",
+        thumbnail: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+      }
+    ],
+    deposit: {
+      required: false,
+      description: "لا يوجد تأمين مطلوب"
+    }
+  },
+  {
+    id: 2,
+    type: 'room',
+    name: "غرفة للطالبات في شيشلي",
+    price: 14000,
+    roomType: 'individual',
+    preference: 'female',
+    location: "Şişli, Istanbul",
+    coordinates: { lat: 41.0743865966797, lng: 28.9878005981445 },
+    googleMapsUrl: "https://www.google.com/maps?q=41.0743865966797,28.9878005981445",
+    description: "متوفر غرفة للبنات في شقة 2+1 في شيشلي موقعها مميز تبعد عن مترو 5 دقائق فقط مع اطلالة مميزة. الشقة مؤثثة بالكامل وجاهزة للسكن.",
+    apartment: {
+      type: "1+2"
+    },
+    amenities: [
+      "قريب من المترو",
+      "اطلالة مميزة",
+      "مطبخ مشترك",
+      "انترنت",
+      "تدفئة مركزية"
+    ],
+    image: "https://media-hosting.imagekit.io//df164f4eba974d06/WhatsApp%20Image%202025-01-27%20at%2011.45.35%20AM.jpeg?Expires=1832575704&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=J9F7VIRSLtHTdwwuMiJgAlHhA3p8szs1kaBLRTDsumCIHDstTbLkAQgUuzSkFuCHE58hdEmqPVYkxIDHMGPHcC8zR-BGmZ1qCaeQdzCO2dPB0UJYPLfW7KVGqhkpFZ4Y4WVN7Gq98WPRvwceRaiuP8v17S03TJBAuTgmwC9LYYCTbmTkzCrBh5PiFLvD0vbbzotoqBDPQKqYGkQZtVxudq1mO2~enakq~MbXDCWWi8z9jK3QD7tt57x7Eup6e4SymmoF7fwBHhpsROWo6PGVPBzaF4bx2Blu-c3qAZ-EOC4l2qLe9oezky10YxFN9ah9~EJyB75VoC4nw37SmEo5Bg__",
+    images: [
+      "https://media-hosting.imagekit.io//fafcc33ca44f420f/WhatsApp%20Image%202025-01-27%20at%2011.45.36%20AM.jpeg?Expires=1832575704&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=XtrZDxJwE5H3-DBKv8RXdq4QCX8f6u~Jl0tqJQ-vbM~KHQam5As9fWol513Bz~OgZbtguvlvbbuvpoUUg6In5Ja-dHsU6xlw8lSnDUlZGr5mY55fCiL6Z-r2oK8yNmSzhdOo9X74lRHx2BtRX0cq488m6N~nmPE04vVJgtbgW4Jm40Bxv8kY29nJw5KY5AiS3INqkNgxywqQfpefMSZ0Z6K~MeBgG38PA4zgofZkG7W0ZWYsLaqQ03OpgPWnV60zHwPi7ECDKsOP9uLVFGxTo5t6LGsTpNEQE0XjzYiyA7vmNfIAWNK0LCrtY4JPLwBO2PMKGBx07ioNO2oSq6hJZw__",
+      "https://media-hosting.imagekit.io//df164f4eba974d06/WhatsApp%20Image%202025-01-27%20at%2011.45.35%20AM.jpeg?Expires=1832575704&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=J9F7VIRSLtHTdwwuMiJgAlHhA3p8szs1kaBLRTDsumCIHDstTbLkAQgUuzSkFuCHE58hdEmqPVYkxIDHMGPHcC8zR-BGmZ1qCaeQdzCO2dPB0UJYPLfW7KVGqhkpFZ4Y4WVN7Gq98WPRvwceRaiuP8v17S03TJBAuTgmwC9LYYCTbmTkzCrBh5PiFLvD0vbbzotoqBDPQKqYGkQZtVxudq1mO2~enakq~MbXDCWWi8z9jK3QD7tt57x7Eup6e4SymmoF7fwBHhpsROWo6PGVPBzaF4bx2Blu-c3qAZ-EOC4l2qLe9oezky10YxFN9ah9~EJyB75VoC4nw37SmEo5Bg__",
+      "https://media-hosting.imagekit.io//9b9bcfc2f17546b5/WhatsApp%20Image%202025-01-27%20at%2011.45.36%20AM%20(1).jpeg?Expires=1832575704&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=on44kmfo0sWi~o7YL6U37FkW1dxrIMLGm8MsIz8GoPcrPtTOKw3OsYHgOXkWMClzBI4L3OTq~e-Jlsd04~GjuhYvLuXLPZIFlaKMhuciU4JP-SaVo~Hfd9d6B79zXzrRe77MdmvmKJmGMx4sarAToUy0laVN9bU~Rwvebf~wtcUFANcGNTFx1-EX3xpCBwqcqLyrYZt-qkF8VyEjnFoxeUWWovpGcwR8S4EvTdi74hiLrLtoMz3MB108qHdtwN~qVlvIcl0ZlW4frbE8vY9RQyUYWV8dVb2kJN~zsU3cZUi~3pedYN1fr3qhnErAlnNnrROuqKHj1SlOst95ELdtxw__",
+      "https://media-hosting.imagekit.io//cee135edf6694e83/WhatsApp%20Image%202025-01-15%20at%2011.32.25_58bae13c.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=SKIEcX~ahDqUFUkKbwZAJBhjnFEdYQdDnlnIb8V5WKqTMnGJMb5r0V3-jP2TcREtYCoxXfgB4qSQClIYqdWWknyUk8sLy2klZC4KFZtrUFZVcJDJJWOEeVA7WINOwfty5I4pP1qIKTxEJ7Dk-78ta0peCRu0i5jFuxEriRdnAId~S0GFsvkcfpm~6e4uzIjPD1EBWqv8cW71HKUy5D0zXr5bOFC7j4MVtxFFbqKs2e~i3HQ60ONJSuhtEGQVJnZ4Cc~bduYcPTLYwCmP3fgjqo~IDUSIEPBLKi1Xmx~C2bHrGaegAaY94-t1g7NXt1UZmQ-To6l7M7ahqooRJfC7bw__",
+      "https://media-hosting.imagekit.io//7073d74d63894f72/WhatsApp%20Image%202025-01-15%20at%2011.32.25_28ddb73c.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=VDf1eFqoqumF0IWb2WMFMtcgSVd~nk9HIt5FV0YZJ8Fcw8o8A5CwQbmbDFsGdABr5Y5aiAGtKgENr4AzKb7mLCsCUKl355uFqwyFZeMEjpB3~RVYB5Paw~zv1J9SRX9LZPoxhtaXEqv0r-1EeZzhRtAzVstF4TXQ09KcyAlXHfPeaB93BeX8O9N8Q-yJ~RogF6KMdpWOP6TGbC0zcL8t4St~Fmfby~wlYJp-1vtjneA3L5m72bXNJsNTEAPqcxRqN6InjeFb-LuD0e4JjjGH47tu1pDIPmcQHL90d2uh51HCZwNQ3esWpjmLr42U6yZcXk9ICFkqJmJuKMaJY4wmUw__",
+      "https://media-hosting.imagekit.io//9e5e8223de0e4998/WhatsApp%20Image%202025-01-15%20at%2011.32.24_f4633e9e.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=JoNMinM8e7D5H2fMLeOIP~nj2~KjfliOPgj0o3~-WQk3dkszmHx~x90Kj1LE0ml4sa21NnrX24bcj4PU6kQuYZS5~HyPDuNGLbyb1iqlVsNtyqEz84UI2Hzp45SMvFOjgf2jj~TGQ~xNyAmoKRWIdQhvkXGmIFmdV4yOdxhEP0IQ7teXF8YFT1lHtcT~TBiFGe~8Zrv5n0DLQ~jGTUc9R0~g9ZmNVzI0uc2j6V7WfxVYvsYL0WfW6Wb1j8uw7eAJP7UA4Y9KA-9K7sal7j4RAZJlpVnlyOD2vmYvnVeoZn07ZJxTZB1WZbicrq9Us6oYJElWjv49kiHkZVm9l9xp-A__",
+      "https://media-hosting.imagekit.io//580b15d30ade4443/WhatsApp%20Image%202025-01-15%20at%2011.32.24_0396f271.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=CAmhJiirgjkW3dRZT5rF0-kg8lqQOa1SCTKScu9cnvS9TwfiDrypvppsW8W-PbX-82CFbfqXC7SX6rryfdFfvQLRyLXO2Bk7JABaMm-Y97hS7Akun9uRzAGNbeN9k0Y-TZc6xAjZntCnf66tuX4KX-me4CelVFOs7Zva37SsTj9vtu7XO2b5mq79HMSIFEtw1f0Ku7zLQzUbc2BxC2ijXJAV7VH5Nmyd1rLSGUO71fSqGe9lEh~OLrg5GQdspHpHkGfQD425QZnsk~L4WKJwMDqEJjZXcw0BpF0bSKcDPAkIZqpE8irKbmQlzjVrVvZKm8S5gASVaXCFp-BNn~DspA__",
+      "https://media-hosting.imagekit.io//ed1ddf71baf3484c/WhatsApp%20Image%202025-01-15%20at%2011.32.24_4ba7d183.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=N9mTB0YseDIwRU~AFr8cVvHwQ2C~nr8bWCTGpCk1N8QAX1YlJ~9tH3BFil11ylrVEB8QLegARbB6r1PjvpEIA4W1HGevXF~i4sKZS-TwKFDFB~8-eENJax~etph16lnGqLtD3uDs2WMzS-IGhFG5umSS6iM5yiDG3xSU1oFb~EDI5oNcZUQP0jypzHyhpvKvQvbCxwoCOaYfiP62myTV1JWiKCW75rDRHL-sU-XdlU~JvBXRmEDvczmQNO~ypGbQj9-0U7tLYtbtBlNrmQ2zHoa7kQ4-wxJwFOsm0YTmDST2n~q5DNurMP8~RtwMpS8h84W8k3GdSIv5~1T9b98GiQ__"
+    ],
+    deposit: {
+      required: false,
+      description: "لا يوجد تأمين مطلوب"
+    }
+  },
+  {
+    id: 3,
+    type: 'room',
+    name: "غرفة للطالبات في شيشلي",
+    price: 10000,
+    roomType: 'individual',
+    preference: 'female', 
     location: "Şişli, Istanbul",
     address: "Gülseren Sk. No:10",
     coordinates: { lat: 41.0605, lng: 28.9877 },
     googleMapsUrl: "https://www.google.com/maps/place/Fulya,+G%C3%BClseren+Sk.+No:10,+34394+%C5%9Ei%C5%9Fli%2F%C4%B0stanbul,+T%C3%BCrkiye/@41.0598016,28.9954572,20z/data=!4m15!1m8!3m7!1s0x14cab7013a469d27:0xf43e712c5a06ccbf!2zRnVseWEsIEfDvGxzZXJlbiBTay4gTm86MTAsIDM0Mzk0IMWeacWfbGkvxLBzdGFuYnVsLCBUw7xya2l5ZQ!3b1!8m2!3d41.0597672!4d28.9955704!16s%2Fg%2F11c4xyjf81!3m5!1s0x14cab7013a469d27:0xf43e712c5a06ccbf!8m2!3d41.0597672!4d28.9955704!16s%2Fg%2F11c4xyjf81?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D ",
     description: "غرفة للبنات في شقة 3+1 في شيشلي موقعها مميز جدا خلال 5 دقائق تصل لمترو M7 & M2",
+    apartment: {
+      type: "1+2"
+    },
     amenities: [
       "قرب المترو",
-      "قرب جامعة ميديبول"
+      "قرب جامعة ميديبول",      
+      "مطبخ مشترك",
+      "انترنت",
+      "تدفئة مركزية"
     ],
-    deposit: {
-      required: true,
-      amount: 10000,
-      refundable: true,
-      description: "تأمين 10 ألف مُسترد"
-    },
-    residencyPermit: {
-      available: true,
-      description: "متاح تثبيت نفوس"
-    },
-    occupancy: {
-      total: 3,
-      current: 2,
-      available: 1,
-      description: "في بالشقة بنتين"
-    },
     image: "https://media-hosting.imagekit.io//0fb1912bc4ef4625/WhatsApp%20Image%202025-01-15%20at%2012.00.08_e4655fab.jpg?Expires=1832313613&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TcAz-OVP-mD-oel~V0icvcmSY9LjPHK-5p8JHBSKvBOaJcRpDJjwfztuGUvofO0GLowNdKDabAed~WbTQ5Ylu7GYM5gH~U2z8kZBVK9h6iwpM6qknbFjqbpOv7mkk2h~v9wwLsdaX0g9JXKvF2D4Q9apwHBwmg2lxD6z0eH2tDbkMznjdMIhHgoDLqr4aq0XlNKrlQlLfqE9m9AGC6f~C0enoRlTUHjTuSkdM8MoZN3QYK3vmXdcVi4EYezFH9Akov96onaS-QgrJoqbZZ1eB4o93syYCLJNxAyaT0Cp9NbwIbqMS6dGDcDFgwBJkotW66tASBCqaLAgNMquqUUtrw__",
     images: [
       "https://media-hosting.imagekit.io//0fb1912bc4ef4625/WhatsApp%20Image%202025-01-15%20at%2012.00.08_e4655fab.jpg?Expires=1832313613&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TcAz-OVP-mD-oel~V0icvcmSY9LjPHK-5p8JHBSKvBOaJcRpDJjwfztuGUvofO0GLowNdKDabAed~WbTQ5Ylu7GYM5gH~U2z8kZBVK9h6iwpM6qknbFjqbpOv7mkk2h~v9wwLsdaX0g9JXKvF2D4Q9apwHBwmg2lxD6z0eH2tDbkMznjdMIhHgoDLqr4aq0XlNKrlQlLfqE9m9AGC6f~C0enoRlTUHjTuSkdM8MoZN3QYK3vmXdcVi4EYezFH9Akov96onaS-QgrJoqbZZ1eB4o93syYCLJNxAyaT0Cp9NbwIbqMS6dGDcDFgwBJkotW66tASBCqaLAgNMquqUUtrw__"
@@ -47,44 +106,36 @@ export const properties = [
       {
         url: "https://media-hosting.imagekit.io//a363287145c34317/WhatsApp%20Video%202025-01-15%20at%2012.00.32_8d43f128.mp4?Expires=1832313613&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=o36-VfkuL8lOHSJjX-HZkl6LsXuiEcvrFaVtlU5ckNyi4fvNtKf2lG6DvP4uo43jtJZq0XGtacf0TXovDZA6m6BPMLNORpx~Lk3Cb8wJt-K9-XF5F-WVarD8KC7wEW6h3~gvysIAN-JzHNosmPBtDYhGYwEr9mM~vqrNkxV9DLNVpwyYkNgpE3d3ihzDFOIOiDL01wS4~CYndljM2Q-tNgOKfD1hwp~2e3Ydg5Ux0xdNjCanJxd1R9pO6LYvb9bbJb0Gs2MAo~tR95mWtaUs6q3h0b-5vozwv0guzKntnbj8gs6TslSQmjEEmxEGvL7v2G3M3AiskelcJvvpDdN4kw__"
       }
-    ]
+    ],
+    deposit: {
+      required: true,
+      amount: "شهر",
+      description: "شهر تأمين"
+    }
    },
    {
-    id: 2,
+    id: 4,
     type: 'room',
     name: "غرفة للشباب في أوسكودار",
     price: 9500,
-    roomType: 'shared',
+    roomType: 'individual',
     preference: 'male',
     location: "Üsküdar, Istanbul",
     coordinates: { lat: 41.0234, lng: 29.0152 },
     googleMapsUrl: "https://maps.app.goo.gl/8EXVRJBKjUAmwmhU9",
     description: "غرفة لطلاب في شقة 3+1 في اوسكودا عند الساحل موقعها مميز جدا 5 دقائق بعيده عن مرمراي و ٥ دقائق بعيده عن m5",
+    apartment: {
+      type: "1+3"
+    },
     amenities: [
       "قرب المرمراي",
       "قرب المترو M5",
       "على الساحل",
     ],
-    apartment: {
-      type: "3+1",
-      location: "اوسكودار",
-      currentOccupants: 2,
-      description: "شقة 3+1 في اوسكودار"
-    },
     deposit: {
       required: false,
       amount: 0,
       description: "لا يوجد تأمين"
-    },
-    occupancy: {
-      total: 4,
-      current: 3,
-      available: 1,
-      description: "في بالشقة ثلاث شباب"
-    },
-    utilities: {
-      included: true,
-      description: "شامل فواتير"
     },
     image: "https://media-hosting.imagekit.io//864cd9aaebbd48dc/WhatsApp%20Image%202025-01-15%20at%2013.20.32_ed9e855b.jpg?Expires=1832314100&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=fifnLs7M1N94HP94mAGIqjufSRSoO4sTlBKioT1M3LfdVLp3zBWzXQkZkOcS03MKbyWkmweVyHg6C-GP8m8Gr6zORqCyn1qxIvrRymH7PBAygizHgx5RDCqHLgFRyWhVqQxBb5j0cF5q6XiEqiegDXFzXPCU0kKXtxSqok6K7peexApMWUUWCuUoibLEIExuHDAcmJ1VVvEtGBpWezSQkuQZqRIR6CPymaVC80YocKkU~hVR~my~jkRHQdRnCyJseRCC4EYyp7kArc4VF8bmSmjou4~YRSWjWHKcvKgSTwYp2WWTetSF3GhZBb9Z7hJ5uIoniSH7IukFL4JPxQCYXA__",
     images: [
@@ -101,43 +152,7 @@ export const properties = [
     ]
    },
    {
-    id: 3,
-    type: 'room',
-    name: "غرفة للطلاب في بشكتاش",
-    price: 18000,
-    roomType: 'individual',
-    preference: 'male',
-    location: "Beşiktaş, Istanbul",
-    coordinates: { lat: 41.0430, lng: 29.0082 },
-    googleMapsUrl: "https://maps.google.com/maps?q=Akdoğan+Sk.+No:34+Beşiktaş",
-    description: "غرفة لطلاب في شقة 2+1 في بيشكتاش موقعها مميز جدا في ميدان بيشكتاش",
-    availableFrom: "نهاية شهر 1",
-    apartment: {
-      type: "2+1",
-      location: "ميدان بيشكتاش"
-    },
-    deposit: {
-      required: false,
-      amount: 0,
-      description: "لا يوجد تامين"
-    },
-    amenities: [
-      "موقعها مميز جدا في ميدان بيشكتاش"
-    ],
-    videos: [
-      {
-        url: "https://media-hosting.imagekit.io//c13ffa16a0ec4bcb/WhatsApp%20Video%202025-01-15%20at%2014.24.59_cb4b7306.mp4?Expires=1832315240&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wATOE4nR8Pmk3wW4vcM8khHJDQmPhH1H9znNxcShpX5aRh~dKn54sIXOxB~kAF-np1D9NzKNBbLQfXG3KEi5XRqjXoZNyuy1sDVhnSPvBSZFfBlYZ4lCKJ2oMH6j~T1uXkc0rBN0c6Yl9l21W0y2QmmykC1Lv-h2rUvVEnUWU1jEHeau4B6FmQ58pntnNIqUZSi2zLq6op251WiKos9bAiJ2k-kV7Eu8kmQYq5MDrxdDYplFh-av65B~v1MgNWruH2Jmex0KxeGWdMYE5iUqlDxicUQqCsXExVS3xgImLlNeZK7BPE8KUqd0QVHPyNzqeuAk~2qatY2cB~I4EI8iOQ__",
-        thumbnail: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
-      },
-      {
-        url: "https://media-hosting.imagekit.io//eee8c581ab124372/WhatsApp%20Video%202025-01-15%20at%2014.24.57_23766870.mp4?Expires=1832315240&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=LxdF72YGcVqWiJamytJ86Zo0WobvmSbGeJqQIBFpGAkL1yxa4618aGprUmm81zFixymRwujE~qjTVquK9TawVjg-qb8SVzRwrYuuiEGfVO3oPFgwHpjsl3Z9gnL5lso3~VEl~uh6lG0DEATOSznO6-yeOwGThqw7XfBdj3NCF3lQ79pB4o5CXhqH-QPn-Lwn7hrjwXqN3IF0ohEYEET92D5BmhSR~32XSK434hUVmf-CdFnB3m7fgMpUrFftK47nVIcp5q6gvG~gy5Zm5CvNPCj6gVvi1HUYC3kwNC2FifHejDqXc0egF4nD48NiJhUMED-fVdn4MgqBkbT8bhRB5w__",
-        thumbnail: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
-
-      }
-    ]
-   },
-   {
-    id: 4,
+    id: 5,
     type: 'student_housing',
     name: "سكن طلابي في افجيلار",
     price: 10000,
@@ -161,7 +176,7 @@ export const properties = [
       }
     },
    
-    totalRooms: 20,
+    totalRooms: 40,
     
     amenities: [
       "وجبة افطار",
@@ -202,72 +217,66 @@ export const properties = [
       }
     ]
    },
-  {
-    id: 5,
+   {
+    id: 6,
     type: 'room',
-    name: "غرفة في شقة مشتركة في اسكودار",
-    price: 13000,
+    name: "غرفة للطلاب في بشكتاش",
+    price: 17800,
     roomType: 'individual',
     preference: 'male',
-    location: "Üsküdar, Istanbul",
-    coordinates: { lat: 41.0266, lng: 29.0163 },
-    googleMapsUrl: "https://maps.app.goo.gl/SnGTVrwes3ZbG9he8",
-    description: "متوفر سكن في اسكودار موجود غرفه قريبه من مرمراي و الساحل في شقة 3+1 لشباب. موقعها مميز يوجد في الشقة شخص واحد فقط. هم ثلاث غرف بثلاث شباب.",
+    location: "Beşiktaş, Istanbul",
+    coordinates: { lat: 41.0430, lng: 29.0082 },
+    googleMapsUrl: "https://maps.google.com/maps?q=Akdoğan+Sk.+No:34+Beşiktaş",
+    description: "غرفة لطلاب في شقة 2+1 في بيشكتاش موقعها مميز جدا في ميدان بيشكتاش",
+    apartment: {
+      type: "1+2"
+    },
+        deposit: {
+      required: false,
+      amount: 0,
+      description: "لا يوجد تامين"
+    },
     amenities: [
-      "قريب من مرمراي",
-      "قريب من الساحل",
-      "شقة 3+1",
+      "موقعها مميز جدا في ميدان بيشكتاش",
       "مطبخ مشترك",
-      "حمام مشترك",
       "انترنت",
-      "تدفئة"
+      "تدفئة مركزية"
     ],
-    image: "https://media-hosting.imagekit.io//1def72562d6343b1/WhatsApp%20Image%202025-01-15%20at%2010.46.04_21499f37.jpg?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=tISHUsN6s8ZmJ7KOQxr5sHfxh1qKv89go~strNB7Otg~X5FqUPWMsY4Zy6Kty84FRRcuiTi2bq3ndbJxBJhrPrqtqogkpiPOD-UIYwCgRuRfimhpxSrigo4YOazYewfPjystGnkNJ0FnAhpOL9mmBVGsqggv5gvKYYQISmUb0x-zxBRmhZ~sStQSzvWU4dPriiGfWxNRSgXSHdkE61bsFsTkJ3-48xWlnmYaqD4~8KJ2XQSQMODZzNdCgdK-la8jcGsWwfcakc~fgwpIioypnYVqrBRYMSd98GLoZOhdCIovf02ev4BKldYPwB4fzNgwGsGmQrOMkHWarNw0YmIsmg__",
+    image: "https://media-hosting.imagekit.io//c4fe4d102ae74899/Screenshot%202025-01-27%20122923.png?Expires=1832578206&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TmdiqLClZiNNEgr3znllPWF4zDANd1lhEiHo~yxhVCJlZghJkIgsKzoqj7LbjyP80KqEy7dkhmWqv1844bPC46r5HCeZCtudOm3a2Hk11k0SSZdBjNE8LzeGA9aQMHpFBqC7jIXD9Dj7cloRX2v6YNfjSUYJ2F69yeEGrDL1rEvvrmbEDXS~Y~87tjN5G1bAcgtHylcwd-Wbjj3vL71EGepihBskESg12H5OjncQh0E5kRMrlHZNiBH6VS-shLrPtqtAYy7j7pjSZP2oT5QO9B-rt3s5bbfl-lA4CB-TvB9wGXEKR9rAbAiOrL95GeRxiymALPE6CcTgoC5QBF9IRQ__",
     images: [
-      "https://media-hosting.imagekit.io//1def72562d6343b1/WhatsApp%20Image%202025-01-15%20at%2010.46.04_21499f37.jpg?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=tISHUsN6s8ZmJ7KOQxr5sHfxh1qKv89go~strNB7Otg~X5FqUPWMsY4Zy6Kty84FRRcuiTi2bq3ndbJxBJhrPrqtqogkpiPOD-UIYwCgRuRfimhpxSrigo4YOazYewfPjystGnkNJ0FnAhpOL9mmBVGsqggv5gvKYYQISmUb0x-zxBRmhZ~sStQSzvWU4dPriiGfWxNRSgXSHdkE61bsFsTkJ3-48xWlnmYaqD4~8KJ2XQSQMODZzNdCgdK-la8jcGsWwfcakc~fgwpIioypnYVqrBRYMSd98GLoZOhdCIovf02ev4BKldYPwB4fzNgwGsGmQrOMkHWarNw0YmIsmg__",
-      "https://media-hosting.imagekit.io//d5c38f9b035240ec/WhatsApp%20Image%202025-01-15%20at%2010.46.03_d2ad666d.jpg?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UNvYujAP-2JpSl~r-Lau2CkNEk-f2snY9cgZdLZ8iCdEI7n4iM1ZeYld6jmFLTYvch5w7FjaCgm8DmWHIL9tde-h~uMjpXKQ48IejIbrjiAn9vFJDr05veh6zmV0FKTfnXVLax3eLu5ZX~V7HwgyLcJBpD4-7CZSeUQwXe5cZFhj0vZPyRN~LzMCXM47iduajHgmMZ~loRhoIFvhBHqYeFJAblaX3EkZAnUJKwzh1wddJKEBtYJnpmKmqOPQ83BWp5HG9ispH5BEAUvOwRe5bZ8OjiPr0gt0BWOPJG0qnP566OeMKaU6b5OGzQHyrvj-1nFezzdZmDvf741Juu5k1Q__",
-      "https://media-hosting.imagekit.io//14306b7f07f04e4e/WhatsApp%20Image%202025-01-15%20at%2010.46.03_3caf0292.jpg?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KEPsnV9afh0hifbOTQhzghAvbSyZJdHWs9jmMZCZm-D7ENzdbTxD7VN7huowVDluEMxzy~vQ84TNrbkl8vQDOuu9Chwjy7iY0eByl8QaZJSIPYfcxwcfr581s0D8dSN6RxoNUvPLpTEsQmvV9Oa1NWUtBT53nuTIY6~8DWEKfoF~yAh9dEF-ef8N6Mi8q4Q6iDjEOPgH~zWn6grbSmUtmSWr-Hleai32GvaR9dUXhV~gU5UudRuQ7zm8vlBlL1gIwVDeplaaEtyeJwZ2B3bUVswKJ62umEbwMJP~BIPtJqA0oO3~1Fkm6AnW5rzqUQOYBdBW-D-Gryy7L6BFZa506Q__",
-    ],
+      "https://media-hosting.imagekit.io//c4fe4d102ae74899/Screenshot%202025-01-27%20122923.png?Expires=1832578206&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=TmdiqLClZiNNEgr3znllPWF4zDANd1lhEiHo~yxhVCJlZghJkIgsKzoqj7LbjyP80KqEy7dkhmWqv1844bPC46r5HCeZCtudOm3a2Hk11k0SSZdBjNE8LzeGA9aQMHpFBqC7jIXD9Dj7cloRX2v6YNfjSUYJ2F69yeEGrDL1rEvvrmbEDXS~Y~87tjN5G1bAcgtHylcwd-Wbjj3vL71EGepihBskESg12H5OjncQh0E5kRMrlHZNiBH6VS-shLrPtqtAYy7j7pjSZP2oT5QO9B-rt3s5bbfl-lA4CB-TvB9wGXEKR9rAbAiOrL95GeRxiymALPE6CcTgoC5QBF9IRQ__",
+     ],
     videos: [
       {
-        url: "https://media-hosting.imagekit.io//30e7d5a64d9f4d22/WhatsApp%20Video%202025-01-15%20at%2010.46.03_e9420da5.mp4?Expires=1832258879&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zK7WOsI4UVuAW3XId1CdcMeuGXhK1zclBC3heXnuOBZf4bgTRrto~H4gQV3QugUdVAkmdo-Y-RLMEAUSXrmrq6OHEJZhY9K8iG7lxE1W5w1i0Sf9UriH0PLeS3h6y1zC2P~mtwKoNuM6FxsSylFDzMVWenSvt-i0ZTABK8YO9-Tg0z8Fa36XXgmX4mcxrR0pNMBeSpEW2rik19I~vt-zRB-ehnsBICM8sU0C0Q1vEsHwC~UIHmSzTQLMxkph1r5Sbj81tUeRDyCPzagmmZAyP8nuMI1EZRmvsvxNIU9jIjj3J5tb8jfiI0lP5lBNKsHZGz2kCphMxHItGNWn0X0vcQ__",
-        thumbnail: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+        url: "https://media-hosting.imagekit.io//c13ffa16a0ec4bcb/WhatsApp%20Video%202025-01-15%20at%2014.24.59_cb4b7306.mp4?Expires=1832315240&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wATOE4nR8Pmk3wW4vcM8khHJDQmPhH1H9znNxcShpX5aRh~dKn54sIXOxB~kAF-np1D9NzKNBbLQfXG3KEi5XRqjXoZNyuy1sDVhnSPvBSZFfBlYZ4lCKJ2oMH6j~T1uXkc0rBN0c6Yl9l21W0y2QmmykC1Lv-h2rUvVEnUWU1jEHeau4B6FmQ58pntnNIqUZSi2zLq6op251WiKos9bAiJ2k-kV7Eu8kmQYq5MDrxdDYplFh-av65B~v1MgNWruH2Jmex0KxeGWdMYE5iUqlDxicUQqCsXExVS3xgImLlNeZK7BPE8KUqd0QVHPyNzqeuAk~2qatY2cB~I4EI8iOQ__",
+        thumbnail: "https://media-hosting.imagekit.io//e84cad1aa61d4de4/Screenshot%202025-01-27%20122737.png?Expires=1832578391&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wBdv62xWa6DI0mb05FzGsFQM8tLeMxCZpBYs3zool21G2IpR-N~3~STcoowB5Fs38TesyTHs~aE~KVjqQxLz-GRZkoK57iSOnqeV0RD-wIJvpr90SwsAbJQJzAFUgCa3VvGpKvutS04pnJugcqXtLp9fpSEj8YLgrJJoTpS3tESrdtLF1NBSXcNCe9tdY8phmjeRjd9zMqOpTQq1uWPaSyDOMQ9rXCO5Idc~b1-xdF0b1NJX6BePVFtAGsy3p2w4XUTK6Ta7Z9bsqRMAmJt0XWU6aewNsJ-MYIj8kk9Jez~nOQwDK-5HgyLps4xenEff75ai376kBCA3vB1dPMoMzA__"
       },
       {
-        url: "https://media-hosting.imagekit.io//e8b22b86ad124229/rent1.mp4?Expires=1832183611&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ci4~sVJBMNHej6pYO-Zez1UZDGNoLwzYmw8nkBPdmcnklVcT8v5eq28Mdq25GFRzwC5OWHBTmmQqbTBOJQRpWlzL7svqAl5QQuzJiMV65i3C6eiwy0qZT-oJgDepzrhU2MEfSk2bui1Q-QJYjR-wnFnsLh8fKFLf4fi7A1xYP7QukChOSSZxKXvw1n3qa~S9flhTjjPY32fm4tCQDFz74KE5lHWl0KhaCwjqLv8slSiIAghRLbDqb8eAAPVvxWcl8~XQ5ie2qC5JQnJnBf21~gWs2FejDgEzDoGdS6y7F7zM5~iiOpWFBik~HA7UX-C6K-dqtJNNGEfCL14iY89Y6Q__",
-        thumbnail: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267"
+        url: "https://media-hosting.imagekit.io//eee8c581ab124372/WhatsApp%20Video%202025-01-15%20at%2014.24.57_23766870.mp4?Expires=1832315240&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=LxdF72YGcVqWiJamytJ86Zo0WobvmSbGeJqQIBFpGAkL1yxa4618aGprUmm81zFixymRwujE~qjTVquK9TawVjg-qb8SVzRwrYuuiEGfVO3oPFgwHpjsl3Z9gnL5lso3~VEl~uh6lG0DEATOSznO6-yeOwGThqw7XfBdj3NCF3lQ79pB4o5CXhqH-QPn-Lwn7hrjwXqN3IF0ohEYEET92D5BmhSR~32XSK434hUVmf-CdFnB3m7fgMpUrFftK47nVIcp5q6gvG~gy5Zm5CvNPCj6gVvi1HUYC3kwNC2FifHejDqXc0egF4nD48NiJhUMED-fVdn4MgqBkbT8bhRB5w__",
+        thumbnail: "https://media-hosting.imagekit.io//e84cad1aa61d4de4/Screenshot%202025-01-27%20122737.png?Expires=1832578391&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wBdv62xWa6DI0mb05FzGsFQM8tLeMxCZpBYs3zool21G2IpR-N~3~STcoowB5Fs38TesyTHs~aE~KVjqQxLz-GRZkoK57iSOnqeV0RD-wIJvpr90SwsAbJQJzAFUgCa3VvGpKvutS04pnJugcqXtLp9fpSEj8YLgrJJoTpS3tESrdtLF1NBSXcNCe9tdY8phmjeRjd9zMqOpTQq1uWPaSyDOMQ9rXCO5Idc~b1-xdF0b1NJX6BePVFtAGsy3p2w4XUTK6Ta7Z9bsqRMAmJt0XWU6aewNsJ-MYIj8kk9Jez~nOQwDK-5HgyLps4xenEff75ai376kBCA3vB1dPMoMzA__"
+
       }
-    ],
-    commission: {
-      type: 'fixed',
-      value: 5000,
-      description: "عمولة 5000 ليرة تركية"
-    },
-    deposit: {
-      required: false,
-      description: "لا يوجد تأمين مطلوب"
-    }
-  },
+    ]
+   },
   {
-    id: 6,
+    id: 7,
     type: 'room',
     name: "غرفة للطالبات في داود باشا",
     price: 8500,
-    roomType: 'shared',
+    roomType: 'individual',
     preference: 'female',
     location: "Davutpaşa, Istanbul",
     coordinates: { lat: 41.0257, lng: 28.8932 },
     googleMapsUrl: "https://maps.app.goo.gl/rQ187H25cXx1v2bx5",
     description: "غرفة لطالبات في شقة 3+1 لا منطقة داود باشا بين مارتر وجيفيزليبا بعيدة عن مترو M1 خمس دقايق مشي",
-    
     apartment: {
-      type: "3+1",
-      totalRooms: 3,
-      studentsPerRoom: 2
+      type: "1+3"
     },
-   
     amenities: [
-      "قرب المترو M1"
+      "قرب المترو M1",
+      "مطبخ مشترك",
+      "انترنت",
+      "تدفئة مركزية"
     ],
    
     deposit: {
@@ -286,57 +295,8 @@ export const properties = [
       }
     ]
    },
-//   {
-//     id: 6,
-//     type: 'buy',
-//     name: "غرفة للطالبات في شيشلي",
-//     price: 14000,
-//     apartmentArea: '2 + 1',
-//     location: "Şişli, Istanbul",
-//     coordinates: { lat: 41.0743865966797, lng: 28.9878005981445 },
-//     googleMapsUrl: "https://www.google.com/maps?q=41.0743865966797,28.9878005981445",
-//     description: "متوفر غرفة للبنات في شقة 2+1 في شيشلي موقعها مميز تبعد عن مترو 5 دقائق فقط مع اطلالة مميزة. الشقة مؤثثة بالكامل وجاهزة للسكن.",
-//     amenities: [
-//       "شقة 2+1",
-//       "قريب من المترو",
-//       "اطلالة مميزة",
-//       "مطبخ مشترك",
-//       "حمام مشترك",
-//       "انترنت",
-//       "تدفئة مركزية"
-//     ],
-//     image: "https://media-hosting.imagekit.io//cee135edf6694e83/WhatsApp%20Image%202025-01-15%20at%2011.32.25_58bae13c.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=SKIEcX~ahDqUFUkKbwZAJBhjnFEdYQdDnlnIb8V5WKqTMnGJMb5r0V3-jP2TcREtYCoxXfgB4qSQClIYqdWWknyUk8sLy2klZC4KFZtrUFZVcJDJJWOEeVA7WINOwfty5I4pP1qIKTxEJ7Dk-78ta0peCRu0i5jFuxEriRdnAId~S0GFsvkcfpm~6e4uzIjPD1EBWqv8cW71HKUy5D0zXr5bOFC7j4MVtxFFbqKs2e~i3HQ60ONJSuhtEGQVJnZ4Cc~bduYcPTLYwCmP3fgjqo~IDUSIEPBLKi1Xmx~C2bHrGaegAaY94-t1g7NXt1UZmQ-To6l7M7ahqooRJfC7bw__",
-//     images: [
-//       "https://media-hosting.imagekit.io//a4c5084de5c44b11/WhatsApp%20Image%202025-01-15%20at%2011.32.25_67d879bb.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=AUSjk3MKQa12v6OUZm1PQxsdsaglRW~k89ZO--T7SqvJv~ZPOSxKUoGSuaFv9uNfsEUYp07wLsjECr8yV9anqO8MTwnI4bXgylH0pHOG-cwykE6DVshrJ3LWg2b~RqHlQzaqhvXFIkhUe-xHXDcd-q3AO4BBGPLm03o238Jq5FoOPFPiqk~MvG04Hw2LN-3F1ugS4BufeecS1pFgGAfUa8jf2wiyuZnglWBz4iBDWpXVBLf7UN39ptA7PEokRCH0Fx-aq4tt-rkgkTgoirDsvk-OCXr5pxmviUs6y9sSe~Oe-U7UKMr34gu6a3h1WGM-dSV8QbhkKIMhIyJIffF6CQ__",
-//       "https://media-hosting.imagekit.io//cee135edf6694e83/WhatsApp%20Image%202025-01-15%20at%2011.32.25_58bae13c.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=SKIEcX~ahDqUFUkKbwZAJBhjnFEdYQdDnlnIb8V5WKqTMnGJMb5r0V3-jP2TcREtYCoxXfgB4qSQClIYqdWWknyUk8sLy2klZC4KFZtrUFZVcJDJJWOEeVA7WINOwfty5I4pP1qIKTxEJ7Dk-78ta0peCRu0i5jFuxEriRdnAId~S0GFsvkcfpm~6e4uzIjPD1EBWqv8cW71HKUy5D0zXr5bOFC7j4MVtxFFbqKs2e~i3HQ60ONJSuhtEGQVJnZ4Cc~bduYcPTLYwCmP3fgjqo~IDUSIEPBLKi1Xmx~C2bHrGaegAaY94-t1g7NXt1UZmQ-To6l7M7ahqooRJfC7bw__",
-//       "https://media-hosting.imagekit.io//7073d74d63894f72/WhatsApp%20Image%202025-01-15%20at%2011.32.25_28ddb73c.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=VDf1eFqoqumF0IWb2WMFMtcgSVd~nk9HIt5FV0YZJ8Fcw8o8A5CwQbmbDFsGdABr5Y5aiAGtKgENr4AzKb7mLCsCUKl355uFqwyFZeMEjpB3~RVYB5Paw~zv1J9SRX9LZPoxhtaXEqv0r-1EeZzhRtAzVstF4TXQ09KcyAlXHfPeaB93BeX8O9N8Q-yJ~RogF6KMdpWOP6TGbC0zcL8t4St~Fmfby~wlYJp-1vtjneA3L5m72bXNJsNTEAPqcxRqN6InjeFb-LuD0e4JjjGH47tu1pDIPmcQHL90d2uh51HCZwNQ3esWpjmLr42U6yZcXk9ICFkqJmJuKMaJY4wmUw__",
-//       "https://media-hosting.imagekit.io//9e5e8223de0e4998/WhatsApp%20Image%202025-01-15%20at%2011.32.24_f4633e9e.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=JoNMinM8e7D5H2fMLeOIP~nj2~KjfliOPgj0o3~-WQk3dkszmHx~x90Kj1LE0ml4sa21NnrX24bcj4PU6kQuYZS5~HyPDuNGLbyb1iqlVsNtyqEz84UI2Hzp45SMvFOjgf2jj~TGQ~xNyAmoKRWIdQhvkXGmIFmdV4yOdxhEP0IQ7teXF8YFT1lHtcT~TBiFGe~8Zrv5n0DLQ~jGTUc9R0~g9ZmNVzI0uc2j6V7WfxVYvsYL0WfW6Wb1j8uw7eAJP7UA4Y9KA-9K7sal7j4RAZJlpVnlyOD2vmYvnVeoZn07ZJxTZB1WZbicrq9Us6oYJElWjv49kiHkZVm9l9xp-A__",
-//       "https://media-hosting.imagekit.io//580b15d30ade4443/WhatsApp%20Image%202025-01-15%20at%2011.32.24_0396f271.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=CAmhJiirgjkW3dRZT5rF0-kg8lqQOa1SCTKScu9cnvS9TwfiDrypvppsW8W-PbX-82CFbfqXC7SX6rryfdFfvQLRyLXO2Bk7JABaMm-Y97hS7Akun9uRzAGNbeN9k0Y-TZc6xAjZntCnf66tuX4KX-me4CelVFOs7Zva37SsTj9vtu7XO2b5mq79HMSIFEtw1f0Ku7zLQzUbc2BxC2ijXJAV7VH5Nmyd1rLSGUO71fSqGe9lEh~OLrg5GQdspHpHkGfQD425QZnsk~L4WKJwMDqEJjZXcw0BpF0bSKcDPAkIZqpE8irKbmQlzjVrVvZKm8S5gASVaXCFp-BNn~DspA__",
-//       "https://media-hosting.imagekit.io//ed1ddf71baf3484c/WhatsApp%20Image%202025-01-15%20at%2011.32.24_4ba7d183.jpg?Expires=1832264305&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=N9mTB0YseDIwRU~AFr8cVvHwQ2C~nr8bWCTGpCk1N8QAX1YlJ~9tH3BFil11ylrVEB8QLegARbB6r1PjvpEIA4W1HGevXF~i4sKZS-TwKFDFB~8-eENJax~etph16lnGqLtD3uDs2WMzS-IGhFG5umSS6iM5yiDG3xSU1oFb~EDI5oNcZUQP0jypzHyhpvKvQvbCxwoCOaYfiP62myTV1JWiKCW75rDRHL-sU-XdlU~JvBXRmEDvczmQNO~ypGbQj9-0U7tLYtbtBlNrmQ2zHoa7kQ4-wxJwFOsm0YTmDST2n~q5DNurMP8~RtwMpS8h84W8k3GdSIv5~1T9b98GiQ__"
-//     ],
-//     commission: {
-//       type: 'percentage',
-//       value: 12,
-//       description: "عمولة 12% من قيمة الايجار السنوي"
-//     },
-//     insurance: {
-//       required: false,
-//       description: "لا يوجد تأمين مطلوب"
-//     },
-    
-//     // nearbyTransport: [
-//     //   "Metro - 5 minutes walking",
-//     //   "Bus Stations",
-//     //   "Taxis"
-//     // ],
-//     // apartmentType: "2+1",
-//     // roommates: {
-//     //   total: 1,
-//     //   description: "مشاركة مع طالبة واحدة"
-//     // }
-//   },
   {
-    id: 7,
+    id: 8,
     type: 'room',
     name: "غرفة ثنائية في افجيلار",
     price: 5000,
@@ -346,23 +306,30 @@ export const properties = [
     coordinates: { lat: 40.989, lng: 28.723 },
     googleMapsUrl: "https://maps.app.goo.gl/k46gf6ejmSVRmxcr9",
     description: "متوفر سريرين في غرفة ثنائية فاضية بالكامل في افجيلار في شقة 3+1 تبعد عن مترو M1A 10 دقائق فقط",
-    
     apartment: {
-      type: "3+1",
-      bedsAvailable: 2,
-      furnishingStatus: "فاضية بالكامل"
+      type: "1+3"
     },
-   
+    rooms: {
+      single: {
+        price: 1000,
+        available: true
+      },
+      double: {
+        price: 5000,
+        available: true
+      }
+    },
     amenities: [
-      "قرب المترو M1A"
+      "قرب المترو M1A",
+      "مطبخ مشترك",
+      "انترنت",
+      "تدفئة مركزية"
     ],
-   
     deposit: {
       required: true,
       amount: 5000,
       description: "تامين شهر"
     },
-   
     utilities: {
       included: false,
       description: "غير شامل فواتير"
@@ -380,7 +347,7 @@ export const properties = [
     videos: []
    },
    {
-    id: 8,
+    id: 9,
     type: 'room',
     name: "غرفة فردية في افجيلار",
     price: 7000,
@@ -390,13 +357,14 @@ export const properties = [
     coordinates: { lat: 40.980111, lng: 28.734722 },
     googleMapsUrl: "https://maps.google.com/?q=40.980111,28.734722",
     description: "متوفر غرفة فردية في افجيلار في شقة 2+1 تبعد عن متروبوس 5 دقائق فقط",
-    
     apartment: {
-      type: "2+1"
+      type: "1+2"
     },
-   
     amenities: [
-      "قرب المتروبوس"
+      "قرب المتروبوس",
+      "مطبخ مشترك",
+      "انترنت",
+      "تدفئة مركزية"
     ],
     deposit: {
       required: true,
@@ -430,7 +398,7 @@ export const properties = [
     ]
    },
    {
-    id: 9,
+    id: 10,
     type: 'room',
     preference: 'male',
     name: "غرفة فردية في كتهانة",
@@ -440,7 +408,6 @@ export const properties = [
     coordinates: { lat: 41.099306, lng: 28.990417 },
     googleMapsUrl: "https://maps.google.com/?q=41.099306,28.990417",
     description: "متوفر غرفة فردية في كتهانة في شقة 3+1 بعيده عن اطلس ١٠ دقائق بيت ثلاث غرف وصاله ، كامل من كل شيء مطبخ مكينه قهوه قلايه هوائيه مكينت توست غساله مواعين",
-    
     apartment: {
       type: "3+1",
     },
@@ -469,7 +436,7 @@ export const properties = [
     ]
    },
    {
-    id: 10,  
+    id: 11,  
     type: 'room',
     preference: 'male',
     name: "غرفة فردية بطابقين في علي بي كوي",
@@ -479,36 +446,19 @@ export const properties = [
     coordinates: { lat: 41.078500, lng: 28.947944 },
     googleMapsUrl: "https://maps.google.com/?q=41.078500,28.947944",
     description: "متوفر غرفة فردية للطلاب في علي بي كوي Alibeyköy في شقة 2+1 بعيده عن تبعد عن جامعة اطلس ١٠ دقائق",
-    
     apartment: {
       type: "2+1",
-      currentOccupants: 1,
-      features: ["غرفة بطابقين"]
     },
-   
     deposit: {
       required: false,
       description: "لا يوجد تامين"
     },
-   
-    commission: {
-      type: 'percentage',
-      value: 12,
-      description: "كوميسيون شهر 12% من قيمة الايجار السنوي"
-    },
-   
-    transportation: {
-      metro: "M5",
-      tram: "T5"
-    },
     amenities: [
-      "تبعد عن جامعة اطلس ١٠ دقائق"
-    ],
-    nearbyUniversities: [
-      {
-        name: "Bilgi University",
-        description: "الطالب يدرس في بيلجي"
-      }
+      "تبعد عن جامعة اطلس ١٠ دقائق",
+      "قريبة على مترو M5 & T5",
+      "مطبخ مشترك",
+      "انترنت",
+      "تدفئة مركزية"
     ],
    image: "https://media-hosting.imagekit.io//422ceec265f44748/WhatsApp%20Image%202025-01-15%20at%2016.21.46_7a1582c3.jpg?Expires=1832318518&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=jKJXkSP8XiOOkKh06-sMA00E9eoi~1FpzpYQv1e-QJq9xYGBQ5eqsf75lcwdj~lYjJyNyu7UiOXj2yxInB07uBXf2wJTGkNklGhxc5FDlCQzpQH9TdcJzIIKk68Ua8JESK7DHdn5wTgjYQ4NSeQvKWX-Q0CJJAPUlsTVigBQBeJ-d~FqTN~pQB4SVth75tePHR0Sg0X6c3E6fNRmF~E6KSM~Rb67uzSrilCkHu32JTNKGkx-2BgHRDsWKOzIpL8pu8J6R6-uKoSiM2cfdntg8FWC0KTxbNSsg9CDkl4-kujfRO3Kjo2ZAEpDR4sts6nHyYIfRvZufy6pNZUkzWnWxg__",
     images: [
@@ -528,7 +478,7 @@ export const properties = [
     ]
    },
    {
-    id: 11,
+    id: 12,
     type: 'apartment',
     name: "شقة في مجمع Kiptaş Yeşilpınar",
     price: 40000,
@@ -537,17 +487,23 @@ export const properties = [
     coordinates: { lat: 41.0752, lng: 28.9348 },
     googleMapsUrl: "https://maps.app.goo.gl/NwMbYqr6rNGCJvFz6",
     description: "شقة 3+1 جديدة صفر لم يتم السكن فيها في الطابق التاسع",
-   
     amenities: [
       "ڤيالاند مول - دقيقة مشياً",
-      "دقيقة واحدة عن المواصلات العامة"
+      "دقيقة واحدة عن المواصلات العامة",
+      "Haliç, Atlas, Bilgi ومناسبة لطلاب جامعة",
+      "تبعد عن مول ڤيالاند دقيقة سير على الأقدام",
+      "دقيقة واحدة عن المواصلات العامة",
+      "الماركت الموجودة تحت باب المجمع" 
     ],
-   
     deposit: {
       required: true,
       amount: 40000,
-      description: "شهر واحد فقط"
+      description: "التأمين شهر واحد فقط"
     },
+    image: "https://media-hosting.imagekit.io//07f1874be62c486b/Screenshot%202025-01-27%20131548.png?Expires=1832580987&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=fuUb8glPfrqxogbuLYn-I-dE8UP4cJW1-re8aewdSOtQ4DkdLNpU-qIPaMf0Kyj7Og1cNP6DILJDlP8IZaK~0fYH-kCNAmGO1xUQhpt4KKRoU6JkEfxReVFGd~sce~4QNgJPk486SJB35tKR46hkxjDMcfvGUj3l64CC7q3rOQSVUCxcVIj9e1~oDkURWVXMYIM9iknnX7K8dutxDxQs5ZGrB8xpS7ouoQnBLmHoQ6ZNahEVMZI3BnytHPHHk28J9HNAD6ge2p2eGJhX2duVIFlbcgyA1bN-mAANUAZ09j2lyZUaCJXT0lqPWjNS4s6xFHNe6av47n6ny46hHSmwJA__",
+    images: [
+      "https://media-hosting.imagekit.io//07f1874be62c486b/Screenshot%202025-01-27%20131548.png?Expires=1832580987&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=fuUb8glPfrqxogbuLYn-I-dE8UP4cJW1-re8aewdSOtQ4DkdLNpU-qIPaMf0Kyj7Og1cNP6DILJDlP8IZaK~0fYH-kCNAmGO1xUQhpt4KKRoU6JkEfxReVFGd~sce~4QNgJPk486SJB35tKR46hkxjDMcfvGUj3l64CC7q3rOQSVUCxcVIj9e1~oDkURWVXMYIM9iknnX7K8dutxDxQs5ZGrB8xpS7ouoQnBLmHoQ6ZNahEVMZI3BnytHPHHk28J9HNAD6ge2p2eGJhX2duVIFlbcgyA1bN-mAANUAZ09j2lyZUaCJXT0lqPWjNS4s6xFHNe6av47n6ny46hHSmwJA__"
+    ],
        videos: [
       {
         url: "https://media-hosting.imagekit.io//dea62976c84f4131/WhatsApp%20Video%202025-01-15%20at%2023.47.01_afebd830.mp4?Expires=1832318748&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=IceE7YjCkqAAvozdMimB6vXqK4puTmrEHzgxOdR6valpoTBKFQI2t2vkzf2n4Pp6rwfS-MA4GlJDyPJVgrIXRvnNThUMWSzi~tcb~Gi4IPugHb8jW6gS1rPYDHd3cGtfXmxZrEPASjdwI0xe3kz1FEJuJ2ClXSy~6qr6VRXBU4-CBYHFBlxEc1rUnCJx9AMR4i~Q0M3bAojjKnukH2nHO0DksxQZ8vuNtfnntfSAKl50NgR2BziaEV3euXarPMbf3RtRqLxvD751OCoUeLQZnqk8nFb0gAq8egD-xNNV1n8wplmcn2ddEKSlf1EgbR~8E7Lf9-jQ9NnzdzJrLQHvZQ__"
@@ -555,7 +511,7 @@ export const properties = [
     ]
    },
    {
-    id: 12,
+    id: 13,
     type: 'room',
     name: "غرفة فردية في تشيكماكوي",
     price: 9500,
@@ -572,7 +528,10 @@ export const properties = [
       maxOccupants: 3
     },
    amenities: [
-     "مترو تشيكماكوي - 10 دقايق مشي"
+     "مترو تشيكماكوي - 10 دقايق مشي",
+     "مطبخ مشترك",
+     "انترنت",
+     "تدفئة مركزية"
    ],
     deposit: {
       required: false,
@@ -587,33 +546,33 @@ export const properties = [
     videos: []
    },
    {
-    id: 13,
+    id: 14,
     type: 'room',
     name: "غرفة فردية للطالبات في بالات",
     price: 5500,
     roomType: 'individual',
     preference: 'female',
-    location: "Balat, Fatih, Istanbul",
+    location: "Fatih, Istanbul",
     coordinates: { lat: 41.027278, lng: 28.948722 },
     googleMapsUrl: "https://maps.google.com/?q=41.027278,28.948722",
     description: "متوفر غرفة فردية لطالبة في الفاتح في شقة 3+1 قريبة من المترو وقريبة من جامع الفاتح 10دقايق مشي",
-    
     apartment: {
       type: "3+1",
     },
-   
     deposit: {
       required: false,
       description: "مافي تأمين"
     },
-   
     utilities: {
       included: false,
       description: "بدون فواتير"
     },
    amenities: [
     "جامع الفاتح - 10 دقايق مشي",
-    "قريبة من المترو"
+    "قريبة من المترو",
+    "مطبخ مشترك",
+    "انترنت",
+    "تدفئة مركزية"
    ],
    image: "https://media-hosting.imagekit.io//9f862ea7980347a6/WhatsApp%20Image%202025-01-16%20at%2009.18.19_d31a3131.jpg?Expires=1832319116&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=jY1v48o9OfF-x8lZORQgTDBtR4k3YZ5HalG3BhDMpOcI4XUZNpD6cFLWrmscRO~wqj6~L8TzC54LiRaBP1VcD1knrfcwOusQB1LuwL4UkagpJFqbLxOZQrqG89CIMsDv0gowcUR9HuVLjVp~sguZGxkDEN1HJnud52dpsMqys49AHeGTYaZSJKsFiAeS1kieJR1ND5jWYWTsZgAAUQJwtjbgTxnihc-FXR37AKOgYiAVPs6kYXq8EBfCpzSqtpLpXGzWfYbC2ZG1WRz378oPMmRKRhmGvtWwKhIpxN3Yzz6ewfCyDxWnQ9VCCP86cwIE-euBkVU-2O0lE6S2WjChtQ__",
     images: [
@@ -625,7 +584,7 @@ export const properties = [
     videos: []
    },
    {
-    id: 14,
+    id: 15,
     type: 'room',
     name: "غرفة في مجمع اسنيورت",
     price: 6000,
@@ -634,7 +593,7 @@ export const properties = [
     location: "Esenyurt, Istanbul",
     coordinates: { lat: 41.0336, lng: 28.6741 },
     googleMapsUrl: "https://maps.google.com/maps?q=Inci+Palas+Esenyurt",
-    description: "متوفر غرفة فردية في مجمع سكني لطالب في اسنيورت في شقة 2+1 بعيده عن المتروبوس 10 دقائق",
+    description: " العائدات : 1150 , متوفر غرفة فردية في مجمع سكني لطالب في اسنيورت في شقة 2+1 بعيده عن المتروبوس 10 دقائق",
     
     apartment: {
       type: "2+1",
@@ -651,19 +610,19 @@ export const properties = [
       required: false,
       description: "لا يوجد تامين"
     },
-   image: "https://media-hosting.imagekit.io//806b408c8cde4dae/WhatsApp%20Image%202025-01-16%20at%2009.41.38_6cabfd99.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=uy8ZOooEzVboAu9uTVXwsRXnGB-qK6SyaqbBAuo2MB3DmbAn75KgqkTTiIz5nOTYz17iExyBXTa4mxYADxujAtMn9qJmsiX1ndHpUHPaMw~skcARpc2imeZEIu0LPw2DHUMC-aDcpKOteXXb-nE4XujwcBS1E4VdwSTU9~cDZzvR9e5ky2tQbgl4Zjup~dG0bnjCrkZnZpA1CcYjNKg4vw2qxfJYJDlbQ6QlBZlZMCif561U-IKYoRILZgPxzfeCg6ZYYNOOzm96aE3EIxjWvwcycCR~Q8PhCUfddANvVRlaDwmm~bnr5bNEcyZZaRnB~zMrFoc8h~t4zKDWhZrOkQ__",
+   image: "https://media-hosting.imagekit.io//434c89eaf47b4a46/Screenshot%202025-01-27%20134945.png?Expires=1832583029&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=mned9L1Y0WVrH2uajRC4~YwKz8QHPy-yUV-qCGtwE6b7vctQMrTrap1GvGbH8532XiOmBcYpJrrMGUpXTi8Xi3ZsUGuhOZKMPY1KHiNH-RDx~zJ9adTsHsOzhr2JM5ZgwacBLTxmScCgut0nCYmKCip334lYsIgl-xM~0eFT4sQlNA8hEq7viTETruxDXNOH~XLn9ifE5zlKHKB68HCCKa4reWagE-hdlJI3YGAN04Uv2fO7t2cyvH4nfISr9Tuj9KYkKT88sCgOJbLIcqGZU0ju4zRuM6kRfw~Z9lpm7zaiJK8Vw34yZ~8Syw7yizo7ntvYMyu4YNOTe3TCp00qXw__",
     images: [
-      "https://media-hosting.imagekit.io//127c0d865cf146d1/WhatsApp%20Image%202025-01-16%20at%2009.41.39_794260f8.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yPZyXSV26gPugNw7fev7TJctcr6JEqB7~RJ9qirmJdWQ-zuFys6PCz86cYNNAfO280S8eWTlyJLgftrLT9zOMS0F7AMhcTobl1ImdVke5Zs6k2tHdNJocSkbnnqVJGwz8d93rdpdMMC51we8ROgssl9Zywib7GLFqZo15oPGBXbHPW5JmeEuZBtrZnQWvj31XXrpiLiw746qbUYm16XFfgeprKlP33HLEz6zd0mRgrRsL3jFUIGsmPzL2hxIh6nzpXeraCnxRZtN0G7~Na7S8lzt9sPKK8Ivs5w5d~rTO84hw4y8ZUxR6U244JFhlvTsd7olZX-Jz9BpljevLPuFMw__",
-      "https://media-hosting.imagekit.io//839ddb602c1b4576/WhatsApp%20Image%202025-01-16%20at%2009.41.38_d7c4cc5c.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ELAfbNg3m6hhYJzj41JvWOJuD9en2NKFDpDzG9H8jFZKecMVtBUtBrJfQoC1gE0SChNGulBgOMdx3ykQYiXPQuX3U~yzlHQBxU7KDs8X1P32xR0an2vPpLQ9NLvZDmvIAn4z3Hyq3QyD2C7VYZWlqrKHB~BrdUmFkU90tP9hSyBcJuY8v5pLKnvwzCkLrr281bZYJasRtaxp381L278oU7U~Wp9yrmamHy-FH8tADLn4gQZfainhomZ4IR8GB-6Sr-IS6mNfCyF3FVXFlPp~87EqRnW~pM39gGSz0NgZc1548Vvek6k4-yVhepu3ARy97kuMpUhUZwqzcrU4klyk2g__",
-      "https://media-hosting.imagekit.io//d27c16a3e58c4411/WhatsApp%20Image%202025-01-16%20at%2009.41.38_67452f5e.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=W6Lh7clZHalttGUl7wheTagK3BVoWG8cvFiSQledoI1NdJyXI~zn53nPXfLW7Ojq4ksYM~JH5oN3Rb57ZMjVOohM~HrfAeTt1IQO1qLmIkf3MC5IdpVrcp0T2QLUyynZHhXQaRzM~tbXkZTzQ6myD1sqBkE3Mv4~rR7NDTMZeYTD773jXdhAh5K8FDrwn2cWgBPXFDeAZ3f7ZOIscpi4tiAWA8ivtsnQKlsCl345OoQFkewRWrF~WPS~cB5g7ebGRXq8~2pbTonaTDMaCU7lLPkgKaWrXH78WvjXUQZhklPUk6YhLZUJeYSUEsMycUFuI~t3hw8cjvMFQ0YMHca8kQ__",
       "https://media-hosting.imagekit.io//806b408c8cde4dae/WhatsApp%20Image%202025-01-16%20at%2009.41.38_6cabfd99.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=uy8ZOooEzVboAu9uTVXwsRXnGB-qK6SyaqbBAuo2MB3DmbAn75KgqkTTiIz5nOTYz17iExyBXTa4mxYADxujAtMn9qJmsiX1ndHpUHPaMw~skcARpc2imeZEIu0LPw2DHUMC-aDcpKOteXXb-nE4XujwcBS1E4VdwSTU9~cDZzvR9e5ky2tQbgl4Zjup~dG0bnjCrkZnZpA1CcYjNKg4vw2qxfJYJDlbQ6QlBZlZMCif561U-IKYoRILZgPxzfeCg6ZYYNOOzm96aE3EIxjWvwcycCR~Q8PhCUfddANvVRlaDwmm~bnr5bNEcyZZaRnB~zMrFoc8h~t4zKDWhZrOkQ__",
       "https://media-hosting.imagekit.io//7257c59aec9f4645/WhatsApp%20Image%202025-01-16%20at%2009.41.38_0bfca186.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FZyKNVZWyW5w5L2EAZfE6QFCIdGdTEXwWvqZWk3afDJ~oz29SSY~XDhR1j3PPp2tGBb2ztGZbRoxg4ifGTyatbU2c1gh~E7EKETUi8Fzds5cS6mkqii7msiduPjjGZHKMvuQbN4xOcEq6inhZjpjaR2VfmXKGaZ57twWxVGwNhzlJTRgOKsxAGj3AgPO8B~x25o2onjwv9gtjxn6GJ-kjTD4WkwMT3YJx~QC1p3lh4lMUnRF4fetkt7eCrbDaQP7MwTm~ZtO2-pydzYSkbVdCkGGsYhT3wzghNgwsCiEJgpIEF9AjurewHDGhE93Vpnvv3ci9rYbQhPdJK3bZQ6FzA__",
-      "https://media-hosting.imagekit.io//5cc3a78c4f4747d8/WhatsApp%20Image%202025-01-16%20at%2009.41.37_c2ab6366.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BklWHGgloduAqmPcI5jO5o~Mu62e6YacSisufF9S5S9PQu0APEzBV65SuAhRHEYQFtJ6OWAQaeQ-yWYMCNt6fQ6QEv-FJjjzTWJ-7YmlFgkZA5ifU9SG~LLy0cpAQcw9ieGKd4aZN2P8~ztKF-OsYb9cY03OkZwVomkYhjpXpyc52f~xjs50Ox18XDHmfQe8fXmwa9hnC3DCF3yQyXyOGaoWK~1HoZaHggbv~N2To29DVO0lobhSDlYD72eV5B9YxFzno9TMUJ5Kgr-ZXpBEfem10C0-OlSJ2sklVhJpjrvzsZTY2buLKW2P9-M5N6ebKji4h9PrP40ZcLumzAEGfw__"
+      "https://media-hosting.imagekit.io//839ddb602c1b4576/WhatsApp%20Image%202025-01-16%20at%2009.41.38_d7c4cc5c.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ELAfbNg3m6hhYJzj41JvWOJuD9en2NKFDpDzG9H8jFZKecMVtBUtBrJfQoC1gE0SChNGulBgOMdx3ykQYiXPQuX3U~yzlHQBxU7KDs8X1P32xR0an2vPpLQ9NLvZDmvIAn4z3Hyq3QyD2C7VYZWlqrKHB~BrdUmFkU90tP9hSyBcJuY8v5pLKnvwzCkLrr281bZYJasRtaxp381L278oU7U~Wp9yrmamHy-FH8tADLn4gQZfainhomZ4IR8GB-6Sr-IS6mNfCyF3FVXFlPp~87EqRnW~pM39gGSz0NgZc1548Vvek6k4-yVhepu3ARy97kuMpUhUZwqzcrU4klyk2g__",
+      "https://media-hosting.imagekit.io//d27c16a3e58c4411/WhatsApp%20Image%202025-01-16%20at%2009.41.38_67452f5e.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=W6Lh7clZHalttGUl7wheTagK3BVoWG8cvFiSQledoI1NdJyXI~zn53nPXfLW7Ojq4ksYM~JH5oN3Rb57ZMjVOohM~HrfAeTt1IQO1qLmIkf3MC5IdpVrcp0T2QLUyynZHhXQaRzM~tbXkZTzQ6myD1sqBkE3Mv4~rR7NDTMZeYTD773jXdhAh5K8FDrwn2cWgBPXFDeAZ3f7ZOIscpi4tiAWA8ivtsnQKlsCl345OoQFkewRWrF~WPS~cB5g7ebGRXq8~2pbTonaTDMaCU7lLPkgKaWrXH78WvjXUQZhklPUk6YhLZUJeYSUEsMycUFuI~t3hw8cjvMFQ0YMHca8kQ__",
+      "https://media-hosting.imagekit.io//5cc3a78c4f4747d8/WhatsApp%20Image%202025-01-16%20at%2009.41.37_c2ab6366.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BklWHGgloduAqmPcI5jO5o~Mu62e6YacSisufF9S5S9PQu0APEzBV65SuAhRHEYQFtJ6OWAQaeQ-yWYMCNt6fQ6QEv-FJjjzTWJ-7YmlFgkZA5ifU9SG~LLy0cpAQcw9ieGKd4aZN2P8~ztKF-OsYb9cY03OkZwVomkYhjpXpyc52f~xjs50Ox18XDHmfQe8fXmwa9hnC3DCF3yQyXyOGaoWK~1HoZaHggbv~N2To29DVO0lobhSDlYD72eV5B9YxFzno9TMUJ5Kgr-ZXpBEfem10C0-OlSJ2sklVhJpjrvzsZTY2buLKW2P9-M5N6ebKji4h9PrP40ZcLumzAEGfw__",
+      "https://media-hosting.imagekit.io//127c0d865cf146d1/WhatsApp%20Image%202025-01-16%20at%2009.41.39_794260f8.jpg?Expires=1832319331&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yPZyXSV26gPugNw7fev7TJctcr6JEqB7~RJ9qirmJdWQ-zuFys6PCz86cYNNAfO280S8eWTlyJLgftrLT9zOMS0F7AMhcTobl1ImdVke5Zs6k2tHdNJocSkbnnqVJGwz8d93rdpdMMC51we8ROgssl9Zywib7GLFqZo15oPGBXbHPW5JmeEuZBtrZnQWvj31XXrpiLiw746qbUYm16XFfgeprKlP33HLEz6zd0mRgrRsL3jFUIGsmPzL2hxIh6nzpXeraCnxRZtN0G7~Na7S8lzt9sPKK8Ivs5w5d~rTO84hw4y8ZUxR6U244JFhlvTsd7olZX-Jz9BpljevLPuFMw__"
     ],
     videos: []
    },
    {
-    id: 15,
+    id: 16,
     type: 'room',
     name: "غرفة فردية في مجديه كوي",
     price: 10500,
@@ -672,14 +631,12 @@ export const properties = [
     location: "Mecidiyeköy, Istanbul",
     coordinates: { lat: 41.071611, lng: 28.987500 },
     googleMapsUrl: "https://maps.google.com/?q=41.071611,28.987500",
-    description: "متوفر غرفة فردية قريبه من مترو بوس مجديه كوي 10 دقائق ومحطه مترو M7 10 دقائق",
-   
+    description: " , ملاحظة يوجد سرير زيادة متوفر غرفة فردية قريبه من مترو بوس مجديه كوي 10 دقائق ومحطه مترو M7 10 دقائق",
     deposit: {
       required: true,
       amount: 10500,
       description: "شهر تأمين"
     },
-   
     utilities: {
       included: true,
       description: "شامل الفواتير"
@@ -698,7 +655,7 @@ export const properties = [
     videos: []
    },
    {
-    id: 16,
+    id: 17,
     type: 'room',
     name: "غرفة في يني بوسنا",
     price: 6500,
@@ -708,27 +665,19 @@ export const properties = [
     coordinates: { lat: 41.002389, lng: 28.835944 },
     googleMapsUrl: "https://maps.google.com/?q=41.002389,28.835944",
     description: "متوفر غرفة فردية غرفة في يني بوسه قريبه للمتروبوس 7 دقائق",
-    
     apartment: {
-      type: "2+1",
-      floor: 2
-    },
-   
+      type: "2+1"
+        },
     deposit: {
       required: false,
       description: "لا يوجد تامين"
     },
-   
-    commission: {
-      type: 'fixed',
-      value: 3000,
-      description: "كوميسون 3000"
-    },
-   
     amenities: [
-      "قريبة من المتروبوس"
+      "قريبة من المتروبوس",
+      "مطبخ مشترك",
+      "انترنت",
+      "تدفئة مركزية"
     ],
-
    image: "https://media-hosting.imagekit.io//11b438fb94394b00/WhatsApp%20Image%202025-01-16%20at%2015.44.39_968e50b3.jpg?Expires=1832319696&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=L4-84tqGCVkwOZ9i-w0E057JJTOKmaA2ZwjnGRRPfYmeQxUNnmTN5Kx6fGUkiBz-AIL2YKIQ68pDNSoImeu7iovdCUZcnEGVaCnE6JJblZRkRvUhmQ0a6MlSEiuK~wiLScBN06tFA9CFmMZw52zeMSp-uLfM6eDxcAY4LSGml0Uxdti9oikyyK8B0zis1hhZYKL5qUdIeuoyVQiAIBjNFAtLLt5HAZ9JK7wdjHwLb7R7vhjHjUKHiMGcT~lmVFN-6xVYvy7~alM7~fdv~LJnJzpCbpynj~YgxJa~NoVuHn0zNvR~vifRmqQQwRltgFDyB9~g~LukBqwfpVQpvo6xXA__",
     images: [
       "https://media-hosting.imagekit.io//11b438fb94394b00/WhatsApp%20Image%202025-01-16%20at%2015.44.39_968e50b3.jpg?Expires=1832319696&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=L4-84tqGCVkwOZ9i-w0E057JJTOKmaA2ZwjnGRRPfYmeQxUNnmTN5Kx6fGUkiBz-AIL2YKIQ68pDNSoImeu7iovdCUZcnEGVaCnE6JJblZRkRvUhmQ0a6MlSEiuK~wiLScBN06tFA9CFmMZw52zeMSp-uLfM6eDxcAY4LSGml0Uxdti9oikyyK8B0zis1hhZYKL5qUdIeuoyVQiAIBjNFAtLLt5HAZ9JK7wdjHwLb7R7vhjHjUKHiMGcT~lmVFN-6xVYvy7~alM7~fdv~LJnJzpCbpynj~YgxJa~NoVuHn0zNvR~vifRmqQQwRltgFDyB9~g~LukBqwfpVQpvo6xXA__",
@@ -738,29 +687,31 @@ export const properties = [
     videos: []
    },
    {
-    id: 17,
+    id: 18,
     type: 'room',
-    name: "سرير في غرفة مشتركة في بولغورلو",
+    name: " سرير في غرفة مشتركة في بولغورلو اوسكودار",
     price: 5500,
     roomType: 'shared',
     preference: 'male',
-    location: "Bulgurlu, Üsküdar, Istanbul",
+    location: "Üsküdar, Istanbul",
     coordinates: { lat: 41.010611, lng: 29.085500 },
     googleMapsUrl: "https://maps.google.com/?q=41.010611,29.085500",
-    description: "متوفر سرير في غرفة زوجي لشخص واحد في منطقة bulgurlu في اسكودار قريبة من ٣ جامعات",
+    description: " متوفر سرير في غرفة زوجي لشخص واحد في منطقة bulgurlu في اسكودار قريبة من ٣ جامعات",
     
     apartment: {
-      type: "3+1",
-      currentOccupants: 3
+      type: "1+3"
     },
+
     amenities: [
-      "قريبة من ٣ جامعات فنربخشه و اسكودار و ميديبول"
+      "قريبة من ٣ جامعات فنربخشه و اسكودار و ميديبول",
+      "مطبخ مشترك",
+      "انترنت",
+      "تدفئة مركزية"
     ],
     deposit: {
       required: false,
       description: "لا يوجد تامين"
     },
-   
     utilities: {
       included: false,
       description: "غير شامل الفواتير"
@@ -776,12 +727,12 @@ export const properties = [
     videos: []
    },
    {
-    id: 18,
+    id: 19,
     type: 'apartment',
     name: "شقة دوبلكس في شيشلي",
     price: 55000,
-    location: "Feriköy, Şişli, Istanbul",
-    description: "شقة طابقين في شيشلي فباشا محلسي، غرفتين فوق وغرفتين تحت، معفشة جاهزة",
+    location: "Şişli, Istanbul",
+    description: "شقة دوبليكس طابقين في شيشلي فباشا محلسي، غرفتين فوق وغرفتين تحت، معفشة جاهزة",
     googleMapsUrl: "https://www.google.com/maps?q=41.0536766052246,28.9715023040771",
     coordinates: {
       lat: 41.0536766052246,
@@ -803,8 +754,11 @@ export const properties = [
     },
    
     amenities: [
-      "10 دقائق مشي"
+      " عن متور 10 دقائق مشي",
+      "انترنت",
+      "تدفئة مركزية"
     ],
+
    image: "https://media-hosting.imagekit.io//1b91c44321854cef/WhatsApp%20Image%202025-01-16%20at%2016.12.47_986c8c66.jpg?Expires=1832320358&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=EE92YgMGUEXBOj5iolZfhbkEefb0B55DjDw0uLDM7fl4BePPdAgeNBxxe34bSnaRK10~T4XJig2rvFJI3EokxGFTXPO8QteA4dGyn4mTzQXrtpHaGTL4XF-y83NIseCLJGrVbrIq~YmZU5FbQP-W5xZNq3fTURv3GmoCSI6tv8RSzW61aDUL6lWpiYXfAT7WR1QF6C092aXlQtIH8Jlc8LIOC8nOKr7Q-cb700R-T4vm41axkiRELtecmWxgBK31wYKaEPspsBo3gzGX1B0vEiOnlIbEym78RDOLozCXtO6XH3-37ddTeeMIPeySRUHw7MpS~Amzp-Qbk-eIRDSToA__",
     images: [
       "https://media-hosting.imagekit.io//1201ab624a5b49a1/WhatsApp%20Image%202025-01-16%20at%2016.12.48_cc6d405f.jpg?Expires=1832320358&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=PgYpIfB7f0pXqZUL8Jrm0H98GLk3dDRYmudv~FkMgNsnusLxhnYFiICPaqZmFRpyWHX2BufEGd8aqAKyUNkj88CToRoNrEteDdEALmojls8nRaSRvpunpa3VZV94u3u7jsLQSdTxvzACNwsX9-ZNvYe1WqvpLYTbjb9QZb2n1iAU1CQ62QjCpxtKGpu9UjufqQ-75GigUmISuVey9bj9-BjWKmyJFqe1qC8S6EqAATr6gFc28YhIuyvQv1VCDs8KhOaKOpoq9vx9Pgq7JJ2N2-nnlOk5Y6o6-TjmNp6joQxGfXDtZdiMiySQ0hUWeMF6vMeLRRFb2hNL0nE954skJA__",
@@ -827,7 +781,7 @@ export const properties = [
     ]
    },
    {
-    id: 19,
+    id: 20,
     type: 'room',
     name: "غرفة مفروشة في كاديكوي",
     price: 12500,
@@ -841,7 +795,7 @@ export const properties = [
       lng: 28.9715023040771
     },
     apartment: {
-      type: "3+1",
+      type: "1+3"
     },
    
     deposit: {
@@ -873,7 +827,7 @@ export const properties = [
     videos: []
    },
    {
-    id: 20,
+    id: 21,
     type: 'room',
     name: "غرفة فردية مفروشة في الفاتح",
     price: 10707,
@@ -888,8 +842,7 @@ export const properties = [
     description: "متوفر غرفة لطالب مفروشة للإيجار في الفاتح في شقة 3+1، قريب جدا من جامع الفاتح",
     
     apartment: {
-      type: "3+1",
-      furnished: true
+      type: "1+3"
     },
    
     deposit: {
@@ -898,16 +851,29 @@ export const properties = [
       description: "شهرين تأمين"
     },
    
+    amenities: [
+      "قريب جدا من جامع الفاتح",
+      "موقع هادئ",
+      "موقع آمن",
+      "قرب الأسواق",
+      "انترنت",
+      "تدفئة مركزية"
+    ],
     landmarks: {
       "جامع الفاتح": "قريب جدا"
     },
+
+    image: "https://media-hosting.imagekit.io//0090685cb86b4c2e/Screenshot%202025-01-24%20132052.png?Expires=1832585762&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=CaAjnt4LP1hKGZUHcJ~75w0wFs1EIBr-WHJ1Zq8ixLCK-VkoyBjG~VRtLqg~wp3ergFutwBBMWkI1KkcVZY6JC6kC3wO0oOBc5WLdd82CM3998ISpiV65cwIwPpzaVLssja-HdVHiGE4pTCZ7x1xXGAhSmFpGwPRcn5d1XRB~J8NxnOagaN2A0eMiiOCZOVsNXwrlZ9X5ktSIeP6h106s0AmD1d-hm~TW5CzS~fLiWxP5JpekQvzYyFyfttX~JGleXb58s1lN-nJffLE0dNdahZ8sY60xtGDmqrxx3JfBebuDD1htOiztvY2LifOi6ly97mifviWNkeMqayoAhgLHw__",
+    images: [
+      "https://media-hosting.imagekit.io//0090685cb86b4c2e/Screenshot%202025-01-24%20132052.png?Expires=1832585762&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=CaAjnt4LP1hKGZUHcJ~75w0wFs1EIBr-WHJ1Zq8ixLCK-VkoyBjG~VRtLqg~wp3ergFutwBBMWkI1KkcVZY6JC6kC3wO0oOBc5WLdd82CM3998ISpiV65cwIwPpzaVLssja-HdVHiGE4pTCZ7x1xXGAhSmFpGwPRcn5d1XRB~J8NxnOagaN2A0eMiiOCZOVsNXwrlZ9X5ktSIeP6h106s0AmD1d-hm~TW5CzS~fLiWxP5JpekQvzYyFyfttX~JGleXb58s1lN-nJffLE0dNdahZ8sY60xtGDmqrxx3JfBebuDD1htOiztvY2LifOi6ly97mifviWNkeMqayoAhgLHw__"
+    ],
     videos: [
       "https://media-hosting.imagekit.io//63ff00bbba854746/WhatsApp%20Video%202025-01-18%20at%2003.09.06_1a9b26fc.mp4?Expires=1832322338&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=GLjJGqzpKpSb3X1q0uFSfDQGsltgEBMBl3koPxCSl5PSDR7wiTU3ckZW-8ahLVCfXQJ1LH3F61RzrgHzEHkzfemsLvFHGT7Fjag4seDc2yk7tMLAmCx30cCHX0d5VEEkxLd8z50ggXe~IBTU1uEVTENX1UaYll5Z-CChRvfUNnlV-porfvooJAdr44UNbYYDij83prNi2LI68pru1FcyIilc7iLKm7qDuxop4qsnvHAtaoHKE7s4FiOoKig5IyBIoXdQp31KwXvOOf~DU60v2X~l1ImM2AmhbfQXvmZ7L174AH3NGdxxza02tBUijFBl3nHsd6IkWankKddvjmw5Hg__"
     ]
     },
    {
-    id: 21,
-    type: '',
+    id: 22,
+    type: 'room',
     name: "سرير في غرفة ثنائية في افجيلار",
     price: 4639,
     roomType: 'shared',
@@ -918,25 +884,23 @@ export const properties = [
       lat: 41.008515,
       lng: 28.978359
     },
-    description: "متوفرة غرفة ثنائية لطالب في شقة دوبلكس في افجيلار تبعد دقيقة واحدة عن متروبوس",
-    
+    description: "متوفرة غرفة فردية لطالب في شقة 4+1 في افجيلار تبعد دقيقة واحدة عن متروبوس",
     apartment: {
-      type: "duplex",
-      rooms: {
-        upstairs: 2,
-        downstairs: 2
-      }
+      type: "1+4"
     },
-   
+  
     deposit: {
       required: true,
-      amount: 1784
+      amount: 1784,
+      description: "1784 تأمين"
     },
-   
-    transportation: {
-      metrobus: "دقيقة واحدة"
-    },
-   
+
+    amenities: [
+      "دقيقة واحدة عن متروبوس",
+      "انترنت",
+      "تدفئة مركزية"
+    ],
+
     image : "https://media-hosting.imagekit.io//fe31688fbb114299/WhatsApp%20Image%202025-01-18%20at%2003.29.59_c8a77cec.jpg?Expires=1832323161&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=cSNbnosbTtxhvAqjY9c9X7u2MBFMxMoF8VMYxsk~yj6QHIF0POi7WDDJ3AhShUJO27xhrQjfvIInL~w-9jzifHe0Htsbb8Y8IKLVvSsFjRPloePb7draVY1fbuAStNUvlFBdXR5LYQrDoGi6zb7ziuW9ILdIhBP7~hFeLXMMckNKu7j1mxYxUB7BxWZMTj-NxdDQ0IkWWIi~HYF7oHuH-ICyys-WwBOej4XF63Ej45neYqZWJWgZDb~OWPSuDixfWOOH7QmrbH2Ret8czG0iNiAWAiEdeFqMvq9DjOhQeF~3caJF56MYOZhPNXjTVyIsGgnErKcThe4Ouy6ZWfLJZw__",
 
     images: [
@@ -946,343 +910,322 @@ export const properties = [
     ],
     videos: []
    },
-//    {
-//     id: 23,
-//     type: 'rent',
-//     name: "غرفة فردية في افجيلار",
-//     price: 8922,
-//     roomType: 'individual',
-//     preference: 'male',
-//     location: "Avcılar, Istanbul",
-//     googleMapsUrl: "https://maps.app.goo.gl/jNKQqYbGjCHF7Ta76",
-//     description: "متوفرة غرفة فردية لطالب في شقة دوبلكس في افجيلار تبعد دقيقة واحدة عن متروبوس",
-//     apartment: {
-//       type: "duplex"
-//     },
-//     deposit: {
-//       required: true,
-//       amount: 3569
-//     },
-//     transportation: {
-//       metrobus: "دقيقة واحدة"
-//     },
+   {
+    id: 23,
+    type: 'room',
+    name: "غرفة فردية في افجيلار",
+    price: 8922,
+    roomType: 'individual',
+    preference: 'male',
+    location: "Avcılar, Istanbul",
+    googleMapsUrl: "https://maps.app.goo.gl/jNKQqYbGjCHF7Ta76",
+    coordinates: {
+      lat: 41.008515,
+      lng: 28.978359
+    },
+    description: "متوفرة غرفة فردية لطالب في شقة 4+1 في افجيلار تبعد دقيقة واحدة عن متروبوس",
+    apartment: {
+      type: "1+4"
+    },
 
-//     image : "https://media-hosting.imagekit.io//ef2e7685885346f7/Screenshot%202025-01-24%20135007.png?Expires=1832323915&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=EQYbMIJV6-OAk5XLKejfyBAvOCGN3ZCzgmJgkP66musTWhHAhg8dWbTyKVOCxhwTPZaRJNLiWy5Yo4RHcvCOOYeJt53ZPB63mMNrNgKAvbbM58YmX2dcujPSxP~ZZGPnujZgwJru4gcO-p6zpZnl2ExjI7TBlvBdI3um8wJ30PX-6~x6bZnvbZzc8WKIgfzW3yXPRPxWrykROUWJB56qRWQyzcx8ardyWNakbAvo4wahLDDd~c2GgXpBMxPllfUdZm7CQ9wxgLjm00TXhjnUGNHLAYHIfq6O~O-W3ohjwlLTR-rk8MwPgV4Kk17tj8dJDH8jB5dV05YnfOvumg1xTA__",
+    deposit: {
+      required: true,
+      amount: 3569,
+      description: "3569 تأمين"
+    },
+    amenities: [
+      "دقيقة واحدة عن متروبوس",
+      "انترنت",
+      "تدفئة مركزية"
+    ],
+    image : "https://media-hosting.imagekit.io//fadd521b65154432/WhatsApp%20Image%202025-01-18%20at%2003.29.59_c8a77cec.jpg?Expires=1832588212&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=sYBgrnHQ4FxliE8rq3k6Qg66AnidQs4RfB6qzaN6HFniGP0BINNo7iUoUvw1wtM3YL2lhXzpwF4Rz7CRyD2Qi~iry-ZP8fPqjfmUNIwD5K5P4DX3c-r21lgYQBEhvNwPia~ZeQLbxi8546N97lXMCaL4Va9F0GA9mIFzkkGADeYc70TskVIdlh~FYXT19KLpsY3yeiqWUgUIkslAK7MdfMX2COuPT336A6HdmHM5kGZtWD16vY1gKytQYSaj7~bmpLxSk2kbLaei5GMew9rr5XNxBlWE3c3-0bQgZbejsfOYdPl8Zc3ztUrJn2-~1zK~TPqXSr2NuX6HiAWmZR78AA__",
+    images: [
+      "https://media-hosting.imagekit.io//fadd521b65154432/WhatsApp%20Image%202025-01-18%20at%2003.29.59_c8a77cec.jpg?Expires=1832588212&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=sYBgrnHQ4FxliE8rq3k6Qg66AnidQs4RfB6qzaN6HFniGP0BINNo7iUoUvw1wtM3YL2lhXzpwF4Rz7CRyD2Qi~iry-ZP8fPqjfmUNIwD5K5P4DX3c-r21lgYQBEhvNwPia~ZeQLbxi8546N97lXMCaL4Va9F0GA9mIFzkkGADeYc70TskVIdlh~FYXT19KLpsY3yeiqWUgUIkslAK7MdfMX2COuPT336A6HdmHM5kGZtWD16vY1gKytQYSaj7~bmpLxSk2kbLaei5GMew9rr5XNxBlWE3c3-0bQgZbejsfOYdPl8Zc3ztUrJn2-~1zK~TPqXSr2NuX6HiAWmZR78AA__",
+      "https://media-hosting.imagekit.io//fb5c283c21f64c34/WhatsApp%20Image%202025-01-18%20at%2003.29.59_1528a533.jpg?Expires=1832323167&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0zB68IcdYfANcwwfP-kLJoZhIsd-GQEzvGX1rDu~3hk25XtDib2~ZspzVe9kspSLyHqsfPx-8ee9uyP1ALBeZNasNUY1lph0yzUj8izpD6YHpGMgHdXbK2PbWWVEVeLinFs~JL-iLjG2TlKf26CmCJyCQOcFZEBsCOvdZ2NQmI1Vwshyz07IMvtyUpFeFkaQFpxMeP21arixqbXmS1M1kR5WB-B6NzWPZJTXdkwRgujZs1MqXHtB-QMZwno4iOvG2vk43-v02UmO68cFpTEYlmepGbfwCVb5EpcmjQJsR-1mvtTmWX~lOelMCHxoKj6sTgaBBfJiH9awufdP-SrEhg__",
+      "https://media-hosting.imagekit.io//8e1297fcf6134d2f/WhatsApp%20Image%202025-01-18%20at%2003.30.00_b23e1ae2.jpg?Expires=1832323167&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0yok0GSW3rLy8-Myn-A3ztgwq2vaJLzxqGyiLclMpekahM33FaJjuzM6jtESz9zOFU2XuZdqM8pjkoocp6NMlKYgJZ3NDzU7k60QEZfvOPa4ijuzSRZKRWBmlMlg5m09drLGDTFovRi1jsiHdhXUX0hP~qn4Rr3rh8J49ZIKlKMbQiJt-AZfic~yGunOm6-vOWHdTglDuTDGbt1EqTuSrR2G6LEh~LJXcLNcN2RRAmOQxedX8NLbESki7i5ClI2Aqlw6FjuKt1GVVAnN6IBNxBuPfK2Qwc~NtFUyLn7~STuM2ebXY0FGuj9XGpm5mVmXIj6J4ChN6Mm6Ib3am4lM-w__"
+    ],
+    videos: []
+   },
+   {
+    id: 24,
+    type: 'room',
+    name: "غرفة فردية قرب جامعة نيشانتاشي",
+    price: 10000,
+    roomType: 'individual',
+    preference: 'female',
+    location: "Maslak, Istanbul",
+    googleMapsUrl: "https://www.google.com/maps?q=41.11819839477539,29.003170013427734&z=17&hl=en",
+    description: "متوفرة غرفة فردية قريبة على جامعة نيشانتاشي وبيكنت 10 دقائق بالدولموش في شقة 1+3",
+    apartment: {
+      type: "1+3"
+    },
+    deposit: {
+      required: true,
+      amount: 6000,
+      description: "6000 تأمين"
+    },
     
-//     images: [
-//       "https://media-hosting.imagekit.io//ef2e7685885346f7/Screenshot%202025-01-24%20135007.png?Expires=1832323915&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=EQYbMIJV6-OAk5XLKejfyBAvOCGN3ZCzgmJgkP66musTWhHAhg8dWbTyKVOCxhwTPZaRJNLiWy5Yo4RHcvCOOYeJt53ZPB63mMNrNgKAvbbM58YmX2dcujPSxP~ZZGPnujZgwJru4gcO-p6zpZnl2ExjI7TBlvBdI3um8wJ30PX-6~x6bZnvbZzc8WKIgfzW3yXPRPxWrykROUWJB56qRWQyzcx8ardyWNakbAvo4wahLDDd~c2GgXpBMxPllfUdZm7CQ9wxgLjm00TXhjnUGNHLAYHIfq6O~O-W3ohjwlLTR-rk8MwPgV4Kk17tj8dJDH8jB5dV05YnfOvumg1xTA__",
-//       "https://media-hosting.imagekit.io//fb5c283c21f64c34/WhatsApp%20Image%202025-01-18%20at%2003.29.59_1528a533.jpg?Expires=1832323167&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0zB68IcdYfANcwwfP-kLJoZhIsd-GQEzvGX1rDu~3hk25XtDib2~ZspzVe9kspSLyHqsfPx-8ee9uyP1ALBeZNasNUY1lph0yzUj8izpD6YHpGMgHdXbK2PbWWVEVeLinFs~JL-iLjG2TlKf26CmCJyCQOcFZEBsCOvdZ2NQmI1Vwshyz07IMvtyUpFeFkaQFpxMeP21arixqbXmS1M1kR5WB-B6NzWPZJTXdkwRgujZs1MqXHtB-QMZwno4iOvG2vk43-v02UmO68cFpTEYlmepGbfwCVb5EpcmjQJsR-1mvtTmWX~lOelMCHxoKj6sTgaBBfJiH9awufdP-SrEhg__",
-//       "https://media-hosting.imagekit.io//8e1297fcf6134d2f/WhatsApp%20Image%202025-01-18%20at%2003.30.00_b23e1ae2.jpg?Expires=1832323167&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0yok0GSW3rLy8-Myn-A3ztgwq2vaJLzxqGyiLclMpekahM33FaJjuzM6jtESz9zOFU2XuZdqM8pjkoocp6NMlKYgJZ3NDzU7k60QEZfvOPa4ijuzSRZKRWBmlMlg5m09drLGDTFovRi1jsiHdhXUX0hP~qn4Rr3rh8J49ZIKlKMbQiJt-AZfic~yGunOm6-vOWHdTglDuTDGbt1EqTuSrR2G6LEh~LJXcLNcN2RRAmOQxedX8NLbESki7i5ClI2Aqlw6FjuKt1GVVAnN6IBNxBuPfK2Qwc~NtFUyLn7~STuM2ebXY0FGuj9XGpm5mVmXIj6J4ChN6Mm6Ib3am4lM-w__"
-//     ],
-//         videos: [
-//           "https://media-hosting.imagekit.io//9c25fb85143345a1/WhatsApp%20Video%202025-01-18%20at%2003.30.01_993ee852.mp4?Expires=1832323922&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Wi5E2Qvdxii4OdTQpOrAbjowlGwt~zNrGJeI-2uKX5md0Cwg90xvJBcG8mTAUpWNY-i6pGG7FS369JSUcHKyrE4XWkE0-~g3UYldYpysa85wJIaga77ZxmAm48PVXGoCoq3pSJg8WG6ItLS71pl5aqzlHRVlLe0VZS5nyiGldlcNbjMeFIr9lZYa-Hwr2Bf3d72vrvcCrymXgPJL1Rz1lS3YtynTJEA-wMTEpgsAptEwn24c~fs7lRe6EqJ-RwO3ohqJTzK7uWbyAoUs0HYUvc4an4GAW8CPqI5HQ8qzyMY9Y6oiBOibzqfPwurUXhQAUgYQkf4OsjF6zY2GxtYqnw__"
-//         ]
-//    },
-//    {
-//     id: 24,
-//     type: 'rent',
-//     name: "غرفة فردية قرب جامعة نيشانتاشي",
-//     price: 10000,
-//     roomType: 'individual',
-//     preference: 'female',
-//     location: "Şişli, Istanbul",
-//     googleMapsUrl: "https://maps.google.com/?q=41.1181983947754,29.0031700134277",
-//     description: "متوفرة غرفة فردية قريبة على جامعة نيشانتاشي وبيكنت 10 دقائق بالدولموش في شقة 1+3",
-//     apartment: {
-//       type: "3+1",
-//       currentResidents: {
-//         total: 3,
-//         gender: "female"
-//       }
-//     },
-//     deposit: {
-//       required: true,
-//       amount: 6000
-//     },
-//     amenities: [
-//       "سوبر ماركت تحت البناء",
-//       "محطة باص"
-//     ],
-//     transportation: {
-//       dolmus: "10 دقائق للجامعات",
-//       bus: "10 دقائق للمترو"
-//     },
-//     nearbyUniversities: [
-//       "Nişantaşı University",
-//       "Beykent University"
-//     ],
+    amenities: [
+      "سوبر ماركت تحت البناء",
+      "محطة باص",
+      "بجانب جامعة نيشانتاشي وبيكنت 10 دقائق للجامعات",
+      "10 دقائق للمترو"
+    ],
+    image : "https://media-hosting.imagekit.io//14df87a7f3824344/WhatsApp%20Image%202025-01-18%20at%2003.30.00_b23e1ae2.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=u6iHYI5rxJC0STnvNPK1ydD16C9xkvRIQFzxY3XLludrQ28qXq7CtnJVLHP1vfhXNktO6m3OoR3DBMSf0WomGXfEEcGEmf9szTRm3zhMAwgq~x3Z6SXz-elOK9ZXar1KVZI3thCHxVSs9Mw54~7jdccCijUwqMfq9bahCfzh8cnVYEqOl2JDog-~9fX3uZPC0ycnwK2iGhpoywra-19LM7QQJuaS9v-6HwNI3SYPiZ5yw9x1dG~z9cCgCcJ0xadYEvmpJ9GM5ItT2byAMP22epqTqvRLngEAKdFCfu7KB6nu9s7-5-G07DMdUZ2~7KWS0qg3EOfOTlZgCDNgEH-u~A__",
+    images: [
+      "https://media-hosting.imagekit.io//14df87a7f3824344/WhatsApp%20Image%202025-01-18%20at%2003.30.00_b23e1ae2.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=u6iHYI5rxJC0STnvNPK1ydD16C9xkvRIQFzxY3XLludrQ28qXq7CtnJVLHP1vfhXNktO6m3OoR3DBMSf0WomGXfEEcGEmf9szTRm3zhMAwgq~x3Z6SXz-elOK9ZXar1KVZI3thCHxVSs9Mw54~7jdccCijUwqMfq9bahCfzh8cnVYEqOl2JDog-~9fX3uZPC0ycnwK2iGhpoywra-19LM7QQJuaS9v-6HwNI3SYPiZ5yw9x1dG~z9cCgCcJ0xadYEvmpJ9GM5ItT2byAMP22epqTqvRLngEAKdFCfu7KB6nu9s7-5-G07DMdUZ2~7KWS0qg3EOfOTlZgCDNgEH-u~A__",
+      "https://media-hosting.imagekit.io//77880860b9414a1b/WhatsApp%20Image%202025-01-18%20at%2021.56.10_5e7dd52a.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KKj35T3jo4KaSKW1cjAvXnwAM925VuBAsapHjKZ7AWKIAL8RVh-y14IHYEKNbVjh9jAOtoUEPCh8Zxp9SlyVs75Z6Vlu-VQYMchseFPhjPLKuubo5RxQNweTS-vHScB~mQcj1Bc~PoeZayBph7NaG1yP8ISCVUaa9pVxrmkTjI6nTroIFx9ZWJtdiYWAIUeVxgLeizA3uOC0YeQNWLTY7P9AmpLmcacrleGD6pwK8b8AI2pLkngBtxyRX6psFl2y3L-nrQdzSZB8vQxuRFPkrqmAOu7QT5q3sKLQJsLkddqmPRZt~eNNekp4VHCHiQMdqIWC3LNlZAVw59xl7UUEWw__",
+      "https://media-hosting.imagekit.io//ea993ec1246c41fd/WhatsApp%20Image%202025-01-18%20at%2021.56.10_19996574.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zGtkJy6HiWU2nP~25TlDHJhc1laXeLCsCTE6aXewbCapB368377oqCws5~jmUL8amhRuG5Cw3wjuEX9WaEV3P1IKAY1WhexQm8XZNql07-BjLSsaEPacqeJbz-TSRhy~mdhFt-dBJyDXNNtcc5ZCf~2~IQYXcqjwJDcguBZX--mQnRMDviGRtIvHr60zaHTi2JIYW~JMBSMl50ZsJUWcqnKQWYKvdciXQwq8VBPodMF6OEgxIyQYISLwHmvcf7-D-80wzLAhAuM0kKs5Qn~K00TsdNXIscGrFKaRC828cvKHTQXFIom63U~wAE1ccVlTG7hB1DwxY3ssHdV4JYMcHA__",
+      "https://media-hosting.imagekit.io//774dd2455ad04598/WhatsApp%20Image%202025-01-18%20at%2021.56.10_eca38c26.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FO3b13XhgeJl0A3KQnAuqaEUyEV7CzEMSmzydIzRzfZQmqhw-GQB0Qs3Z5sBU7QwiBFSthsGEuNjwyoXXWsLn3bJ67D8rURCwL7S3rCr25~P6GvqsZkT3tkrw7E6rh6j8Bxga6oWtp3W160tmVt1jSumA6cpsCjSfsRSRvR3HfuyCGpJxttIaepE4hH1dziIcHQAVJYzD7n7xau2fwgqglvl7uk~tNnb2gQ4lB0VOW9Gy8y4EM-qCdEtzN-8XMgkjqlYSsy4H~y1Tiv72IwB1NCtX4XwIYB3PW3GGrsYujYdt0VFP2VIBFM0wItRo5SfCFgKt6vlyLjBSBOowwkmWQ__"
+    ]
+   },
+  //  {
+  //   id: 25,
+  //   type: 'rent',
+  //   name: "غرفة فردية في شيرين افلار",
+  //   price: 8000,
+  //   roomType: 'individual', 
+  //   preference: 'female',
+  //   location: "Şirinevler, Istanbul",
+  //   description: "غرفه فردية في سكن طالبات في شيرين افلار شارع الفاتح",
+  //   apartment: {
+  //     floor: 4,
+  //     features: ["اصانصير"]
+  //   },
+  //   deposit: {
+  //     required: true,
+  //     amount: 3000
+  //   },
+  //   amenities: [
+  //     "قرب الميدان",
+  //     "قرب المواصلات", 
+  //     "قرب الاسواق",
+  //     "منطقة حيوية"
+  //   ],
+  //   locationDetails: {
+  //     distance: {
+  //       square: "4 دقائق"
+  //     }
+  //   },
+  //   image: "https://media-hosting.imagekit.io//b3d699605beb4e38/Screenshot%202025-01-24%20142606.png?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KZ-h1ptjfoLhea67zOT5aYoeNeQisPpVH3RIMAO8k1m4CTDmj9KpL00kyr~F9AehnIv0no6tpKhvu4TGCjKMWa28YOu8G-QRkc0JLuHn1PzNJpa-30LmPxC4PcsZEbv~Y8kmmgJotNBhyP5XbL5QZ53Rvtov1k0y1aUmoT~p0CrzpPOJdFulGsTwBMr28FmDQ4AmSn0jzms7zbLRdhsvmEuSnIduiJQy2irlMdKk~JyRGqGBAUos9lHlTO5NDUhc112dZ0irJkm8PpfDHK18cHwLvniQfm3750i3IGET5JozozIFfTRIb8kiWmB7zy7UWYpiAIFFYRJqXMjJxXgYgw__",
+  //   images: [
+  //     "https://media-hosting.imagekit.io//b3d699605beb4e38/Screenshot%202025-01-24%20142606.png?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KZ-h1ptjfoLhea67zOT5aYoeNeQisPpVH3RIMAO8k1m4CTDmj9KpL00kyr~F9AehnIv0no6tpKhvu4TGCjKMWa28YOu8G-QRkc0JLuHn1PzNJpa-30LmPxC4PcsZEbv~Y8kmmgJotNBhyP5XbL5QZ53Rvtov1k0y1aUmoT~p0CrzpPOJdFulGsTwBMr28FmDQ4AmSn0jzms7zbLRdhsvmEuSnIduiJQy2irlMdKk~JyRGqGBAUos9lHlTO5NDUhc112dZ0irJkm8PpfDHK18cHwLvniQfm3750i3IGET5JozozIFfTRIb8kiWmB7zy7UWYpiAIFFYRJqXMjJxXgYgw__"
+  //   ],
+  //   videos: [
+  //   "https://media-hosting.imagekit.io//e7a6f91e59ac434d/WhatsApp%20Video%202025-01-18%20at%2022.37.34_2bd7337f.mp4?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Qi0BXhfiVzT1C2f57RdqSHUZPNRzh2027rG~iqJKcTrV0RokEkPYXi9aqYr9O~gwDhdz0IrBVWJu3gBLS9rtAk2k~b7NnA7yZgkRkP~S7MwZu31osiQp6Cqiz9pnt66kPawnWPo2tJz5ufq-QUYF9YyZe37y1u8jtEuShsh2mamkukclr16g9w4cvebpZf~pFUe~b2atN9OhYbP7n7TFVkpJu12SAlzlIGQww0mws8H6PleFsOhOtGhpFz49hOUXA3F4raRmBq~H0E9P3kIRABmPb7a9KOWhd6EN4MNv49IOgXRQ6dm46uQN~Vu-ZuX2LxtcUjKa0BeiDHVyhm~cUg__"
+  //   ]
+  //  },
+  //  {
+  //   id: 26,
+  //   type: 'rent',
+  //   name: "سرير في غرفة ثنائية في شيرين افلار",
+  //   price: 4000,
+  //   roomType: 'shared',
+  //   preference: 'female',
+  //   location: "Şirinevler, Istanbul",
+  //   description: "غرفه ثنائية في سكن طالبات في شيرين افلار شارع الفاتح",
+  //   apartment: {
+  //     floor: 4,
+  //     features: ["اصانصير"]
+  //   },
+  //   deposit: {
+  //     required: true,
+  //     amount: 2000
+  //   },
+  //   amenities: [
+  //     "قرب الميدان",
+  //     "قرب المواصلات",
+  //     "قرب الاسواق",
+  //     "منطقة حيوية"
+  //   ],
+  //   locationDetails: {
+  //     distance: {
+  //       square: "4 دقائق"
+  //     }
+  //   },
+  //   image: "https://media-hosting.imagekit.io//b3d699605beb4e38/Screenshot%202025-01-24%20142606.png?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KZ-h1ptjfoLhea67zOT5aYoeNeQisPpVH3RIMAO8k1m4CTDmj9KpL00kyr~F9AehnIv0no6tpKhvu4TGCjKMWa28YOu8G-QRkc0JLuHn1PzNJpa-30LmPxC4PcsZEbv~Y8kmmgJotNBhyP5XbL5QZ53Rvtov1k0y1aUmoT~p0CrzpPOJdFulGsTwBMr28FmDQ4AmSn0jzms7zbLRdhsvmEuSnIduiJQy2irlMdKk~JyRGqGBAUos9lHlTO5NDUhc112dZ0irJkm8PpfDHK18cHwLvniQfm3750i3IGET5JozozIFfTRIb8kiWmB7zy7UWYpiAIFFYRJqXMjJxXgYgw__",
+  //   images: [
+  //     "https://media-hosting.imagekit.io//b3d699605beb4e38/Screenshot%202025-01-24%20142606.png?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KZ-h1ptjfoLhea67zOT5aYoeNeQisPpVH3RIMAO8k1m4CTDmj9KpL00kyr~F9AehnIv0no6tpKhvu4TGCjKMWa28YOu8G-QRkc0JLuHn1PzNJpa-30LmPxC4PcsZEbv~Y8kmmgJotNBhyP5XbL5QZ53Rvtov1k0y1aUmoT~p0CrzpPOJdFulGsTwBMr28FmDQ4AmSn0jzms7zbLRdhsvmEuSnIduiJQy2irlMdKk~JyRGqGBAUos9lHlTO5NDUhc112dZ0irJkm8PpfDHK18cHwLvniQfm3750i3IGET5JozozIFfTRIb8kiWmB7zy7UWYpiAIFFYRJqXMjJxXgYgw__"
+  //   ],
+  //   videos: [
+  //   "https://media-hosting.imagekit.io//e7a6f91e59ac434d/WhatsApp%20Video%202025-01-18%20at%2022.37.34_2bd7337f.mp4?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Qi0BXhfiVzT1C2f57RdqSHUZPNRzh2027rG~iqJKcTrV0RokEkPYXi9aqYr9O~gwDhdz0IrBVWJu3gBLS9rtAk2k~b7NnA7yZgkRkP~S7MwZu31osiQp6Cqiz9pnt66kPawnWPo2tJz5ufq-QUYF9YyZe37y1u8jtEuShsh2mamkukclr16g9w4cvebpZf~pFUe~b2atN9OhYbP7n7TFVkpJu12SAlzlIGQww0mws8H6PleFsOhOtGhpFz49hOUXA3F4raRmBq~H0E9P3kIRABmPb7a9KOWhd6EN4MNv49IOgXRQ6dm46uQN~Vu-ZuX2LxtcUjKa0BeiDHVyhm~cUg__"
+  //   ]
+  //  },
+   {
+    id: 27,
+    type: 'room',
+    name: "غرفة فردية في افجيلار",
+    price: 5500,
+    roomType: 'individual',
+    preference: 'male',
+    location: "Avcılar, Istanbul",
+    coordinates: { lat: 40.9779441, lng: 28.7290576 },
+    googleMapsUrl: "https://www.google.com/maps/place/Denizk%C3%B6%C5%9Fkler,+Kent+%C3%87k.+No:3,+34315+Avc%C4%B1lar%2F%C4%B0stanbul,+T%C3%BCrkiye/data=!4m2!3m1!1s0x14caa1b036daf0d5:0x28e82cc1b247eff8?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESBzI0LjQ5LjYYACDXggMqhwEsOTQyNDI1MjYsOTQyMjMyOTksOTQyMTY0MTMsOTQyMTI0OTYsOTQyMDczOTQsOTQyMDc1MDYsOTQyMDg1MDYsOTQyMTc1MjMsOTQyMTg2NTMsOTQyMjgyMDQsOTQyMjk4MzksOTQyMzkxMjcsNDcwODcxMTgsNDcwODQzOTMsOTQyMTMyMDBCAk9N",
+    description: "متوفر غرفه فرديه لطالب في شقة 4+1 في افجيلار تبعد 5 دقايق عن متروبوس",
+    amenities: [
+      "200 مساحة البيت",
+      "تبعد 5 دقايق عن متروبوس",
+   ],
+   deposit: {
+    required: true,
+    amount: 1500,
+    description: "1500 تأمين"
+  },
+    utilities: {
+      included: false,
+      description: "غير شامل الفواتير"
+    },
+    image: "https://media-hosting.imagekit.io//47aad025426e464d/WhatsApp%20Image%202025-01-18%20at%2022.50.14_c2b5c7cf.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=un6kDxMRSLMa84hdQN5XlMgxPlhUPawoShQuGRad1G2TLbJa7Etaly-pwIwbs5-GLwtC2nvnSdaFpDkflAXjyn7Zt3MhQxBTcAaJ8IIUFCR8xVfpiMb~TGTlLA6FyhPhVUBeUm3i5wuvKr8laJ1GVrLBTe0GMUMUrWe1FQZeKWOoHqHJ9Tt-idM3kK8br1WnhuTOWap4cAr7zcVKt~EaLuHdntjbnPz2rRSXJEB1UWgE6~t9cbZND7TCNaTv~sRQhyMW~G65Rmr4dIvlLSAPikq~GdHM4ezYcAKnsO6c~DpkTZuL4NDQt50qFsru1xcCvDRKgekoTp-47akiHAUNkA__",
 
-//     image : "https://media-hosting.imagekit.io//14df87a7f3824344/WhatsApp%20Image%202025-01-18%20at%2003.30.00_b23e1ae2.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=u6iHYI5rxJC0STnvNPK1ydD16C9xkvRIQFzxY3XLludrQ28qXq7CtnJVLHP1vfhXNktO6m3OoR3DBMSf0WomGXfEEcGEmf9szTRm3zhMAwgq~x3Z6SXz-elOK9ZXar1KVZI3thCHxVSs9Mw54~7jdccCijUwqMfq9bahCfzh8cnVYEqOl2JDog-~9fX3uZPC0ycnwK2iGhpoywra-19LM7QQJuaS9v-6HwNI3SYPiZ5yw9x1dG~z9cCgCcJ0xadYEvmpJ9GM5ItT2byAMP22epqTqvRLngEAKdFCfu7KB6nu9s7-5-G07DMdUZ2~7KWS0qg3EOfOTlZgCDNgEH-u~A__",
+    images: [
+      "https://media-hosting.imagekit.io//47aad025426e464d/WhatsApp%20Image%202025-01-18%20at%2022.50.14_c2b5c7cf.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=un6kDxMRSLMa84hdQN5XlMgxPlhUPawoShQuGRad1G2TLbJa7Etaly-pwIwbs5-GLwtC2nvnSdaFpDkflAXjyn7Zt3MhQxBTcAaJ8IIUFCR8xVfpiMb~TGTlLA6FyhPhVUBeUm3i5wuvKr8laJ1GVrLBTe0GMUMUrWe1FQZeKWOoHqHJ9Tt-idM3kK8br1WnhuTOWap4cAr7zcVKt~EaLuHdntjbnPz2rRSXJEB1UWgE6~t9cbZND7TCNaTv~sRQhyMW~G65Rmr4dIvlLSAPikq~GdHM4ezYcAKnsO6c~DpkTZuL4NDQt50qFsru1xcCvDRKgekoTp-47akiHAUNkA__",
+      "https://media-hosting.imagekit.io//662448278de042e6/WhatsApp%20Image%202025-01-18%20at%2022.50.13_44c89bd7.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Kr8iITOzc-SfQZCUUkyLPzNuJ6WbUA5Ks~AHip6dHSytWrPYEmT01W5bab5HKvlKaFGbMXZrSoHvaFSKeouCoEwCo8x-xR8Hu3jHHY59LorMqI6h~FFMSGsB2XFxKNE2IL5pRJXzcAKJ-y7Ql3jCswpVpndH1q2iWzxQ27nFM2kLAR75D61j-Q4iVCEfBZ7QGVfxKEba13u8wc3OQuarH1ro8MfsLe-B~qH26bfyZITsidpaw13FCLUELfpXplPSYsoj9s8R3GXufrWOJkIb1GXImR7uiIOvCMQjLhhN-SYzboJ4~RZODSIMM1JH922hX54triXMhleSeGLsXWj7kg__",
+      "https://media-hosting.imagekit.io//5dd7de6ae85c4412/WhatsApp%20Image%202025-01-18%20at%2022.50.13_45e54f14.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=uGbzuoLpf-K0mDBfx9yl8e3BxovLXNmajdtZ0oWpvYcsWBmWghMGH-MwLeN84XSgSxOePUk3qRVWbhB4qR6z1jvUVH5eIbnr2b3ugac9ncFpwpbMmcb7HVd38nGurx22gPL2kCfXKCBjYPthuaymMsKvCK6JjhkmBb97rKXC6g9xrWQa3t9~glzZto9wP~1l0OqNQvZITsMrUhIMoCCqBZNJ2zuz3R2k1Gp~LyY3CQECLut67TEszGIy8xT4ow9oFrJLFZDOoOx-dn78QnmiDN3mz6qXl1RdZUfcymMFvvWUNtW-6NDLN9gpfhWJ17G0ddNkVhQzolbXYUatqMXT1g__",
+      "https://media-hosting.imagekit.io//7b906e132dba4679/WhatsApp%20Image%202025-01-18%20at%2022.50.12_53366b90.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t9jqiwqQaP3Muj0Y4W1KlDCos-ym7An52Fie5ir0YNAo~nfbdo6Utx-XUzp6brgIZSTr7gwq0IshahP7iyE9tNd9BTZggLEywMSQZg3ubLwX4N4QclvkGdRljdP0M4i6gWmNNjPubPf2cH--t6gk4NTWdf8eJ2VrqAA1OoP8SJjHOsaSh~i1XBANdzUv52R7VStOH~~bpRCzg3JjmEF-24waEySQfWlnPg5kxNE4gJm0qsdTXAFjetRw3DczMJYjhuMFKEA3OE9IA-lyfFXDuzccQBMLHK3LYieeSQa3-ycfRVIat~6a2nJEbykJzTH5~rZElxXy3NyGC3VBCA~1kw__"
+    ],
+    videos: []
+  },
+  {
+    id: 28,
+    type: 'room',
+    name: "سرير في غرفة ثلاثية في افجيلار",
+    price: 3500,
+    roomType: 'shared',
+    bedsInRoom: 3,
+    preference: 'male',
+    coordinates: { lat: 40.9779441, lng: 28.7290576 },
+    location: "Avcılar, Istanbul",
+    googleMapsUrl: "https://maps.app.goo.gl/SgN166S5EWGqB6nc8",
+    description: "متوفر سرير في غرفة ثلاثية لطالب في افجيلار في شقة 4+1 تبعد 5 دقايق عن متروبوس",
+    amenities: [
+      "200 مساحة البيت",
+      "تبعد 5 دقايق عن متروبوس",
+   ],
+   deposit: {
+    required: true,
+    amount: 1000,
+    description: "1000 تأمين"
+  },
+    utilities: {
+      included: false,
+      description: "غير شامل الفواتير"
+    },
+    image: "https://media-hosting.imagekit.io//73d39f911d744d76/WhatsApp%20Image%202025-01-18%20at%2022.50.15_a082af9d.jpg?Expires=1832326832&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MChZHktnvX9fUvg4irI28dncdq91bar3hZis1Tpp~H4GeNae4XzxCvdHgHZP7n9LYosrzvpZaDmVnHY5PRJ65Gvy4qL-B1c8jjue2epLqYZs7PSOStIPGu3cFQ8r2JKav9Ioi3uY3D3hD~DfydNEYMTAOvs4uJJbDskckuxv4KL5oSzoQK0yg1PYXubY6-kXmz7Gis~69Ru8HT1cXXTG9YFntMVg4Sr94gtoaU2wFkU-lLNw8wnwH70SFnC~JGj~Pfm8gcbBiwQ7SxV9R1R1YrAv3f55L9f5GO3-DfExuPBhK1Cnwv017dwWpBU~QUmevXYhbLeg2vLcHeuk4j81Ow__",
 
-//     images: [
-//       "https://media-hosting.imagekit.io//14df87a7f3824344/WhatsApp%20Image%202025-01-18%20at%2003.30.00_b23e1ae2.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=u6iHYI5rxJC0STnvNPK1ydD16C9xkvRIQFzxY3XLludrQ28qXq7CtnJVLHP1vfhXNktO6m3OoR3DBMSf0WomGXfEEcGEmf9szTRm3zhMAwgq~x3Z6SXz-elOK9ZXar1KVZI3thCHxVSs9Mw54~7jdccCijUwqMfq9bahCfzh8cnVYEqOl2JDog-~9fX3uZPC0ycnwK2iGhpoywra-19LM7QQJuaS9v-6HwNI3SYPiZ5yw9x1dG~z9cCgCcJ0xadYEvmpJ9GM5ItT2byAMP22epqTqvRLngEAKdFCfu7KB6nu9s7-5-G07DMdUZ2~7KWS0qg3EOfOTlZgCDNgEH-u~A__",
-//       "https://media-hosting.imagekit.io//77880860b9414a1b/WhatsApp%20Image%202025-01-18%20at%2021.56.10_5e7dd52a.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KKj35T3jo4KaSKW1cjAvXnwAM925VuBAsapHjKZ7AWKIAL8RVh-y14IHYEKNbVjh9jAOtoUEPCh8Zxp9SlyVs75Z6Vlu-VQYMchseFPhjPLKuubo5RxQNweTS-vHScB~mQcj1Bc~PoeZayBph7NaG1yP8ISCVUaa9pVxrmkTjI6nTroIFx9ZWJtdiYWAIUeVxgLeizA3uOC0YeQNWLTY7P9AmpLmcacrleGD6pwK8b8AI2pLkngBtxyRX6psFl2y3L-nrQdzSZB8vQxuRFPkrqmAOu7QT5q3sKLQJsLkddqmPRZt~eNNekp4VHCHiQMdqIWC3LNlZAVw59xl7UUEWw__",
-//       "https://media-hosting.imagekit.io//ea993ec1246c41fd/WhatsApp%20Image%202025-01-18%20at%2021.56.10_19996574.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zGtkJy6HiWU2nP~25TlDHJhc1laXeLCsCTE6aXewbCapB368377oqCws5~jmUL8amhRuG5Cw3wjuEX9WaEV3P1IKAY1WhexQm8XZNql07-BjLSsaEPacqeJbz-TSRhy~mdhFt-dBJyDXNNtcc5ZCf~2~IQYXcqjwJDcguBZX--mQnRMDviGRtIvHr60zaHTi2JIYW~JMBSMl50ZsJUWcqnKQWYKvdciXQwq8VBPodMF6OEgxIyQYISLwHmvcf7-D-80wzLAhAuM0kKs5Qn~K00TsdNXIscGrFKaRC828cvKHTQXFIom63U~wAE1ccVlTG7hB1DwxY3ssHdV4JYMcHA__",
-//       "https://media-hosting.imagekit.io//774dd2455ad04598/WhatsApp%20Image%202025-01-18%20at%2021.56.10_eca38c26.jpg?Expires=1832324646&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FO3b13XhgeJl0A3KQnAuqaEUyEV7CzEMSmzydIzRzfZQmqhw-GQB0Qs3Z5sBU7QwiBFSthsGEuNjwyoXXWsLn3bJ67D8rURCwL7S3rCr25~P6GvqsZkT3tkrw7E6rh6j8Bxga6oWtp3W160tmVt1jSumA6cpsCjSfsRSRvR3HfuyCGpJxttIaepE4hH1dziIcHQAVJYzD7n7xau2fwgqglvl7uk~tNnb2gQ4lB0VOW9Gy8y4EM-qCdEtzN-8XMgkjqlYSsy4H~y1Tiv72IwB1NCtX4XwIYB3PW3GGrsYujYdt0VFP2VIBFM0wItRo5SfCFgKt6vlyLjBSBOowwkmWQ__"
-//     ],
-//      videos: []
-//    },
-//    {
-//     id: 25,
-//     type: 'rent',
-//     name: "غرفة فردية في شيرين افلار",
-//     price: 8000,
-//     roomType: 'individual', 
-//     preference: 'female',
-//     location: "Şirinevler, Istanbul",
-//     description: "غرفه فردية في سكن طالبات في شيرين افلار شارع الفاتح",
-//     apartment: {
-//       floor: 4,
-//       features: ["اصانصير"]
-//     },
-//     deposit: {
-//       required: true,
-//       amount: 3000
-//     },
-//     amenities: [
-//       "قرب الميدان",
-//       "قرب المواصلات", 
-//       "قرب الاسواق",
-//       "منطقة حيوية"
-//     ],
-//     locationDetails: {
-//       distance: {
-//         square: "4 دقائق"
-//       }
-//     },
-//     image: "https://media-hosting.imagekit.io//b3d699605beb4e38/Screenshot%202025-01-24%20142606.png?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KZ-h1ptjfoLhea67zOT5aYoeNeQisPpVH3RIMAO8k1m4CTDmj9KpL00kyr~F9AehnIv0no6tpKhvu4TGCjKMWa28YOu8G-QRkc0JLuHn1PzNJpa-30LmPxC4PcsZEbv~Y8kmmgJotNBhyP5XbL5QZ53Rvtov1k0y1aUmoT~p0CrzpPOJdFulGsTwBMr28FmDQ4AmSn0jzms7zbLRdhsvmEuSnIduiJQy2irlMdKk~JyRGqGBAUos9lHlTO5NDUhc112dZ0irJkm8PpfDHK18cHwLvniQfm3750i3IGET5JozozIFfTRIb8kiWmB7zy7UWYpiAIFFYRJqXMjJxXgYgw__",
-//     images: [
-//       "https://media-hosting.imagekit.io//b3d699605beb4e38/Screenshot%202025-01-24%20142606.png?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KZ-h1ptjfoLhea67zOT5aYoeNeQisPpVH3RIMAO8k1m4CTDmj9KpL00kyr~F9AehnIv0no6tpKhvu4TGCjKMWa28YOu8G-QRkc0JLuHn1PzNJpa-30LmPxC4PcsZEbv~Y8kmmgJotNBhyP5XbL5QZ53Rvtov1k0y1aUmoT~p0CrzpPOJdFulGsTwBMr28FmDQ4AmSn0jzms7zbLRdhsvmEuSnIduiJQy2irlMdKk~JyRGqGBAUos9lHlTO5NDUhc112dZ0irJkm8PpfDHK18cHwLvniQfm3750i3IGET5JozozIFfTRIb8kiWmB7zy7UWYpiAIFFYRJqXMjJxXgYgw__"
-//     ],
-//     videos: [
-//     "https://media-hosting.imagekit.io//e7a6f91e59ac434d/WhatsApp%20Video%202025-01-18%20at%2022.37.34_2bd7337f.mp4?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Qi0BXhfiVzT1C2f57RdqSHUZPNRzh2027rG~iqJKcTrV0RokEkPYXi9aqYr9O~gwDhdz0IrBVWJu3gBLS9rtAk2k~b7NnA7yZgkRkP~S7MwZu31osiQp6Cqiz9pnt66kPawnWPo2tJz5ufq-QUYF9YyZe37y1u8jtEuShsh2mamkukclr16g9w4cvebpZf~pFUe~b2atN9OhYbP7n7TFVkpJu12SAlzlIGQww0mws8H6PleFsOhOtGhpFz49hOUXA3F4raRmBq~H0E9P3kIRABmPb7a9KOWhd6EN4MNv49IOgXRQ6dm46uQN~Vu-ZuX2LxtcUjKa0BeiDHVyhm~cUg__"
-//     ]
-//    },
-//    {
-//     id: 26,
-//     type: 'rent',
-//     name: "سرير في غرفة ثنائية في شيرين افلار",
-//     price: 4000,
-//     roomType: 'shared',
-//     preference: 'female',
-//     location: "Şirinevler, Istanbul",
-//     description: "غرفه ثنائية في سكن طالبات في شيرين افلار شارع الفاتح",
-//     apartment: {
-//       floor: 4,
-//       features: ["اصانصير"]
-//     },
-//     deposit: {
-//       required: true,
-//       amount: 2000
-//     },
-//     amenities: [
-//       "قرب الميدان",
-//       "قرب المواصلات",
-//       "قرب الاسواق",
-//       "منطقة حيوية"
-//     ],
-//     locationDetails: {
-//       distance: {
-//         square: "4 دقائق"
-//       }
-//     },
-//     image: "https://media-hosting.imagekit.io//b3d699605beb4e38/Screenshot%202025-01-24%20142606.png?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KZ-h1ptjfoLhea67zOT5aYoeNeQisPpVH3RIMAO8k1m4CTDmj9KpL00kyr~F9AehnIv0no6tpKhvu4TGCjKMWa28YOu8G-QRkc0JLuHn1PzNJpa-30LmPxC4PcsZEbv~Y8kmmgJotNBhyP5XbL5QZ53Rvtov1k0y1aUmoT~p0CrzpPOJdFulGsTwBMr28FmDQ4AmSn0jzms7zbLRdhsvmEuSnIduiJQy2irlMdKk~JyRGqGBAUos9lHlTO5NDUhc112dZ0irJkm8PpfDHK18cHwLvniQfm3750i3IGET5JozozIFfTRIb8kiWmB7zy7UWYpiAIFFYRJqXMjJxXgYgw__",
-//     images: [
-//       "https://media-hosting.imagekit.io//b3d699605beb4e38/Screenshot%202025-01-24%20142606.png?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KZ-h1ptjfoLhea67zOT5aYoeNeQisPpVH3RIMAO8k1m4CTDmj9KpL00kyr~F9AehnIv0no6tpKhvu4TGCjKMWa28YOu8G-QRkc0JLuHn1PzNJpa-30LmPxC4PcsZEbv~Y8kmmgJotNBhyP5XbL5QZ53Rvtov1k0y1aUmoT~p0CrzpPOJdFulGsTwBMr28FmDQ4AmSn0jzms7zbLRdhsvmEuSnIduiJQy2irlMdKk~JyRGqGBAUos9lHlTO5NDUhc112dZ0irJkm8PpfDHK18cHwLvniQfm3750i3IGET5JozozIFfTRIb8kiWmB7zy7UWYpiAIFFYRJqXMjJxXgYgw__"
-//     ],
-//     videos: [
-//     "https://media-hosting.imagekit.io//e7a6f91e59ac434d/WhatsApp%20Video%202025-01-18%20at%2022.37.34_2bd7337f.mp4?Expires=1832326069&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Qi0BXhfiVzT1C2f57RdqSHUZPNRzh2027rG~iqJKcTrV0RokEkPYXi9aqYr9O~gwDhdz0IrBVWJu3gBLS9rtAk2k~b7NnA7yZgkRkP~S7MwZu31osiQp6Cqiz9pnt66kPawnWPo2tJz5ufq-QUYF9YyZe37y1u8jtEuShsh2mamkukclr16g9w4cvebpZf~pFUe~b2atN9OhYbP7n7TFVkpJu12SAlzlIGQww0mws8H6PleFsOhOtGhpFz49hOUXA3F4raRmBq~H0E9P3kIRABmPb7a9KOWhd6EN4MNv49IOgXRQ6dm46uQN~Vu-ZuX2LxtcUjKa0BeiDHVyhm~cUg__"
-//     ]
-//    },
-//    {
-//     id: 27,
-//     type: 'rent',
-//     name: "غرفة فردية في افجيلار",
-//     price: 5500,
-//     roomType: 'individual',
-//     preference: 'male',
-//     location: "Avcılar, Istanbul",
-//     googleMapsUrl: "https://maps.app.goo.gl/SgN166S5EWGqB6nc8",
-//     description: "متوفر غرفه فرديه لطالب في افجيلار تبعد 5 دقايق عن متروبوس",
-//     apartment: {
-//       size: "200 متر"
-//     },
-//     deposit: {
-//       required: true,
-//       amount: 1500
-//     },
-//     utilities: {
-//       included: false,
-//       description: "غير شامل الفواتير"
-//     },
-//     transportation: {
-//       metrobus: "5 دقايق"
-//     },
-//     image: "https://media-hosting.imagekit.io//47aad025426e464d/WhatsApp%20Image%202025-01-18%20at%2022.50.14_c2b5c7cf.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=un6kDxMRSLMa84hdQN5XlMgxPlhUPawoShQuGRad1G2TLbJa7Etaly-pwIwbs5-GLwtC2nvnSdaFpDkflAXjyn7Zt3MhQxBTcAaJ8IIUFCR8xVfpiMb~TGTlLA6FyhPhVUBeUm3i5wuvKr8laJ1GVrLBTe0GMUMUrWe1FQZeKWOoHqHJ9Tt-idM3kK8br1WnhuTOWap4cAr7zcVKt~EaLuHdntjbnPz2rRSXJEB1UWgE6~t9cbZND7TCNaTv~sRQhyMW~G65Rmr4dIvlLSAPikq~GdHM4ezYcAKnsO6c~DpkTZuL4NDQt50qFsru1xcCvDRKgekoTp-47akiHAUNkA__",
+    images: [
+      "https://media-hosting.imagekit.io//ca29f15707fb441a/WhatsApp%20Image%202025-01-18%20at%2022.50.15_1c219b0d.jpg?Expires=1832326832&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0w1~YkUZfmUeLCw8LHPD9~DRQYcRQy1nrgXiiTVT4sHsIcTXSjZd6pxZUN89b1~u7VV7mq3pUw4gZBjcHeteO7A75UvnsUpp0huWaTLIKI1mEmrkXEe0XvP1XBne1tiYOzzQs3aosQaHljrJ5zSVJi~HJXcdJea6De22DXMCb1TuLDEsEpx-MjKQ2WV~sjsjTc4r~n5QgstL4Z4k3nITd-PEjf1yF1jPoqh9d28XnHGjS8CbXNPG~ek~Z5s9kamZKrWfldlnjj6UVYlPMtQtl1xzXWt-H~QZ51u-bH14yE~ccswO8StSGJ~M5Dg0CoTJVjDuGtxuaZUj86KMpemKxA__",
+      "https://media-hosting.imagekit.io//662448278de042e6/WhatsApp%20Image%202025-01-18%20at%2022.50.13_44c89bd7.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Kr8iITOzc-SfQZCUUkyLPzNuJ6WbUA5Ks~AHip6dHSytWrPYEmT01W5bab5HKvlKaFGbMXZrSoHvaFSKeouCoEwCo8x-xR8Hu3jHHY59LorMqI6h~FFMSGsB2XFxKNE2IL5pRJXzcAKJ-y7Ql3jCswpVpndH1q2iWzxQ27nFM2kLAR75D61j-Q4iVCEfBZ7QGVfxKEba13u8wc3OQuarH1ro8MfsLe-B~qH26bfyZITsidpaw13FCLUELfpXplPSYsoj9s8R3GXufrWOJkIb1GXImR7uiIOvCMQjLhhN-SYzboJ4~RZODSIMM1JH922hX54triXMhleSeGLsXWj7kg__",
+      "https://media-hosting.imagekit.io//73d39f911d744d76/WhatsApp%20Image%202025-01-18%20at%2022.50.15_a082af9d.jpg?Expires=1832326832&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MChZHktnvX9fUvg4irI28dncdq91bar3hZis1Tpp~H4GeNae4XzxCvdHgHZP7n9LYosrzvpZaDmVnHY5PRJ65Gvy4qL-B1c8jjue2epLqYZs7PSOStIPGu3cFQ8r2JKav9Ioi3uY3D3hD~DfydNEYMTAOvs4uJJbDskckuxv4KL5oSzoQK0yg1PYXubY6-kXmz7Gis~69Ru8HT1cXXTG9YFntMVg4Sr94gtoaU2wFkU-lLNw8wnwH70SFnC~JGj~Pfm8gcbBiwQ7SxV9R1R1YrAv3f55L9f5GO3-DfExuPBhK1Cnwv017dwWpBU~QUmevXYhbLeg2vLcHeuk4j81Ow__",
+      "https://media-hosting.imagekit.io//7b906e132dba4679/WhatsApp%20Image%202025-01-18%20at%2022.50.12_53366b90.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t9jqiwqQaP3Muj0Y4W1KlDCos-ym7An52Fie5ir0YNAo~nfbdo6Utx-XUzp6brgIZSTr7gwq0IshahP7iyE9tNd9BTZggLEywMSQZg3ubLwX4N4QclvkGdRljdP0M4i6gWmNNjPubPf2cH--t6gk4NTWdf8eJ2VrqAA1OoP8SJjHOsaSh~i1XBANdzUv52R7VStOH~~bpRCzg3JjmEF-24waEySQfWlnPg5kxNE4gJm0qsdTXAFjetRw3DczMJYjhuMFKEA3OE9IA-lyfFXDuzccQBMLHK3LYieeSQa3-ycfRVIat~6a2nJEbykJzTH5~rZElxXy3NyGC3VBCA~1kw__"
+    ],
+    videos: []
+   },
+  //  {
+  //   id: 29,
+  //   type: 'room',
+  //   name: "سرير في غرفة ثنائية في شيرين ايفلر",
+  //   price: 4500,
+  //   roomType: 'shared',
+  //   bedsInRoom: 2,
+  //   preference: 'male',
+  //   location: "Şirinevler, Istanbul",
+  //   googleMapsUrl: "",
+  //   description: "متوفر سرير في غرفة ثنائيه في منطقه شيرين ايفلر جنب المتروبوس ب دقائق",
+  //   amenities: [
+  //     "تبعد 5 دقايق عن متروبوس",
+  //  ],
+  //   image: "https://media-hosting.imagekit.io//5e536a9ed8844427/WhatsApp%20Image%202025-01-18%20at%2023.05.26_2227ab37.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QjazxLRKR-Q9UxF56gamsbgRQ6sPc8Wpph5WXkUqM48CCAepRAMLZ-~vLRilMbtNv7oPFiF4U-6cmHgPnj064CWnTkScHhDag1nX8mUW0MVmY~um-ivgX7cnW8qwg5jyoA0Hiqe5lIs73dsJxCrgNILQz2h5yFEtYXNb9bXZuEQigjhBVp6mwtTiZekSttnXZ0GUhtmmk8tdln~F25yAxT2ad1SKcIULl9TT5ttuqLbfIkT-F1vhXMJPZDq9hFaZCKzYVgXyJ6-NmEyQMdZi64qk4h0P-QsWNQL08fNPohIWm-j3CqTlkaB0QygoDeba3PcFWr03RzGgG~dxpv3BVQ__",
 
-//     images: [
-//       "https://media-hosting.imagekit.io//47aad025426e464d/WhatsApp%20Image%202025-01-18%20at%2022.50.14_c2b5c7cf.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=un6kDxMRSLMa84hdQN5XlMgxPlhUPawoShQuGRad1G2TLbJa7Etaly-pwIwbs5-GLwtC2nvnSdaFpDkflAXjyn7Zt3MhQxBTcAaJ8IIUFCR8xVfpiMb~TGTlLA6FyhPhVUBeUm3i5wuvKr8laJ1GVrLBTe0GMUMUrWe1FQZeKWOoHqHJ9Tt-idM3kK8br1WnhuTOWap4cAr7zcVKt~EaLuHdntjbnPz2rRSXJEB1UWgE6~t9cbZND7TCNaTv~sRQhyMW~G65Rmr4dIvlLSAPikq~GdHM4ezYcAKnsO6c~DpkTZuL4NDQt50qFsru1xcCvDRKgekoTp-47akiHAUNkA__",
-//       "https://media-hosting.imagekit.io//662448278de042e6/WhatsApp%20Image%202025-01-18%20at%2022.50.13_44c89bd7.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Kr8iITOzc-SfQZCUUkyLPzNuJ6WbUA5Ks~AHip6dHSytWrPYEmT01W5bab5HKvlKaFGbMXZrSoHvaFSKeouCoEwCo8x-xR8Hu3jHHY59LorMqI6h~FFMSGsB2XFxKNE2IL5pRJXzcAKJ-y7Ql3jCswpVpndH1q2iWzxQ27nFM2kLAR75D61j-Q4iVCEfBZ7QGVfxKEba13u8wc3OQuarH1ro8MfsLe-B~qH26bfyZITsidpaw13FCLUELfpXplPSYsoj9s8R3GXufrWOJkIb1GXImR7uiIOvCMQjLhhN-SYzboJ4~RZODSIMM1JH922hX54triXMhleSeGLsXWj7kg__",
-//       "https://media-hosting.imagekit.io//5dd7de6ae85c4412/WhatsApp%20Image%202025-01-18%20at%2022.50.13_45e54f14.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=uGbzuoLpf-K0mDBfx9yl8e3BxovLXNmajdtZ0oWpvYcsWBmWghMGH-MwLeN84XSgSxOePUk3qRVWbhB4qR6z1jvUVH5eIbnr2b3ugac9ncFpwpbMmcb7HVd38nGurx22gPL2kCfXKCBjYPthuaymMsKvCK6JjhkmBb97rKXC6g9xrWQa3t9~glzZto9wP~1l0OqNQvZITsMrUhIMoCCqBZNJ2zuz3R2k1Gp~LyY3CQECLut67TEszGIy8xT4ow9oFrJLFZDOoOx-dn78QnmiDN3mz6qXl1RdZUfcymMFvvWUNtW-6NDLN9gpfhWJ17G0ddNkVhQzolbXYUatqMXT1g__",
-//       "https://media-hosting.imagekit.io//7b906e132dba4679/WhatsApp%20Image%202025-01-18%20at%2022.50.12_53366b90.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t9jqiwqQaP3Muj0Y4W1KlDCos-ym7An52Fie5ir0YNAo~nfbdo6Utx-XUzp6brgIZSTr7gwq0IshahP7iyE9tNd9BTZggLEywMSQZg3ubLwX4N4QclvkGdRljdP0M4i6gWmNNjPubPf2cH--t6gk4NTWdf8eJ2VrqAA1OoP8SJjHOsaSh~i1XBANdzUv52R7VStOH~~bpRCzg3JjmEF-24waEySQfWlnPg5kxNE4gJm0qsdTXAFjetRw3DczMJYjhuMFKEA3OE9IA-lyfFXDuzccQBMLHK3LYieeSQa3-ycfRVIat~6a2nJEbykJzTH5~rZElxXy3NyGC3VBCA~1kw__"
-//     ],
-//     videos: []
-//   },
-//   {
-//     id: 28,
-//     type: 'rent',
-//     name: "سرير في غرفة ثلاثية في افجيلار",
-//     price: 3500,
-//     roomType: 'shared',
-//     bedsInRoom: 3,
-//     preference: 'male',
-//     location: "Avcılar, Istanbul",
-//     googleMapsUrl: "https://maps.app.goo.gl/SgN166S5EWGqB6nc8",
-//     description: "متوفر سرير في غرفة ثلاثية لطالب في افجيلار تبعد 5 دقايق عن متروبوس",
-//     apartment: {
-//       size: "200 متر"
-//     },
-//     deposit: {
-//       required: true,
-//       amount: 1000
-//     },
-//     utilities: {
-//       included: false,
-//       description: "غير شامل الفواتير"
-//     },
-//     transportation: {
-//       metrobus: "5 دقايق"
-//     },
-//     image: "https://media-hosting.imagekit.io//73d39f911d744d76/WhatsApp%20Image%202025-01-18%20at%2022.50.15_a082af9d.jpg?Expires=1832326832&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MChZHktnvX9fUvg4irI28dncdq91bar3hZis1Tpp~H4GeNae4XzxCvdHgHZP7n9LYosrzvpZaDmVnHY5PRJ65Gvy4qL-B1c8jjue2epLqYZs7PSOStIPGu3cFQ8r2JKav9Ioi3uY3D3hD~DfydNEYMTAOvs4uJJbDskckuxv4KL5oSzoQK0yg1PYXubY6-kXmz7Gis~69Ru8HT1cXXTG9YFntMVg4Sr94gtoaU2wFkU-lLNw8wnwH70SFnC~JGj~Pfm8gcbBiwQ7SxV9R1R1YrAv3f55L9f5GO3-DfExuPBhK1Cnwv017dwWpBU~QUmevXYhbLeg2vLcHeuk4j81Ow__",
+  //   images: [
+  //     "https://media-hosting.imagekit.io//5e536a9ed8844427/WhatsApp%20Image%202025-01-18%20at%2023.05.26_2227ab37.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QjazxLRKR-Q9UxF56gamsbgRQ6sPc8Wpph5WXkUqM48CCAepRAMLZ-~vLRilMbtNv7oPFiF4U-6cmHgPnj064CWnTkScHhDag1nX8mUW0MVmY~um-ivgX7cnW8qwg5jyoA0Hiqe5lIs73dsJxCrgNILQz2h5yFEtYXNb9bXZuEQigjhBVp6mwtTiZekSttnXZ0GUhtmmk8tdln~F25yAxT2ad1SKcIULl9TT5ttuqLbfIkT-F1vhXMJPZDq9hFaZCKzYVgXyJ6-NmEyQMdZi64qk4h0P-QsWNQL08fNPohIWm-j3CqTlkaB0QygoDeba3PcFWr03RzGgG~dxpv3BVQ__",
+  //     "https://media-hosting.imagekit.io//eee98a1480f64522/WhatsApp%20Image%202025-01-18%20at%2023.05.26_973a274a.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=vpenJhU7HPE-l2IcngQLn6m-4P3obDE7LMTeble27mcoAJJTzwUr7Sh5C--d5ApgjAm0XD~CApLyTRr8hIiY4uGaolDErRIW4y1MQGtKKFRHwt963WCLRJK-y6zhM-9ND6cYExHH~YFDugCtoZcK-MWD2Gd3JoqAWZUjZWo2A37X6C~bIyZkyTqOEeKwxNCHMtl7Y9XLECndZoLN4FC5cHcvKR5ayP2FXBK77siwJpsUDZJxqfCmyUnV4~UEKKMTQYXTDrqPDS-mUWXwYxegfGBooa0pYl-D6R9dhiJ7di~2imBAGIbOXQV5Cr0TqDiWiiw8nadHbITVm8e1ZmDZ2Q__",
+  //     "https://media-hosting.imagekit.io//23b6e02c372c4d1e/WhatsApp%20Image%202025-01-18%20at%2023.05.26_0455a951.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wZ4oCsr41huVIRyQHNIrPHXjJU14dvQAr9DZagne9sa9u1bhB4aU9pDz7QL8UHMZ-xtKCO6xvlT9o9Z~IfoRkJqjfHD7tmaN9dlWW4ZNZiaSukRda-PBf8tij8gaxPyEfy0-o06uT4O-EKvMrRy6~uloMddx2USfP-qUkcOvU9Z-mSY6VVu4zMm8J7kACP1cNPDyQf3tFWkijE4-NjfadPtN54vjSEwm0bUSNuyizIwIb9wjBJyXJtDLD3laVVvsrn43nOHc48bk4kKiE8W1gsHexA9FRI0rih9OPKFayjRPWXV1aGVk4llvEumhRZBYChOkCHtoE~kGC-UJOPZBaQ__",
+  //     "https://media-hosting.imagekit.io//1a33fc2aa589424c/WhatsApp%20Image%202025-01-18%20at%2023.05.26_23a41f5f.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Cqr267QJDD1mQ-~XyFk9BxZFOOMBhNrA27lp3ho0Qv5bhD-PfWeIY8yrJIhDEICc33JHO5lrFF8K4bGBkQbKXps-GkZO2TvLTiwWZUMx86OY5AocP0MylegDWuLdNapfhUIRQ1LAw2A~y-ghabJjFVUPNmsR4ktNDtk-SvmESe1kDDSUhZMvOVwP1PLVxpQiBr5nVv~mfLl8rRLP~uRNTE1Sumc-Nh6Ij7Nnykw5jIVhSse4CQ-2KXPRHaTibCzf~2r6vfay4I4eL5f6ZhOzMLnbUdgAt3Nokena8hO6PgHI0lzgUuXl2w0sVi23~kKpzOHG5aDB3aui-WSG2H8Baw__"
+  //   ],
+  //   videos: []
+  //  },
+   {
+    id: 30,
+    type: 'room',
+    name: "غرفة فردية في العمرانية",
+    price: 6500,
+    roomType: 'individual',
+    preference: 'female',
+    location: "Ümraniye, Istanbul",
+    coordinates: { lat: 41.021250, lng: 29.101694 },
+    googleMapsUrl: "https://www.google.com/maps?q=41.02125930786133,29.101694107055664&z=17&hl=en",
+    description: "متوفر غرفة فردية في العمرانية شارع الاستقلال للبنات في شقة 2+1",
+    amenities: [
+      "ميترو تشرشي  10 دقائق مشي"
+    ],
+    deposit: {
+      required: false,
+      description: "لا يوجد تامين"
+    },
+    image: "https://media-hosting.imagekit.io//900f17ae6b434b71/WhatsApp%20Image%202025-01-18%20at%2023.08.11_3ef9adcd.jpg?Expires=1832327831&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Nqiv~4R-ClBeOIxBuX4ZineGvIvbZ~LY46m8ebvbf8EQke9xwTcxPHEwMqgpyl-MpEgvcYfpCnSNw6dcTKvWENTFRg7v-Gm-ksTFHULtwPKUEhTkiiBtdV9DvDw6T9~Jj0Di3OdMnJhjkdBjlDJGs777cDqS6KpPx58KcjyQspem8alyHKxUICWBaCg6Kk8jbENXcjyy9JFKxxymrIsmCvZl1azrqOftyUw1aO~tYQNO5VUGHZ-cARnVd9foh-5ksWk3ZgUVBNsG0BTqF3aP4jYcQvwNtoUE5U7zI1eDWNSjKgadU~Xg-rbVgCyMYfC99mVk3Idr-wdBzUaOGobRzA__",
 
-//     images: [
-//       "https://media-hosting.imagekit.io//ca29f15707fb441a/WhatsApp%20Image%202025-01-18%20at%2022.50.15_1c219b0d.jpg?Expires=1832326832&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0w1~YkUZfmUeLCw8LHPD9~DRQYcRQy1nrgXiiTVT4sHsIcTXSjZd6pxZUN89b1~u7VV7mq3pUw4gZBjcHeteO7A75UvnsUpp0huWaTLIKI1mEmrkXEe0XvP1XBne1tiYOzzQs3aosQaHljrJ5zSVJi~HJXcdJea6De22DXMCb1TuLDEsEpx-MjKQ2WV~sjsjTc4r~n5QgstL4Z4k3nITd-PEjf1yF1jPoqh9d28XnHGjS8CbXNPG~ek~Z5s9kamZKrWfldlnjj6UVYlPMtQtl1xzXWt-H~QZ51u-bH14yE~ccswO8StSGJ~M5Dg0CoTJVjDuGtxuaZUj86KMpemKxA__",
-//       "https://media-hosting.imagekit.io//662448278de042e6/WhatsApp%20Image%202025-01-18%20at%2022.50.13_44c89bd7.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Kr8iITOzc-SfQZCUUkyLPzNuJ6WbUA5Ks~AHip6dHSytWrPYEmT01W5bab5HKvlKaFGbMXZrSoHvaFSKeouCoEwCo8x-xR8Hu3jHHY59LorMqI6h~FFMSGsB2XFxKNE2IL5pRJXzcAKJ-y7Ql3jCswpVpndH1q2iWzxQ27nFM2kLAR75D61j-Q4iVCEfBZ7QGVfxKEba13u8wc3OQuarH1ro8MfsLe-B~qH26bfyZITsidpaw13FCLUELfpXplPSYsoj9s8R3GXufrWOJkIb1GXImR7uiIOvCMQjLhhN-SYzboJ4~RZODSIMM1JH922hX54triXMhleSeGLsXWj7kg__",
-//       "https://media-hosting.imagekit.io//73d39f911d744d76/WhatsApp%20Image%202025-01-18%20at%2022.50.15_a082af9d.jpg?Expires=1832326832&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MChZHktnvX9fUvg4irI28dncdq91bar3hZis1Tpp~H4GeNae4XzxCvdHgHZP7n9LYosrzvpZaDmVnHY5PRJ65Gvy4qL-B1c8jjue2epLqYZs7PSOStIPGu3cFQ8r2JKav9Ioi3uY3D3hD~DfydNEYMTAOvs4uJJbDskckuxv4KL5oSzoQK0yg1PYXubY6-kXmz7Gis~69Ru8HT1cXXTG9YFntMVg4Sr94gtoaU2wFkU-lLNw8wnwH70SFnC~JGj~Pfm8gcbBiwQ7SxV9R1R1YrAv3f55L9f5GO3-DfExuPBhK1Cnwv017dwWpBU~QUmevXYhbLeg2vLcHeuk4j81Ow__",
-//       "https://media-hosting.imagekit.io//7b906e132dba4679/WhatsApp%20Image%202025-01-18%20at%2022.50.12_53366b90.jpg?Expires=1832326500&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=t9jqiwqQaP3Muj0Y4W1KlDCos-ym7An52Fie5ir0YNAo~nfbdo6Utx-XUzp6brgIZSTr7gwq0IshahP7iyE9tNd9BTZggLEywMSQZg3ubLwX4N4QclvkGdRljdP0M4i6gWmNNjPubPf2cH--t6gk4NTWdf8eJ2VrqAA1OoP8SJjHOsaSh~i1XBANdzUv52R7VStOH~~bpRCzg3JjmEF-24waEySQfWlnPg5kxNE4gJm0qsdTXAFjetRw3DczMJYjhuMFKEA3OE9IA-lyfFXDuzccQBMLHK3LYieeSQa3-ycfRVIat~6a2nJEbykJzTH5~rZElxXy3NyGC3VBCA~1kw__"
-//     ],
-//     videos: []
-//    },
-//    {
-//     id: 29,
-//     type: 'rent',
-//     name: "سرير في غرفة ثنائية في شيرين ايفلر",
-//     price: 4500,
-//     roomType: 'shared',
-//     bedsInRoom: 2,
-//     preference: 'male',
-//     location: "Şirinevler, Istanbul",
-//     description: "متوفر غرفتين ثنائيه في منطقه شيرين ايفلر جنب المتروبوس ب دقائق",
-//     apartment: {
-//       type: "3+1",
-//       totalRooms: {
-//         doubleRooms: 2
-//       },
-//       totalOccupants: 5
-//     },
-//     transportation: {
-//       metrobus: "5 دقائق"
-//     },
-//     image: "https://media-hosting.imagekit.io//5e536a9ed8844427/WhatsApp%20Image%202025-01-18%20at%2023.05.26_2227ab37.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QjazxLRKR-Q9UxF56gamsbgRQ6sPc8Wpph5WXkUqM48CCAepRAMLZ-~vLRilMbtNv7oPFiF4U-6cmHgPnj064CWnTkScHhDag1nX8mUW0MVmY~um-ivgX7cnW8qwg5jyoA0Hiqe5lIs73dsJxCrgNILQz2h5yFEtYXNb9bXZuEQigjhBVp6mwtTiZekSttnXZ0GUhtmmk8tdln~F25yAxT2ad1SKcIULl9TT5ttuqLbfIkT-F1vhXMJPZDq9hFaZCKzYVgXyJ6-NmEyQMdZi64qk4h0P-QsWNQL08fNPohIWm-j3CqTlkaB0QygoDeba3PcFWr03RzGgG~dxpv3BVQ__",
-
-//     images: [
-//       "https://media-hosting.imagekit.io//5e536a9ed8844427/WhatsApp%20Image%202025-01-18%20at%2023.05.26_2227ab37.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=QjazxLRKR-Q9UxF56gamsbgRQ6sPc8Wpph5WXkUqM48CCAepRAMLZ-~vLRilMbtNv7oPFiF4U-6cmHgPnj064CWnTkScHhDag1nX8mUW0MVmY~um-ivgX7cnW8qwg5jyoA0Hiqe5lIs73dsJxCrgNILQz2h5yFEtYXNb9bXZuEQigjhBVp6mwtTiZekSttnXZ0GUhtmmk8tdln~F25yAxT2ad1SKcIULl9TT5ttuqLbfIkT-F1vhXMJPZDq9hFaZCKzYVgXyJ6-NmEyQMdZi64qk4h0P-QsWNQL08fNPohIWm-j3CqTlkaB0QygoDeba3PcFWr03RzGgG~dxpv3BVQ__",
-//       "https://media-hosting.imagekit.io//eee98a1480f64522/WhatsApp%20Image%202025-01-18%20at%2023.05.26_973a274a.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=vpenJhU7HPE-l2IcngQLn6m-4P3obDE7LMTeble27mcoAJJTzwUr7Sh5C--d5ApgjAm0XD~CApLyTRr8hIiY4uGaolDErRIW4y1MQGtKKFRHwt963WCLRJK-y6zhM-9ND6cYExHH~YFDugCtoZcK-MWD2Gd3JoqAWZUjZWo2A37X6C~bIyZkyTqOEeKwxNCHMtl7Y9XLECndZoLN4FC5cHcvKR5ayP2FXBK77siwJpsUDZJxqfCmyUnV4~UEKKMTQYXTDrqPDS-mUWXwYxegfGBooa0pYl-D6R9dhiJ7di~2imBAGIbOXQV5Cr0TqDiWiiw8nadHbITVm8e1ZmDZ2Q__",
-//       "https://media-hosting.imagekit.io//23b6e02c372c4d1e/WhatsApp%20Image%202025-01-18%20at%2023.05.26_0455a951.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wZ4oCsr41huVIRyQHNIrPHXjJU14dvQAr9DZagne9sa9u1bhB4aU9pDz7QL8UHMZ-xtKCO6xvlT9o9Z~IfoRkJqjfHD7tmaN9dlWW4ZNZiaSukRda-PBf8tij8gaxPyEfy0-o06uT4O-EKvMrRy6~uloMddx2USfP-qUkcOvU9Z-mSY6VVu4zMm8J7kACP1cNPDyQf3tFWkijE4-NjfadPtN54vjSEwm0bUSNuyizIwIb9wjBJyXJtDLD3laVVvsrn43nOHc48bk4kKiE8W1gsHexA9FRI0rih9OPKFayjRPWXV1aGVk4llvEumhRZBYChOkCHtoE~kGC-UJOPZBaQ__",
-//       "https://media-hosting.imagekit.io//1a33fc2aa589424c/WhatsApp%20Image%202025-01-18%20at%2023.05.26_23a41f5f.jpg?Expires=1832327269&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Cqr267QJDD1mQ-~XyFk9BxZFOOMBhNrA27lp3ho0Qv5bhD-PfWeIY8yrJIhDEICc33JHO5lrFF8K4bGBkQbKXps-GkZO2TvLTiwWZUMx86OY5AocP0MylegDWuLdNapfhUIRQ1LAw2A~y-ghabJjFVUPNmsR4ktNDtk-SvmESe1kDDSUhZMvOVwP1PLVxpQiBr5nVv~mfLl8rRLP~uRNTE1Sumc-Nh6Ij7Nnykw5jIVhSse4CQ-2KXPRHaTibCzf~2r6vfay4I4eL5f6ZhOzMLnbUdgAt3Nokena8hO6PgHI0lzgUuXl2w0sVi23~kKpzOHG5aDB3aui-WSG2H8Baw__"
-//     ],
-//     videos: []
-//    },
-//    {
-//     id: 30,
-//     type: 'rent',
-//     name: "غرفة فردية في العمرانية",
-//     price: 6500,
-//     roomType: 'individual',
-//     preference: 'female',
-//     location: "Ümraniye, Istanbul",
-//     coordinates: { lat: 41.021250, lng: 29.101694 },
-//     googleMapsUrl: "https://maps.google.com/?q=41.021250,29.101694",
-//     description: "متوفر غرفة فردية في العمرانية شارع الاستقلال للبنات في شقة 2+1",
-//     apartment: {
-//       type: "2+1"
-//     },
-//     deposit: {
-//       required: false,
-//       description: "لا يوجد تامين"
-//     },
-//     transportation: {
-//       metro: "ميترو تشرشي - 10 دقائق مشي"
-//     },
-//     image: "https://media-hosting.imagekit.io//900f17ae6b434b71/WhatsApp%20Image%202025-01-18%20at%2023.08.11_3ef9adcd.jpg?Expires=1832327831&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Nqiv~4R-ClBeOIxBuX4ZineGvIvbZ~LY46m8ebvbf8EQke9xwTcxPHEwMqgpyl-MpEgvcYfpCnSNw6dcTKvWENTFRg7v-Gm-ksTFHULtwPKUEhTkiiBtdV9DvDw6T9~Jj0Di3OdMnJhjkdBjlDJGs777cDqS6KpPx58KcjyQspem8alyHKxUICWBaCg6Kk8jbENXcjyy9JFKxxymrIsmCvZl1azrqOftyUw1aO~tYQNO5VUGHZ-cARnVd9foh-5ksWk3ZgUVBNsG0BTqF3aP4jYcQvwNtoUE5U7zI1eDWNSjKgadU~Xg-rbVgCyMYfC99mVk3Idr-wdBzUaOGobRzA__",
-
-//     images: [
-//       "https://media-hosting.imagekit.io//900f17ae6b434b71/WhatsApp%20Image%202025-01-18%20at%2023.08.11_3ef9adcd.jpg?Expires=1832327831&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Nqiv~4R-ClBeOIxBuX4ZineGvIvbZ~LY46m8ebvbf8EQke9xwTcxPHEwMqgpyl-MpEgvcYfpCnSNw6dcTKvWENTFRg7v-Gm-ksTFHULtwPKUEhTkiiBtdV9DvDw6T9~Jj0Di3OdMnJhjkdBjlDJGs777cDqS6KpPx58KcjyQspem8alyHKxUICWBaCg6Kk8jbENXcjyy9JFKxxymrIsmCvZl1azrqOftyUw1aO~tYQNO5VUGHZ-cARnVd9foh-5ksWk3ZgUVBNsG0BTqF3aP4jYcQvwNtoUE5U7zI1eDWNSjKgadU~Xg-rbVgCyMYfC99mVk3Idr-wdBzUaOGobRzA__",
-//       "https://media-hosting.imagekit.io//4ee014011c014a03/WhatsApp%20Image%202025-01-18%20at%2023.08.14_a50f6190.jpg?Expires=1832327831&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=U6Rjfm1KDuHMwQ0l~IouoerU4Nt6bLxYWx1Og4EG38tEM1GQpLcnw~dTYnlk~DbfQ48AfWqjdP37r81HvQ4c7dRwL8UxwMOlEEF9kZ3BjHtPzXETaxOoZfEhc1-gRJgF54Jur45zzkXwXhv-7Hn02JJpsskCUZwrwWM6h4C8wPTQPUwkKTztTGny7yxvsK8lorIJ5OhsgnlCHMf~H90zeXODeynN3UvWjiqGjP2jeeRB3kHt0puci-DqqUXLreA8mHMshsLREqtvj3k7FK1zZLDmUw1CxaLlf~N6ELN~FEP0jadTXzDi-T~FTmFNAQoYZjpeIqWeqP9y5eJVJiEWLQ__"
-//     ],
-//     videos: [
-//       "https://media-hosting.imagekit.io//1a7e1b5bd2db41a7/WhatsApp%20Video%202025-01-18%20at%2023.08.12_f91e2ef9.mp4?Expires=1832327831&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=xNqb8wz-yyrK8Or4rkfnaW77cVBLhgfCh~8q0xNrpou9IZXh2aqrgGSw1qsDE2L5esfmTUi~msTmPYhYMbeMF4UTkA-7MQsni3NRZuAamZK8TQ5fxY2md5SY8Xv0sFswg4X97q5gMAVCfwklG-Yfq0fCAYdpJ88NXW7tvvNYPJXEq8Jqln1BF6XwBvxOjpXuBWm4iCWtjvmOe38o7TGLoqUVq4v9~Gmo32mefKrabTfFXZVMVwyraTwB6w4eUsV00L4BOI2RrkSTgsB9jYlzK9jlaQ5FfoXF5U8LhNpXpL93sWkCnSup2QS~wYdc4hdMCgS5Q~GRDK8vg5kcBsivBg__"    ],
-//    },
-//    {
-//     id: 31,
-//     type: 'rent',
-//     name: "سرير في غرفة ثنائية في افجيلار",
-//     price: 3700,
-//     roomType: 'shared',
-//     bedsInRoom: 2,
-//     preference: 'female',
-//     location: "Avcılar, Istanbul",
-//     coordinates: { lat: 40.981000, lng: 28.719944 },
-//     googleMapsUrl: "https://maps.google.com/?q=40.981000,28.719944",
-//     description: "متوفر سرير في غرفة ثنائية في افجيلار لطالبات في شقة 3+1",
-//     apartment: {
-//       type: "3+1"
-//     },
-//     utilities: {
-//       included: false,
-//       description: "غير شامل الفواتير"
-//     },
-//     locationDetails: {
-//       square: "في الميدان"
-//     },
-//     transportation: {
-//       metrobus: "10 دقائق"
-//     },
-//     image: "https://media-hosting.imagekit.io//e1ec1f639f704ea8/WhatsApp%20Image%202025-01-18%20at%2023.20.19_02fa711f.jpg?Expires=1832328803&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rjxi82UNySUWgpxQ96Q4pVilpLVfCAg-WE1v01HV-wYw0JmClpl84x2nE6~GcLU51xLdGNYRCBWqZ1mdjDryQW87tAIkIQ-B8lcv5YMQw1a2NL1gbVfqTNf4mj-0CxdHzSox9ln0qreaN~HJukFPpLlAPGe~na9lt-GPIk7WfeEwPdVoKHcc~pS0b7~EdbmSkE-QdWiyq0R59f9X9-eJqYY-AzJLccdDNknleWDxORT2u9CPTV~0rPIGIV3RKQ2ycPMdOfuuW8u6i-yc4aPwOL2l-OaPYDiiH~PQnYzENRLZ9sISUO4LvD2bOvVzjPPqj-jtLRdc6Pj2lIYoD2oCuA__",
-//     images: [
-//       "https://media-hosting.imagekit.io//e1ec1f639f704ea8/WhatsApp%20Image%202025-01-18%20at%2023.20.19_02fa711f.jpg?Expires=1832328803&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rjxi82UNySUWgpxQ96Q4pVilpLVfCAg-WE1v01HV-wYw0JmClpl84x2nE6~GcLU51xLdGNYRCBWqZ1mdjDryQW87tAIkIQ-B8lcv5YMQw1a2NL1gbVfqTNf4mj-0CxdHzSox9ln0qreaN~HJukFPpLlAPGe~na9lt-GPIk7WfeEwPdVoKHcc~pS0b7~EdbmSkE-QdWiyq0R59f9X9-eJqYY-AzJLccdDNknleWDxORT2u9CPTV~0rPIGIV3RKQ2ycPMdOfuuW8u6i-yc4aPwOL2l-OaPYDiiH~PQnYzENRLZ9sISUO4LvD2bOvVzjPPqj-jtLRdc6Pj2lIYoD2oCuA__"
-//     ],
-//     videos: [
-//       "https://media-hosting.imagekit.io//474cf3b4eb5947c8/WhatsApp%20Video%202025-01-18%20at%2023.08.12_f91e2ef9.mp4?Expires=1832328803&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Ms~lzBpGCmFBDhus320r7rcoeJ9Q8aEs3YdJeD~d5kxR6rUodKYoVWbWrTsSZWGb01-XZo2OYRAK9CZKZRzMuOsGAtfxbiFxA~65RcwYA3jBFst8BY0m5BmDpZbu1FMm~wAa-4duSx8b8oFUD9~2kzERAGRR4HHiLABtYtF7OmzpFV3Kzgn7AZ4ADGZ2FXDepA32wym47Yi4VN7RpP9aD5ZoZyaK0UpY4BlsWaG97o1TZe7dRjc1shtQOpmyraCaWu4DZfLObIuEfKsgaWjAf6aK9XDDmmVlweme0mXNDoTakQl95ljtJCeOKQtAYD5EYYqkhmj4~x6CP0aJjOcaVg__"
-//     ]
-//    },
+    images: [
+      "https://media-hosting.imagekit.io//900f17ae6b434b71/WhatsApp%20Image%202025-01-18%20at%2023.08.11_3ef9adcd.jpg?Expires=1832327831&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=Nqiv~4R-ClBeOIxBuX4ZineGvIvbZ~LY46m8ebvbf8EQke9xwTcxPHEwMqgpyl-MpEgvcYfpCnSNw6dcTKvWENTFRg7v-Gm-ksTFHULtwPKUEhTkiiBtdV9DvDw6T9~Jj0Di3OdMnJhjkdBjlDJGs777cDqS6KpPx58KcjyQspem8alyHKxUICWBaCg6Kk8jbENXcjyy9JFKxxymrIsmCvZl1azrqOftyUw1aO~tYQNO5VUGHZ-cARnVd9foh-5ksWk3ZgUVBNsG0BTqF3aP4jYcQvwNtoUE5U7zI1eDWNSjKgadU~Xg-rbVgCyMYfC99mVk3Idr-wdBzUaOGobRzA__",
+      "https://media-hosting.imagekit.io//4ee014011c014a03/WhatsApp%20Image%202025-01-18%20at%2023.08.14_a50f6190.jpg?Expires=1832327831&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=U6Rjfm1KDuHMwQ0l~IouoerU4Nt6bLxYWx1Og4EG38tEM1GQpLcnw~dTYnlk~DbfQ48AfWqjdP37r81HvQ4c7dRwL8UxwMOlEEF9kZ3BjHtPzXETaxOoZfEhc1-gRJgF54Jur45zzkXwXhv-7Hn02JJpsskCUZwrwWM6h4C8wPTQPUwkKTztTGny7yxvsK8lorIJ5OhsgnlCHMf~H90zeXODeynN3UvWjiqGjP2jeeRB3kHt0puci-DqqUXLreA8mHMshsLREqtvj3k7FK1zZLDmUw1CxaLlf~N6ELN~FEP0jadTXzDi-T~FTmFNAQoYZjpeIqWeqP9y5eJVJiEWLQ__"
+    ],
+    videos: [
+      "https://media-hosting.imagekit.io//1a7e1b5bd2db41a7/WhatsApp%20Video%202025-01-18%20at%2023.08.12_f91e2ef9.mp4?Expires=1832327831&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=xNqb8wz-yyrK8Or4rkfnaW77cVBLhgfCh~8q0xNrpou9IZXh2aqrgGSw1qsDE2L5esfmTUi~msTmPYhYMbeMF4UTkA-7MQsni3NRZuAamZK8TQ5fxY2md5SY8Xv0sFswg4X97q5gMAVCfwklG-Yfq0fCAYdpJ88NXW7tvvNYPJXEq8Jqln1BF6XwBvxOjpXuBWm4iCWtjvmOe38o7TGLoqUVq4v9~Gmo32mefKrabTfFXZVMVwyraTwB6w4eUsV00L4BOI2RrkSTgsB9jYlzK9jlaQ5FfoXF5U8LhNpXpL93sWkCnSup2QS~wYdc4hdMCgS5Q~GRDK8vg5kcBsivBg__"    ],
+   },
+   {
+    id: 31,
+    type: 'room',
+    name: "سرير في غرفة ثنائية في افجيلار",
+    price: 3700,
+    roomType: 'shared',
+    bedsInRoom: 2,
+    preference: 'female',
+    location: "Avcılar, Istanbul",
+    coordinates: { lat: 40.981000, lng: 28.719944 },
+    googleMapsUrl: "https://maps.google.com/?q=40.981000,28.719944",
+    description: "متوفر سرير في غرفة ثنائية في افجيلار لطالبات في شقة 3+1",
+    amenities: [
+      "في الميدان",
+      "10 دقائق عن متروبوس",      
+    ],
+    deposit: {
+      required: false,
+      description: "لا يوجد تامين"
+    },
+    apartment: {
+      type: "3+1"
+    },
+    utilities: {
+      included: false,
+      description: "غير شامل الفواتير"
+    },
+    image: "https://media-hosting.imagekit.io//e1ec1f639f704ea8/WhatsApp%20Image%202025-01-18%20at%2023.20.19_02fa711f.jpg?Expires=1832328803&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rjxi82UNySUWgpxQ96Q4pVilpLVfCAg-WE1v01HV-wYw0JmClpl84x2nE6~GcLU51xLdGNYRCBWqZ1mdjDryQW87tAIkIQ-B8lcv5YMQw1a2NL1gbVfqTNf4mj-0CxdHzSox9ln0qreaN~HJukFPpLlAPGe~na9lt-GPIk7WfeEwPdVoKHcc~pS0b7~EdbmSkE-QdWiyq0R59f9X9-eJqYY-AzJLccdDNknleWDxORT2u9CPTV~0rPIGIV3RKQ2ycPMdOfuuW8u6i-yc4aPwOL2l-OaPYDiiH~PQnYzENRLZ9sISUO4LvD2bOvVzjPPqj-jtLRdc6Pj2lIYoD2oCuA__",
+    images: [
+      "https://media-hosting.imagekit.io//e1ec1f639f704ea8/WhatsApp%20Image%202025-01-18%20at%2023.20.19_02fa711f.jpg?Expires=1832328803&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rjxi82UNySUWgpxQ96Q4pVilpLVfCAg-WE1v01HV-wYw0JmClpl84x2nE6~GcLU51xLdGNYRCBWqZ1mdjDryQW87tAIkIQ-B8lcv5YMQw1a2NL1gbVfqTNf4mj-0CxdHzSox9ln0qreaN~HJukFPpLlAPGe~na9lt-GPIk7WfeEwPdVoKHcc~pS0b7~EdbmSkE-QdWiyq0R59f9X9-eJqYY-AzJLccdDNknleWDxORT2u9CPTV~0rPIGIV3RKQ2ycPMdOfuuW8u6i-yc4aPwOL2l-OaPYDiiH~PQnYzENRLZ9sISUO4LvD2bOvVzjPPqj-jtLRdc6Pj2lIYoD2oCuA__"
+    ],
+    videos: [
+      "https://media-hosting.imagekit.io//090c15f087ef4b39/WhatsApp%20Video%202025-01-18%20at%2023.08.12_f91e2ef9.mp4?Expires=1833628177&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=EAVkyf0g3dAyJoEl01iM7b~MYMgerjJLIix8npT2R0zyHyRAr4MY2HyLKehajkkAYCeW0KjD8fk6CidlVNEhbteFK3lzG0AkTmhlUNlQ-X1CEsisrny2HbBjJI1Xsw6ayQwlgGcUSSj8sZFBkQrSXIx4aDt3Z96~v06qKZAE1Zi47k0hkzdjfna9rkewqIWQcDNkitLVrfBZsQCr9Upr7gYkPYMK0SJdqOdxVn1hTt~PZlILuUgUKKfuvRrhqgZZHSFrl~5jzB5wX5gj-ICQpGzerbqIcIcv9PM8otAJbClM0tRCCcoRsxTGsEpTG0w7b33vNm8McB~z~5kSaqJC-g__"
+    ]
+   }
 //    {
 //     id: 32,
-//     type: 'rent',
+//     type: 'apartment',
 //     name: "شقة في بيرم باشا",
-//     price: {
-//       USD: 2000
-//     },
+//     price: 71767,
+//     apartmentArea: "3+1",
 //     location: "Bayrampaşa, Istanbul",
 //     googleMapsUrl: "https://maps.app.goo.gl/ZxRM9jYMo8i3PeXPA",
 //     description: "شقه للايجار في بيرم باشا قبال الاوتجار في مجمع",
-//     apartment: {
-//       type: "3+1",
-//       location: "قبال الاوتجار"
-//     },
+//     amenities: [
+//       "قبال الاوتجار"
+//     ],
 //     deposit: {
 //       required: true,
-//       amount: 4000,
 //       description: "تأمين شهرين"
-//     },
-//     transportation: {
-//       metro: "5 دقائق"
 //     },
 
 //     image: "https://media-hosting.imagekit.io//e1ec1f639f704ea8/WhatsApp%20Image%202025-01-18%20at%2023.20.19_02fa711f.jpg?Expires=1832328803&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rjxi82UNySUWgpxQ96Q4pVilpLVfCAg-WE1v01HV-wYw0JmClpl84x2nE6~GcLU51xLdGNYRCBWqZ1mdjDryQW87tAIkIQ-B8lcv5YMQw1a2NL1gbVfqTNf4mj-0CxdHzSox9ln0qreaN~HJukFPpLlAPGe~na9lt-GPIk7WfeEwPdVoKHcc~pS0b7~EdbmSkE-QdWiyq0R59f9X9-eJqYY-AzJLccdDNknleWDxORT2u9CPTV~0rPIGIV3RKQ2ycPMdOfuuW8u6i-yc4aPwOL2l-OaPYDiiH~PQnYzENRLZ9sISUO4LvD2bOvVzjPPqj-jtLRdc6Pj2lIYoD2oCuA__",
 
 //     images: [
-//       "https://media-hosting.imagekit.io//e1ec1f639f704ea8/WhatsApp%20Image%202025-01-18%20at%2023.20.19_02fa711f.jpg?Expires=1832328803&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=rjxi82UNySUWgpxQ96Q4pVilpLVfCAg-WE1v01HV-wYw0JmClpl84x2nE6~GcLU51xLdGNYRCBWqZ1mdjDryQW87tAIkIQ-B8lcv5YMQw1a2NL1gbVfqTNf4mj-0CxdHzSox9ln0qreaN~HJukFPpLlAPGe~na9lt-GPIk7WfeEwPdVoKHcc~pS0b7~EdbmSkE-QdWiyq0R59f9X9-eJqYY-AzJLccdDNknleWDxORT2u9CPTV~0rPIGIV3RKQ2ycPMdOfuuW8u6i-yc4aPwOL2l-OaPYDiiH~PQnYzENRLZ9sISUO4LvD2bOvVzjPPqj-jtLRdc6Pj2lIYoD2oCuA__",
 //       "https://media-hosting.imagekit.io//c864d046d8d84347/WhatsApp%20Image%202025-01-18%20at%2023.23.48_b2238ed7.jpg?Expires=1832329363&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ZGpwHi18wOVqrp05zJsisobJnadD4xP1191wVkbfLKhrTxau1EUMmRgrAU4bd-mlSstXjJHLHZBDa2ZQmVdLfXKDCc0tQtrkXRSOhWj2BA1wHRPQay0CAycoV55oMLhAl0ZfbTMMrCpfk9HKC03cYOUH0uyAY4hLwDsZ~SS6TcIlZ-H5oJlfqlj5mjP8m1U~JMSEUcnQm884pW5Hf44gV4TL3SMG9Tfu4D-dLbXjiDb6pVLQOK0roqFQX7CVYDVE9aR~4U3aU9XGwtHF8JVd5jYesfapzhr0lHFCETVX40Zo6jamG6QqL19TLcJ-uXeYN9u9V3yIh6qMnzHlkLdFGA__",
 //       "https://media-hosting.imagekit.io//88c4ad885e9e4e1b/WhatsApp%20Image%202025-01-18%20at%2023.23.43_f49e4a7a.jpg?Expires=1832329363&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=gzQTuZ4sS8I5DG2OROVo6uiPNmjvJUXYC-btNwMHR5MjjVaqOU0fmHh~5IYmC~1Zcw50ko~FVJco31YugwPu1Wr-fig9jmJ3X-7YLG23XE6MlYA0tRr~LVUS3Arfg3ROzUNnMlYCpPmdft7omKfC5bLucuZ0JGQKFhSxIMKjEJcm2xKO9rKEh4QGsb4ccGJ~S1o99NyKLjLZIrLCbWxunBQoogWw8zD41hcpFfmVf2nnuCci-9YpkVVvVrX2WK~gBJ-6o~rq0QxXz~6kyCLNfPjyxhtbkdg9nH3nAy0J5i8tdoFbOBVmtF~G-V4UP1WJKe8zq646DGfOYG9PQj43GA__",
 //       "https://media-hosting.imagekit.io//308da2df029b42ac/WhatsApp%20Image%202025-01-18%20at%2023.23.48_55b0fb68.jpg?Expires=1832329363&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=aL6smfLmIHCnzWJEM2IEucfp3IpjtkxeeJ5XvBkTmLLp0LdTodCu2PuDtYikifli3QEiA4P03OZtGl8coaI~UWW7mMNAznIiOR4POUF6vqnv1-bGW1NMkv2rdP4pYFrT7E6KHNz5Nv5Nz9zmrYbh9UsyBlzWZ06UqQoG140YrPpZy~b13lzemaRdM6gGRQLaPQVXQyWk2mU8I8NiKm-eRrgspL8S35FesPA6huhj~nFDTOUsEVBq7ZRP8zd0E5cZBr1KgAbHKgZ-vR9nvBCP7QIAxMsEIvzHlwA8dxJ0Alkj3D70j2SKKYhLw8~48NQK2ycOWI8a7UD5Py~zR5Gvhg__",
@@ -1295,7 +1238,7 @@ export const properties = [
 //    },
 //    {
 //     id: 33,
-//     type: 'rent',
+//     type: 'room',
 //     name: "غرف فردية قرب جامعة جليشم",
 //     price: 8000,
 //     roomType: 'individual',
@@ -1330,7 +1273,7 @@ export const properties = [
 //    },
 // {
 //   id: 34,
-//   type: 'rent',
+//   type: 'room',
 //   name: "غرف فردية في مشروطية",
 //   price: 15000,
 //   roomType: 'individual',
@@ -1367,7 +1310,7 @@ export const properties = [
 //  },
 //  {
 //   id: 35,
-//   type: 'rent',
+//   type: 'room',
 //   name: "سرير في غرفة ثنائية في شكري بيه",
 //   price: 4500,
 //   roomType: 'shared',
@@ -1419,7 +1362,7 @@ export const properties = [
 //  },
 //  {
 //   id: 36,
-//   type: 'rent',
+//   type: 'room',
 //   name: "سرير في غرفة ثنائية في الفاتح",
 //   price: 5710,
 //   roomType: 'shared',
@@ -1453,7 +1396,7 @@ export const properties = [
 //  },
 //  {
 //   id: 37,
-//   type: 'rent',
+//   type: 'room',
 //   name: "سرير في غرفة ثنائية في بيكوز",
 //   price: 5710,
 //   roomType: 'shared',
@@ -1486,7 +1429,7 @@ export const properties = [
 //  },
 //  {
 //   id: 38,
-//   type: 'rent',
+//   type: 'room',
 //   name: "غرفة فردية في افجيلار",
 //   price: 5000,
 //   roomType: 'individual',
@@ -1517,7 +1460,7 @@ export const properties = [
 //  },
 //  {
 //   id: 39,
-//   type: 'rent',
+//   type: 'room',
 //   name: "غرفة فردية في مجمع Kitaş yeşilpınar",
 //   price: 12492,
 //   roomType: 'individual',
@@ -1550,7 +1493,7 @@ export const properties = [
 //  },
 //  {
 //   id: 40,
-//   type: 'rent',
+//   type: 'room',
 //   name: "غرفة فردية في تشيكمك كوي",
 //   price: 9500,
 //   roomType: 'individual',
@@ -1581,7 +1524,7 @@ export const properties = [
 //  },
 //  {
 //   id: 41,
-//   type: 'rent',
+//   type: 'room',
 //   name: "غرفة فردية في عليبيكوي",
 //   price: 8000,
 //   roomType: 'individual',
@@ -1621,7 +1564,7 @@ export const properties = [
 //  },
 //  {
 //   id: 42,
-//   type: 'buy',
+//   type: 'apartment',
 //   name: "شقة في صفاكوي",
 //   price: 20000,
 //   location: "Safaköy, Istanbul",
@@ -1658,7 +1601,7 @@ export const properties = [
 //  },
 //  {
 //   id: 43,
-//   type: 'rent',
+//   type: 'room',
 //   rooms: [
 //     {
 //       type: 'individual',
@@ -1705,7 +1648,7 @@ export const properties = [
 //  },
 //  {
 //   id: 44,
-//   type: 'rent',
+//   type: 'room',
 //   name: "غرفة فردية في عمرانية",
 //   price: 9500,
 //   roomType: 'individual',

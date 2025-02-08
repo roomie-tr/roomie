@@ -26,7 +26,7 @@ function ProductPage() {
   useEffect(() => {
     const foundProperty = findPropertyById(id)
     if (!foundProperty) {
-      navigate('/') // Redirect to home if property not found
+      navigate('/')
       return
     }
     setProperty(foundProperty)
@@ -41,8 +41,12 @@ function ProductPage() {
   }
 
   const handleLocationClick = () => {
-    window.open(property.googleMapsUrl, '_blank')
+    if (property.googleMapsUrl) {
+      window.open(property.googleMapsUrl, '_blank')
+    }
   }
+
+  const coordinates = property.coordinates || { lat: 0, lng: 0 }
 
   const allMedia = [
     ...(property.videos?.map((v, i) => ({ 
@@ -132,6 +136,14 @@ function ProductPage() {
     );
   };
 
+  const handleContactClick = () => {
+    const phoneNumber = property.contactNumber?.replace(/^0+/, '') || "796697404";
+    const formattedNumber = `962${phoneNumber}`;
+    const message = `Hi, I'm interested in your property at ${property.location}`;
+    const whatsappUrl = `https://wa.me/${formattedNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <motion.div 
       className="min-h-screen flex flex-col"
@@ -198,7 +210,7 @@ function ProductPage() {
                       width="100%"
                       height="100%"
                       frameBorder="0"
-                      src={`https://www.openstreetmap.org/export/embed.html?bbox=${property.coordinates.lng-0.01}%2C${property.coordinates.lat-0.01}%2C${property.coordinates.lng+0.01}%2C${property.coordinates.lat+0.01}&layer=mapnik&marker=${property.coordinates.lat}%2C${property.coordinates.lng}`}
+                      src={`https://www.openstreetmap.org/export/embed.html?bbox=${coordinates.lng-0.01}%2C${coordinates.lat-0.01}%2C${coordinates.lng+0.01}%2C${coordinates.lat+0.01}&layer=mapnik&marker=${coordinates.lat}%2C${coordinates.lng}`}
                     />
                   </div>
                 </div>
@@ -237,13 +249,16 @@ function ProductPage() {
                     <div className="space-y-4 mb-8">
                       {property.type === 'room' ? (
                         <RoomDetails property={property} />
-                      ) : (
+                      ) : property.type === 'apartment' ? (
                         <ApartmentDetails property={property} />
-                      )}
+                      ) : null}
                     </div>
 
-                    <button className="w-full bg-[#E9A159] text-white py-3 rounded-lg hover:bg-[#d08236] transition-colors duration-300">
-                      {property.type === 'room' ? 'Contact Owner' : 'Contact Agent'}
+                    <button 
+                      onClick={handleContactClick}
+                      className="w-full bg-[#E9A159] text-white py-3 rounded-lg hover:bg-[#d08236] transition-colors duration-300"
+                    >
+                      Contact Owner
                     </button>
                   </div>
                 </motion.div>

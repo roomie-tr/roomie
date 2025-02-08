@@ -52,15 +52,15 @@ function Footer() {
             <div className="col-span-1">
               <h3 className="text-lg font-semibold text-gray-900 mb-6">Contact Us</h3>
               <ul className="space-y-3">
-                <li className="text-gray-600 text-sm">
+                {/* <li className="text-gray-600 text-sm">
                   Email: info@roomie.com
-                </li>
+                </li> */}
                 <li className="text-gray-600 text-sm">
-                  Phone: +1 234 567 890
+                  Phone: +962 796697404
                 </li>
-                <li className="text-gray-600 text-sm">
+                {/* <li className="text-gray-600 text-sm">
                   Address: 123 Main St, City
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

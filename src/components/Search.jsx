@@ -14,14 +14,31 @@ function Search({ onSearch }) {
   const [showRoomType, setShowRoomType] = useState(false)
   const [showPreference, setShowPreference] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
-  const [locations] = useState([
-    'Kadıköy, Istanbul',
-    'Beşiktaş, Istanbul',
-    'Üsküdar, Istanbul',
-    'Beylikdüzü, Istanbul',
-    'Bahçeşehir, Istanbul',
-    'Ataşehir, Istanbul'
-  ])
+  const [locations] = useState({
+    room: [
+      'Üsküdar, Istanbul',
+      'Şişli, Istanbul',
+      'Avcılar, Istanbul',
+      'Beşiktaş, Istanbul',
+      'Davutpaşa, Istanbul',
+      'Kâğıthane, Istanbul',
+      'Alibeyköy, Istanbul',
+      'Çekmeköy, Istanbul',
+      'Fatih, Istanbul',
+      'Esenyurt, Istanbul',
+      'Mecidiyeköy, Istanbul',
+      'Yenibosna, Istanbul',
+      'Bostancı, Kadıköy, Istanbul',
+      'Maslak, Istanbul'
+    ],
+    apartment: [
+      'Yeşilpınar, Istanbul',
+      'Şişli, Istanbul'
+    ],
+    student_housing: [
+      'Avcılar, Istanbul'
+    ]
+  })
   const preferences = ['male', 'female']
   const apartmentAreas = ['1+1', '2+1', '3+1', '4+1', "duplex"]
 
@@ -65,20 +82,17 @@ function Search({ onSearch }) {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab)
-    if (tab === 'room') {
-      setRoomType('')
-      setPreference('')
-    } else if (tab === 'student_housing') {
-      setRoomType('')
-      setPreference('')
-    }
+    setLocation('')
+    setRoomType('')
+    setPreference('')
+    setApartmentArea('')
     
     onSearch({
       activeTab: tab,
-      location,
-      roomType: (tab === 'room' || tab === 'student_housing') ? roomType : '',
-      preference: (tab === 'room' || tab === 'student_housing') ? preference : '',
-      apartmentArea: tab === 'apartment' ? apartmentArea : ''
+      location: '',
+      roomType: '',
+      preference: '',
+      apartmentArea: ''
     })
   }
 
@@ -204,6 +218,17 @@ function Search({ onSearch }) {
               <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
             )}
           </div>
+
+          {/* Add Clear Filters button */}
+          <div className="ml-auto self-center h-[56px] flex items-center pr-8">
+            <button 
+              onClick={handleClearFilters}
+              className="text-[#E9A159] text-[11px] font-medium border-b border-[#E9A159]
+                hover:text-[#d08236] hover:border-[#d08236] transition-colors duration-300 cursor-pointer"
+            >
+              Clear Filters
+            </button>
+          </div>
         </div>
 
         {/* Search Fields */}
@@ -224,7 +249,7 @@ function Search({ onSearch }) {
             {/* Location Dropdown Menu */}
             {activeDropdown === 'location' && (
               <div className="absolute top-full left-0 mt-2 bg-white p-2 rounded-lg shadow-lg z-50 w-[300px] dropdown-enter">
-                {locations.map((loc) => (
+                {locations[activeTab].map((loc) => (
                   <div
                     key={loc}
                     className={`px-4 py-2 cursor-pointer hover:bg-[#F0EFF9] rounded-md ${
@@ -333,7 +358,7 @@ function Search({ onSearch }) {
                 )}
               </div>
             </>
-          ) : (
+          ) : activeTab === 'apartment' ? (
             <>
               {/* Apartment Area */}
               <div className="flex-1 min-w-0 relative">
@@ -366,7 +391,9 @@ function Search({ onSearch }) {
                 )}
               </div>
             </>
-          )}
+          ) : activeTab === 'student_housing' ? (
+            <></>
+          ) : null}
 
           {/* Add back the Search Button */}
           <button 

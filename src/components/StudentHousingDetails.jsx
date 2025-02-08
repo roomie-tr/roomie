@@ -10,26 +10,6 @@ function StudentHousingDetails({ property }) {
     <div className="bg-white rounded-lg border border-[#F0EFF9] p-6 mb-8">
       <h2 className="text-xl font-semibold text-[#10103B] mb-4">Student Housing Details</h2>
       <div className="space-y-4">
-        {/* Gender Options */}
-        <div className="flex items-center gap-3">
-          {property.genderOptions.includes('male') && property.genderOptions.includes('female') ? (
-            <>
-              <IoMaleFemale className="text-[#E9A159] w-5 h-5" />
-              <span className="text-gray-600">Mixed Dorm</span>
-            </>
-          ) : property.genderOptions.includes('male') ? (
-            <>
-              <BsGenderMale className="text-[#007BFF] w-5 h-5" />
-              <span className="text-gray-600">Male Only</span>
-            </>
-          ) : (
-            <>
-              <BsGenderFemale className="text-[#FF69B4] w-5 h-5" />
-              <span className="text-gray-600">Female Only</span>
-            </>
-          )}
-        </div>
-
         {/* Room Types and Prices */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
           {property.rooms.single?.available && (

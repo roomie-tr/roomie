@@ -62,6 +62,9 @@ function Home() {
     if (searchParams.activeTab === 'apartment' && property.type !== 'apartment') {
       return false;
     }
+    if (searchParams.activeTab === 'student_housing' && property.type !== 'student_housing') {
+      return false;
+    }
 
     // Then apply other filters if they exist
     if (searchParams.location && property.location !== searchParams.location) {

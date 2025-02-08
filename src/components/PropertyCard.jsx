@@ -125,26 +125,6 @@ function PropertyCard({ property }) {
                         <FiHome className="text-[#E9A159] w-5 h-5" />
                         <span className="text-[#10103B] font-medium">Student Housing</span>
                       </div>
-                      {property.genderOptions && (
-                        <div className="flex items-center gap-2">
-                          {property.genderOptions.includes('male') && property.genderOptions.includes('female') ? (
-                            <>
-                              <IoMaleFemale className="text-[#E9A159] w-5 h-5" />
-                              <span className="text-[#10103B]">Mixed Dorm</span>
-                            </>
-                          ) : property.genderOptions.includes('male') ? (
-                            <>
-                              <BsGenderMale className="text-[#007BFF] w-5 h-5" />
-                              <span className="text-[#10103B]">Male Only</span>
-                            </>
-                          ) : (
-                            <>
-                              <BsGenderFemale className="text-[#FF69B4] w-5 h-5" />
-                              <span className="text-[#10103B]">Female Only</span>
-                            </>
-                          )}
-                        </div>
-                      )}
                     </div>
                   </div>
                 ) : (
