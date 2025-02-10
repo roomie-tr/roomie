@@ -182,45 +182,48 @@ function Search({ onSearch }) {
       {/* Main container */}
       <div className="relative bg-white/90 backdrop-blur-sm rounded-lg">
         {/* Tabs */}
-        <div className="flex items-center gap-8 border-b border-[#E0DEF7]">
-          <div className="relative min-w-[120px] h-[56px]">
-            <button 
-              className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'room' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
-              onClick={() => handleTabChange('room')}
-            >
-              Rooms
-            </button>
-            {activeTab === 'room' && (
-              <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
-            )}
+        <div className="flex flex-col border-b border-[#E0DEF7] px-4 sm:px-8 py-2">
+          {/* Tabs Row */}
+          <div className="grid grid-cols-3 w-full mb-2 gap-4">
+            <div className="relative h-[56px]">
+              <button 
+                className={`absolute inset-0 flex items-center justify-center font-medium text-sm sm:text-base whitespace-nowrap ${activeTab === 'room' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
+                onClick={() => handleTabChange('room')}
+              >
+                Rooms
+              </button>
+              {activeTab === 'room' && (
+                <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
+              )}
+            </div>
+
+            <div className="relative h-[56px]">
+              <button 
+                className={`absolute inset-0 flex items-center justify-center font-medium text-sm sm:text-base whitespace-nowrap ${activeTab === 'apartment' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
+                onClick={() => handleTabChange('apartment')}
+              >
+                Apartments
+              </button>
+              {activeTab === 'apartment' && (
+                <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
+              )}
+            </div>
+
+            <div className="relative h-[56px]">
+              <button 
+                className={`absolute inset-0 flex items-center justify-center font-medium text-xs sm:text-sm whitespace-nowrap ${activeTab === 'student_housing' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
+                onClick={() => handleTabChange('student_housing')}
+              >
+                Student Housing
+              </button>
+              {activeTab === 'student_housing' && (
+                <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
+              )}
+            </div>
           </div>
 
-          <div className="relative min-w-[120px] h-[56px]">
-            <button 
-              className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'apartment' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
-              onClick={() => handleTabChange('apartment')}
-            >
-              Apartments
-            </button>
-            {activeTab === 'apartment' && (
-              <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
-            )}
-          </div>
-
-          <div className="relative min-w-[120px] h-[56px]">
-            <button 
-              className={`absolute inset-0 flex items-center justify-center font-medium whitespace-nowrap ${activeTab === 'student_housing' ? 'text-[#E9A159]' : 'text-[#10103B]'}`}
-              onClick={() => handleTabChange('student_housing')}
-            >
-              Student Housing
-            </button>
-            {activeTab === 'student_housing' && (
-              <div className="absolute bottom-0 w-full h-[3px] bg-[#E9A159]" />
-            )}
-          </div>
-
-          {/* Add Clear Filters button */}
-          <div className="ml-auto self-center h-[56px] flex items-center pr-8">
+          {/* Clear Filters button */}
+          <div className="flex justify-center w-full">
             <button 
               onClick={handleClearFilters}
               className="text-[#E9A159] text-[11px] font-medium border-b border-[#E9A159]
